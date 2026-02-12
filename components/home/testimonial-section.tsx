@@ -25,10 +25,10 @@ export default function TestimonialSection() {
     {
       content:
         "Slateworks is amazing. We went from idea and concept to, in days, having a fully working MVP that we tested with 10 customers to get immediate feedback.",
-      author: "Scott Garber",
+      author: "Jordan Rudd",
       role: "Founder",
-      company: "Profluence",
-      initials: "SG",
+      company: "Sparked Digital",
+      initials: "JR",
       hasDetailedFeedback: true,
     },
     {

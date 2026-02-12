@@ -30,7 +30,7 @@ export default function WorkSection() {
       type: "AI Game",
       title: "All Suspects",
       description: "An immersive AI mystery game where every case is uniquely generated. Interrogate suspects, examine evidence, and solve procedurally-generated detective mysteries.",
-      image: "https://images.unsplash.com/photo-1453873623425-02f53d1cfb0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      image: "https://images.unsplash.com/photo-1579566346927-c68383817a25?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
       technologies: ["Next.js", "Claude AI", "fal.ai", "Railway"],
       url: "https://allsuspects.slateworks.io",
     },
