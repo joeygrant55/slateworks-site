@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { Github, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import { useRef } from "react";
 import LeadCaptureForm from "@/components/home/lead-capture-form";
 
@@ -33,7 +33,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="mb-1 font-semibold">Office Location</h4>
-                    <p className="text-neutral-dark">340 Beach Drive NE, St. Petersburg, FL 33701</p>
+                    <p className="text-neutral-dark">St. Petersburg, FL</p>
                   </div>
                 </div>
 
@@ -43,7 +43,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="mb-1 font-semibold">Email Us</h4>
-                    <p className="text-neutral-dark">hello@slateagency.com</p>
+                    <p className="text-neutral-dark">hello@slateworks.io</p>
                   </div>
                 </div>
 
@@ -53,13 +53,13 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="mb-1 font-semibold">Call Us</h4>
-                    <p className="text-neutral-dark">+1 (727) 555-0123</p>
+                    <p className="text-neutral-dark">(727) 266-6378</p>
                   </div>
                 </div>
               </div>
 
               <div className="flex space-x-4">
-                {[Twitter, Linkedin, Instagram, Github].map((Icon, index) => (
+                {[Twitter, Linkedin].map((Icon, index) => (
                   <a
                     href="#"
                     key={index}
