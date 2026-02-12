@@ -43,7 +43,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="mb-1 font-semibold">Email Us</h4>
-                    <p className="text-neutral-dark">hello@slateworks.io</p>
+                    <p className="text-neutral-dark">joey@slateworks.io</p>
                   </div>
                 </div>
 
