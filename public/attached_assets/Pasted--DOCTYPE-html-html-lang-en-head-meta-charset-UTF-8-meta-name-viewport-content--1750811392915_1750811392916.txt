@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Slateworks × Profluence — Proposal Microsite</title>
+
+  <!-- Quick minimalist styles; swap for Tailwind or your design system -->
+  <style>
+    :root { --accent:#0C6CF2; --dark:#0F172A; --grey:#64748B; --bg:#F8FAFC; }
+    *{box-sizing:border-box;padding:0;margin:0;font-family:Inter,system-ui,sans-serif;}
+    body{background:var(--bg);color:var(--dark);line-height:1.55;}
+    header,section,footer{max-width:960px;margin:0 auto;padding:64px 24px;}
+    h1,h2,h3{margin-bottom:.5em;font-weight:700;}
+    h1{font-size:2.75rem;} h2{font-size:2rem;} h3{font-size:1.25rem;}
+    p,li{color:var(--grey);font-size:1rem;}
+    nav{display:flex;gap:32px;margin-top:16px;}
+    nav a{color:var(--grey);text-decoration:none;font-weight:500;}
+    nav a:hover{color:var(--accent);}
+    .btn{display:inline-block;padding:14px 28px;border-radius:8px;background:var(--accent);
+         color:#fff;font-weight:600;text-decoration:none;}
+    table{width:100%;border-collapse:collapse;margin-top:24px;font-size:.95rem;}
+    th,td{border:1px solid #E2E8F0;padding:12px;text-align:left;}
+    th{background:#EEF2FF;color:var(--dark);}
+    ul.timeline{list-style:none;counter-reset:step;margin-top:24px;}
+    ul.timeline li{counter-increment:step;margin-bottom:24px;position:relative;padding-left:40px;}
+    ul.timeline li::before{content:counter(step);position:absolute;left:0;top:0;width:28px;height:28px;
+        border-radius:50%;background:var(--accent);color:#fff;font-weight:600;display:flex;align-items:center;
+        justify-content:center;}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+    footer{text-align:center;font-size:.9rem;color:var(--grey);}
+    @media(max-width:768px){.two-col{grid-template-columns:1fr;}nav{flex-wrap:wrap;gap:16px;}
+      header,section,footer{padding:48px 20px;}}
+  </style>
+</head>
+
+<body>
+
+<!-- ─── HERO ─────────────────────────────────────────────────────────────── -->
+<header id="top">
+  <h1>Next‑Gen Deck Portal<br/>for <span style="color:var(--accent)">Profluence</span></h1>
+  <p style="max-width:550px;font-size:1.1rem;margin:20px 0 32px">
+    Slateworks.io designed and engineered <strong>deck.profluence.com</strong> — your secure
+    founder ⇄ investor exchange. Now let’s extend it into a
+    powerful, data‑driven platform that scales with your deal flow.
+  </p>
+  <a class="btn" href="#proposal">View Proposal ↓</a>
+
+  <nav>
+    <a href="#about">Case Study</a>
+    <a href="#proposal">Scope & Deliverables</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#pricing">Investment</a>
+    <a href="#team">Team</a>
+    <a href="#cta">Contact</a>
+  </nav>
+</header>
+
+<!-- ─── CASE STUDY / ABOUT ──────────────────────────────────────────────── -->
+<section id="about">
+  <h2>What We’ve Already Built & Why It Matters</h2>
+  <div class="two-col">
+    <div>
+      <h3>🚀 deck.profluence.com v1</h3>
+      <ul>
+        <li>End‑to‑end founder intake workflow with secure PDF upload & live preview</li>
+        <li>Slack + HubSpot integration for real‑time triage</li>
+        <li>Role‑based access controls and AES‑256 encrypted storage</li>
+        <li>99.98 % uptime since launch</li>
+      </ul>
+    </div>
+    <div>
+      <!-- Placeholder; replace w/ product screenshot -->
+      <img src="https://placehold.co/450x280?text=Portal+Screenshot" alt="Portal screen"
+           style="border-radius:8px;width:100%;object-fit:cover">
+    </div>
+  </div>
+
+  <p style="margin-top:32px">
+    Founders submit richer data, analysts receive structured insights in minutes,
+    and Profluence retains a proprietary database of sports‑tech deal intelligence.
+  </p>
+</section>
+
+<!-- ─── PROPOSAL ─────────────────────────────────────────────────────────── -->
+<section id="proposal">
+  <h2>Project Scope & Deliverables</h2>
+
+  <h3>Phase 1 — Discovery & Product Strategy (2 weeks)</h3>
+  <ul>
+    <li>Stakeholder interviews, success‑metric workshops</li>
+    <li>Technical audit of WordPress, Circle, CRM touchpoints</li>
+    <li>Compliance & data‑governance blueprint (GDPR, SOC‑2 readiness)</li>
+  </ul>
+
+  <h3>Phase 2 — Experience Design (3 weeks)</h3>
+  <ul>
+    <li>Figma design system, reusable component library, dark/light themes</li>
+    <li>Interactive prototype for founder and analyst journeys</li>
+    <li>WCAG 2.2 AA accessibility reviews</li>
+  </ul>
+
+  <h3>Phase 3 — MVP Engineering (6 weeks)</h3>
+  <ul>
+    <li><strong>Frontend</strong>: Next.js 14 (React‑Server Components), TailwindCSS, shadcn/ui</li>
+    <li><strong>Backend/API</strong>: Node 18, tRPC, PostgreSQL (Supabase)</li>
+    <li><strong>Auth & SSO</strong>: Clerk.dev federated with Circle & WordPress</li>
+    <li>Deck parsing → vector database for semantic search & AI summaries</li>
+    <li>Stripe metered billing (future founder analytics upsells)</li>
+  </ul>
+
+  <h3>Phase 4 — QA, Pen‑Test & UAT (1 week)</h3>
+  <h3>Phase 5 — Launch, Handover & 30‑Day Warranty (½ week)</h3>
+
+  <p style="margin-top:24px;font-style:italic">
+    *Optional post‑launch add‑ons: founder analytics dashboard, investor
+    reporting portal, mobile PWA wrapper.*
+  </p>
+</section>
+
+<!-- ─── TIMELINE ─────────────────────────────────────────────────────────── -->
+<section id="timeline">
+  <h2>Timeline</h2>
+  <ul class="timeline">
+    <li><strong>July 1–12 &nbsp;|&nbsp; Discovery</strong></li>
+    <li><strong>July 15 – Aug 2 &nbsp;|&nbsp; Experience Design</strong></li>
+    <li><strong>Aug 5 – Sept 12 &nbsp;|&nbsp; MVP Engineering</strong></li>
+    <li><strong>Sept 15–22 &nbsp;|&nbsp; QA & UAT</strong></li>
+    <li><strong>Sept 24 &nbsp;|&nbsp; Public Launch</strong></li>
+    <li><strong>Oct 24 &nbsp;|&nbsp; Warranty Completion + Retainer kickoff (if desired)</strong></li>
+  </ul>
+  <p>
+    Total calendar duration: <strong>≈ 12½ weeks</strong>, built for a “back‑to‑school” launch that
+    dovetails with Q4 fund‑raising season.
+  </p>
+</section>
+
+<!-- ─── PRICING ──────────────────────────────────────────────────────────── -->
+<section id="pricing">
+  <h2>Investment Breakdown</h2>
+  <table>
+    <thead><tr><th>Role</th><th>Rate (USD/hr)</th><th>Estimated Hours</th><th>Subtotal</th></tr></thead>
+    <tbody>
+      <tr><td>Product Manager</td><td>$90</td><td>120</td><td>$10,800</td></tr>
+      <tr><td>Senior UX Designer</td><td>$80</td><td>140</td><td>$11,200</td></tr>
+      <tr><td>UI / Visual Designer</td><td>$65</td><td>100</td><td>$6,500</td></tr>
+      <tr><td>Senior Front‑end Engineer</td><td>$95</td><td>220</td><td>$20,900</td></tr>
+      <tr><td>Senior Back‑end Engineer</td><td>$110</td><td>200</td><td>$22,000</td></tr>
+      <tr><td>DevOps / Cloud Engineer</td><td>$100</td><td>40</td><td>$4,000</td></tr>
+      <tr><td>QA Engineer</td><td>$60</td><td>80</td><td>$4,800</td></tr>
+      <tr><td>Tech‑lead / CTO Oversight</td><td>$120</td><td>30</td><td>$3,600</td></tr>
+      <tr style="font-weight:600;background:#F1F5F9">
+        <td colspan="3">Core build</td><td>$83,800</td>
+      </tr>
+      <tr><td colspan="3">10 % contingency</td><td>$8,380</td></tr>
+      <tr style="font-weight:700;background:#EEF2FF">
+        <td colspan="3">Fixed‑bid project total</td><td>$92,180</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:32px">Payment Milestones</h3>
+  <table>
+    <thead><tr><th>Milestone</th><th>%</th><th>Amount</th></tr></thead>
+    <tbody>
+      <tr><td>Kick‑off</td><td>20 %</td><td>$18,436</td></tr>
+      <tr><td>Design Sign‑off</td><td>20 %</td><td>$18,436</td></tr>
+      <tr><td>MVP Code‑Complete</td><td>30 %</td><td>$27,654</td></tr>
+      <tr><td>Launch</td><td>20 %</td><td>$18,436</td></tr>
+      <tr><td>Warranty Close</td><td>10 %</td><td>$9,218</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ─── TEAM ────────────────────────────────────────────────────────────── -->
+<section id="team">
+  <h2>The Slateworks Crew</h2>
+  <div class="two-col">
+    <div>
+      <h3>Joey&nbsp;Grant — Managing Partner</h3>
+      <p>Ex‑athlete, product‑led founder, strategist for 75+ sports‑tech builds.</p>
+      <h3>Jessica&nbsp;Vu — Design Lead</h3>
+      <p>10 yrs UI/UX across fintech & media; Figma advocate, WCAG specialist.</p>
+      <h3>Ravi&nbsp;Patel — Lead Engineer</h3>
+      <p>Node/React veteran; previously scaled DocSend clone to 1M MAU.</p>
+    </div>
+    <div>
+      <!-- Replace with team headshots -->
+      <img src="https://placehold.co/450x540?text=Team+Portraits" alt="Team" 
+           style="border-radius:8px;width:100%;object-fit:cover">
+    </div>
+  </div>
+</section>
+
+<!-- ─── CALL TO ACTION ──────────────────────────────────────────────────── -->
+<section id="cta" style="text-align:center">
+  <h2>Ready to Roll?</h2>
+  <p style="margin:0 auto 32px;max-width:500px">
+    We can lock Discovery kickoff for <strong>July 1 st</strong>.  
+    Approve the scope or request tweaks — we’ll send the MSA &amp; first invoice same‑day.
+  </p>
+  <a class="btn" href="mailto:projects@slateworks.io?subject=Profluence%20Deck%20Portal%20Green%20Light">
+    Green‑light the Project
+  </a>
+</section>
+
+<!-- ─── FOOTER ──────────────────────────────────────────────────────────── -->
+<footer>
+  © 2025 Slateworks.io&nbsp;·&nbsp;PO Box 123, Denver CO&nbsp;80202  
+  · (720) 555‑0199 · <a href="https://slateworks.io">slateworks.io</a>
+</footer>
+
+</body>
+</html>

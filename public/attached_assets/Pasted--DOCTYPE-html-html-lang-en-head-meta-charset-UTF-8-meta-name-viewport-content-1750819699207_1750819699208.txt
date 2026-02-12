@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slateworks x Profluence - Strategic Partnership Proposal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --slate-black: #0a0a0a;
+            --slate-dark: #1a1d23;
+            --slate-medium: #2a2d33;
+            --slate-light: #3a3d43;
+            --text-primary: #ffffff;
+            --text-secondary: #a8abb2;
+            --accent-green: #00ff88;
+            --accent-red: #e74c3c;
+            --border-subtle: rgba(255,255,255,0.08);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--slate-black);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Page Structure */
+        .page {
+            min-height: 100vh;
+            padding: 80px 60px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 100px,
+                    var(--border-subtle) 100px,
+                    var(--border-subtle) 101px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 100px,
+                    var(--border-subtle) 100px,
+                    var(--border-subtle) 101px
+                );
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        /* Cover Page */
+        .cover {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cover-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+
+        .x-symbol {
+            font-size: 36px;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        .cover h1 {
+            font-size: 72px;
+            font-weight: 900;
+            letter-spacing: -3px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cover-subtitle {
+            font-size: 24px;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 60px;
+        }
+
+        .cover-details {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            font-size: 18px;
+        }
+
+        .cover-details span {
+            color: var(--text-secondary);
+        }
+
+        .cover-details strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Section Headers */
+        .section-header {
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-number {
+            font-size: 120px;
+            font-weight: 900;
+            color: var(--slate-medium);
+            line-height: 1;
+            margin-bottom: -30px;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        /* Content Sections */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Grid Layouts */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: var(--slate-dark);
+            border: 1px solid var(--border-subtle);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-green);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-green);
+        }
+
+        .feature-card:hover::before {
+            transform: translateX(0);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-marker {
+            width: 80px;
+            flex-shrink: 0;
+            text-align: right;
+        }
+
+        .timeline-weeks {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--accent-green);
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: var(--slate-dark);
+            padding: 30px;
+            border-left: 4px solid var(--accent-green);
+            position: relative;
+        }
+
+        .timeline-content h4 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .timeline-content ul {
+            list-style: none;
+            color: var(--text-secondary);
+        }
+
+        .timeline-content li::before {
+            content: '▸';
+            color: var(--accent-green);
+            margin-right: 10px;
+        }
+
+        /* Pricing Tables */
+        .pricing-table {
+            background: var(--slate-dark);
+            border: 1px solid var(--border-subtle);
+            overflow: hidden;
+            margin: 40px 0;
+        }
+
+        .pricing-header {
+            background: var(--slate-medium);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .pricing-header h3 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .pricing-total {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--accent-green);
+        }
+
+        .pricing-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border-subtle);
+            align-items: center;
+        }
+
+        .pricing-row:hover {
+            background: rgba(0,255,136,0.05);
+        }
+
+        .pricing-row.header {
+            background: var(--slate-medium);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        /* Value Props */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, var(--slate-dark) 0%, var(--slate-medium) 100%);
+            padding: 40px;
+            border: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: var(--accent-green);
+            opacity: 0.1;
+            clip-path: polygon(100% 0, 100% 100%, 0 0);
+        }
+
+        .value-card h4 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-green);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        /* Call to Action */
+        .cta-section {
+            text-align: center;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, var(--slate-dark) 0%, var(--slate-black) 100%);
+            border: 2px solid var(--accent-green);
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--accent-green) 0%, transparent 70%);
+            opacity: 0.05;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .cta-title {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 60px;
+            background: var(--accent-green);
+            color: var(--slate-black);
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,255,136,0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page {
+                padding: 40px 20px;
+            }
+            
+            .cover h1 {
+                font-size: 48px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .pricing-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .page {
+                page-break-after: always;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="page">
+        <div class="cover">
+            <div class="cover-logos">
+                <div class="logo">slateworks</div>
+                <div class="x-symbol">×</div>
+                <div class="logo" style="color: var(--accent-green);">profluence</div>
+            </div>
+            <h1>Strategic Partnership Proposal</h1>
+            <p class="cover-subtitle">Building the Future of Intelligent Deal Flow</p>
+            <div class="cover-details">
+                <div><span>Investment</span><br><strong>$92,000</strong></div>
+                <div><span>Timeline</span><br><strong>12 Weeks</strong></div>
+                <div><span>Launch</span><br><strong>Q2 2025</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="page">
+        <div class="content">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">Executive Summary</h2>
+                <p class="section-subtitle">Transforming venture capital through intelligent automation</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>The Vision</h3>
+                    <p>Build a best-in-class pitch deck intelligence platform that streamlines deal flow, automates analysis, and provides data-driven insights for PIE Sports Capital.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>The Approach</h3>
+                    <p>12-week MVP sprint combining cutting-edge AI analysis with institutional-grade security and a founder-friendly experience that strengthens your brand.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>The Outcome</h3>
+                    <p>A scalable platform that reduces review cycles by 60%, creates a proprietary data moat, and positions Profluence as the tech-forward leader in sports venture capital.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Timeline -->
+    <div class="page">
+        <div class="content">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">Development Timeline</h2>
+                <p class="section-subtitle">From concept to launch in 12 weeks</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-weeks">2W</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Discovery & Product Strategy</h4>
+                        <ul>
+                            <li>Stakeholder interviews & requirements gathering</li>
+                            <li>User journey mapping & workflow optimization</li>
+                            <li>Technical architecture planning</li>
+                            <li>Security & compliance audit</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-weeks">3W</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Experience Design</h4>
+                        <ul>
+                            <li>Figma design system creation</li>
+                            <li>Responsive UI for all devices</li>
+                            <li>Interactive prototype development</li>
+                            <li>WCAG 2.2 AA accessibility compliance</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-weeks">6W</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>MVP Development</h4>
+                        <ul>
+                            <li>Frontend: Modern React architecture</li>
+                            <li>Backend: Scalable API infrastructure</li>
+                            <li>AI Integration: Deck analysis engine</li>
+                            <li>Security: Enterprise-grade authentication</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-weeks">1.5W</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Testing & Launch</h4>
+                        <ul>
+                            <li>Cross-browser & device testing</li>
+                            <li>Security penetration testing</li>
+                            <li>Founder pilot program</li>
+                            <li>Production deployment & handoff</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Investment Breakdown -->
+    <div class="page">
+        <div class="content">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">Investment Breakdown</h2>
+                <p class="section-subtitle">Transparent pricing with milestone-based payments</p>
+            </div>
+            
+            <div class="pricing-table">
+                <div class="pricing-header">
+                    <h3>Team Composition & Effort</h3>
+                    <div class="pricing-total">$92,000</div>
+                    <p style="color: var(--text-secondary); margin-top: 10px;">Fixed-bid engagement with 10% contingency</p>
+                </div>
+                
+                <div class="pricing-row header">
+                    <div>Role</div>
+                    <div>Rate</div>
+                    <div>Hours</div>
+                    <div>Subtotal</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>Product Manager</div>
+                    <div>$90/hr</div>
+                    <div>120</div>
+                    <div>$10,800</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>Senior UX Designer</div>
+                    <div>$80/hr</div>
+                    <div>140</div>
+                    <div>$11,200</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>UI/Visual Designer</div>
+                    <div>$65/hr</div>
+                    <div>100</div>
+                    <div>$6,500</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>Senior Frontend Engineer</div>
+                    <div>$95/hr</div>
+                    <div>220</div>
+                    <div>$20,900</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>Senior Backend Engineer</div>
+                    <div>$110/hr</div>
+                    <div>200</div>
+                    <div>$22,000</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>DevOps/Cloud Engineer</div>
+                    <div>$100/hr</div>
+                    <div>40</div>
+                    <div>$4,000</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>QA Engineer</div>
+                    <div>$60/hr</div>
+                    <div>80</div>
+                    <div>$4,800</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>Tech Lead/CTO Oversight</div>
+                    <div>$120/hr</div>
+                    <div>30</div>
+                    <div>$3,600</div>
+                </div>
+            </div>
+            
+            <div class="pricing-table" style="margin-top: 40px;">
+                <div class="pricing-header">
+                    <h3>Payment Schedule</h3>
+                </div>
+                
+                <div class="pricing-row header">
+                    <div>Milestone</div>
+                    <div>Percentage</div>
+                    <div>Amount</div>
+                    <div>Deliverable</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>Contract Signature</div>
+                    <div>20%</div>
+                    <div>$18,400</div>
+                    <div>Discovery kickoff</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>Design Sign-off</div>
+                    <div>20%</div>
+                    <div>$18,400</div>
+                    <div>Approved designs</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>MVP Complete</div>
+                    <div>30%</div>
+                    <div>$27,600</div>
+                    <div>Code complete</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>Launch</div>
+                    <div>20%</div>
+                    <div>$18,400</div>
+                    <div>Production deploy</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>Warranty Period</div>
+                    <div>10%</div>
+                    <div>$9,200</div>
+                    <div>30-day support</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Value Proposition -->
+    <div class="page">
+        <div class="content">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">Strategic Value Delivery</h2>
+                <p class="section-subtitle">How this investment transforms your business</p>
+            </div>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h4><div class="value-icon"></div>Deal Flow Optimization</h4>
+                    <p>Streamlined upload process with AI-powered analysis reduces review cycles by 60%. Founders experience a premium intake process that strengthens your brand reputation.</p>
+                </div>
+                
+                <div class="value-card">
+                    <h4><div class="value-icon"></div>Operational Excellence</h4>
+                    <p>Automated CRM integration and intelligent alerts eliminate manual data entry. Your team focuses on high-value diligence instead of administrative tasks.</p>
+                </div>
+                
+                <div class="value-card">
+                    <h4><div class="value-icon"></div>Proprietary Data Moat</h4>
+                    <p>Every analyzed deck contributes to your sports-tech market intelligence database. Pattern recognition and trend analysis give you an unfair advantage.</p>
+                </div>
+                
+                <div class="value-card">
+                    <h4><div class="value-icon"></div>Enterprise Scalability</h4>
+                    <p>Serverless architecture scales from seed-stage volume to Series A without infrastructure changes. SOC-2 ready foundation protects sensitive founder data.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Architecture -->
+    <div class="page">
+        <div class="content">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2 class="section-title">Technical Excellence</h2>
+                <p class="section-subtitle">Built on a foundation of modern, scalable technology</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Frontend Architecture</h3>
+                    <p>React-based SPA with TypeScript for type safety, modern state management, and a component library ensuring consistent UX across all touchpoints.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Backend Infrastructure</h3>
+                    <p>Scalable API layer with secure file handling, real-time processing queues, and enterprise authentication supporting future SSO integration.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Analysis Engine</h3>
+                    <p>Custom-tuned models for pitch deck analysis, automated scoring algorithms, and intelligent data extraction creating actionable insights.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Analytics Platform</h3>
+                    <p>Real-time dashboards, automated PDF report generation, and data visualization tools providing deep insights into deal flow patterns.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Security First</h3>
+                    <p>End-to-end encryption, role-based access control, comprehensive audit logging, and compliance-ready infrastructure from day one.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Cloud Native</h3>
+                    <p>Deployed on AWS with auto-scaling, multi-AZ redundancy, and edge optimization ensuring sub-second response times globally.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post-Launch Support -->
+    <div class="page">
+        <div class="content">
+            <div class="section-header">
+                <div class="section-number">06</div>
+                <h2 class="section-title">Ongoing Partnership</h2>
+                <p class="section-subtitle">Your success is our success</p>
+            </div>
+            
+            <div class="pricing-table">
+                <div class="pricing-header">
+                    <h3>Support & Maintenance Plans</h3>
+                    <p style="color: var(--text-secondary); margin-top: 10px;">Flexible options to match your growth trajectory</p>
+                </div>
+                
+                <div class="pricing-row header">
+                    <div>Plan</div>
+                    <div>Monthly Hours</div>
+                    <div>Monthly Cost</div>
+                    <div>Best For</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div><strong>Care Plan</strong></div>
+                    <div>15 hours</div>
+                    <div>$3,250</div>
+                    <div>Essential maintenance & security updates</div>
+                </div>
+                
+                <div class="pricing-row" style="border: 2px solid var(--accent-green);">
+                    <div><strong>Growth Plan</strong> <span style="color: var(--accent-green);">RECOMMENDED</span></div>
+                    <div>40 hours</div>
+                    <div>$5,800</div>
+                    <div>Quarterly features + performance optimization</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div><strong>Velocity Plan</strong></div>
+                    <div>80 hours</div>
+                    <div>$10,900</div>
+                    <div>Continuous development & AI experiments</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 60px;">
+                <h3 style="font-size: 32px; margin-bottom: 30px;">Every Plan Includes:</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Security & Compliance</h3>
+                        <p>Critical patches, dependency updates, penetration test remediations, and SOC-2 evidence gathering.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Infrastructure Management</h3>
+                        <p>AWS hosting, monitoring, cost optimization, and quarterly architecture reviews to ensure scalability.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Continuous Innovation</h3>
+                        <p>Access to our latest AI models, UI components, and best practices as we evolve the platform together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="page">
+        <div class="content">
+            <div class="cta-section">
+                <h2 class="cta-title">Ready to Transform Your Deal Flow?</h2>
+                <p style="font-size: 24px; color: var(--text-secondary); margin-bottom: 20px;">
+                    Let's build something extraordinary together.
+                </p>
+                <p style="font-size: 20px; margin-bottom: 40px;">
+                    Join forward-thinking VCs who are leveraging technology<br>
+                    to make smarter, faster investment decisions.
+                </p>
+                <a href="#" class="cta-button">Schedule Strategy Session</a>
+                <div style="margin-top: 40px; display: flex; justify-content: center; gap: 40px; font-size: 18px;">
+                    <div><strong>Alex Chen</strong><br>CEO, Slateworks</div>
+                    <div><strong>Sarah Mitchell</strong><br>Head of Partnerships</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px; color: var(--text-secondary);">
+                <p>© 2025 Slateworks. Confidential & Proprietary.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
