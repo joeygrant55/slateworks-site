@@ -42,10 +42,10 @@ export default function CTASection() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-6 text-5xl font-bold md:text-6xl lg:text-7xl"
+            className="mb-6 text-3xl font-bold sm:text-4xl md:text-6xl lg:text-7xl"
           >
             <span className="text-neutral">Ready to </span>
-            <span className="bg-gradient-to-r from-neutral via-secondary to-neutral bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient">
+            <span className="gradient-text inline-block">
               Build Something Amazing?
             </span>
           </motion.h2>
@@ -54,7 +54,7 @@ export default function CTASection() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mx-auto mb-8 max-w-2xl text-xl leading-relaxed text-neutral-dark md:text-2xl"
+            className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-neutral-dark md:text-2xl"
           >
             Join forward-thinking companies who trust us to transform their digital presence.
             Get your free project assessment today.

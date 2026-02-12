@@ -58,18 +58,18 @@ export default function Footer() {
           <div>
             <h4 className="mb-6 text-lg font-semibold">Subscribe</h4>
             <p className="mb-4 text-neutral-dark">Stay up to date with our latest news and projects.</p>
-            <form onSubmit={handleSubscribe} className="flex">
+            <form onSubmit={handleSubscribe} className="flex flex-col gap-2 sm:flex-row sm:gap-0">
               <input
                 type="email"
                 required
                 placeholder="Your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="rounded-l-sm rounded-r-none border border-neutral/10 bg-neutral-darker px-4 py-2 text-neutral focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary"
+                className="w-full rounded-sm border border-neutral/10 bg-neutral-darker px-4 py-2 text-neutral focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary sm:rounded-l-sm sm:rounded-r-none"
               />
               <button
                 type="submit"
-                className="rounded-l-none rounded-r-sm bg-secondary px-4 font-medium text-black hover:bg-secondary-light"
+                className="rounded-sm bg-secondary px-4 py-2 font-medium text-black hover:bg-secondary-light sm:rounded-l-none sm:rounded-r-sm"
                 disabled={isSubmitting}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -82,7 +82,7 @@ export default function Footer() {
 
         <div className="flex flex-col items-center justify-between border-t border-neutral/10 pt-8 md:flex-row">
           <p className="mb-4 text-neutral-dark md:mb-0">&copy; {new Date().getFullYear()} Slateworks. All rights reserved.</p>
-          <div className="flex space-x-6">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:justify-start">
             <a href="#" className="text-neutral-dark transition-colors hover:text-secondary">Privacy Policy</a>
             <a href="#" className="text-neutral-dark transition-colors hover:text-secondary">Terms of Service</a>
             <a href="#" className="text-neutral-dark transition-colors hover:text-secondary">Cookies Policy</a>

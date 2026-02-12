@@ -19,20 +19,20 @@ export default function WorkSection() {
 
   const projects: Project[] = [
     {
-      type: "Web Application",
-      title: "Profluence Deck Intelligence",
-      description: "A cutting-edge presentation platform that transforms ideas into fully working MVPs in days. Built for rapid prototyping and customer validation.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500&q=80",
-      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-      url: "https://deck.profluence.com/",
+      type: "Mobile App",
+      title: "Haven",
+      description: "AI-powered home redesign app. Snap a photo of any room and see it transformed with AI-generated design concepts. Save, organize, and track your home projects.",
+      image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      technologies: ["React Native", "AI/ML", "Cloud Storage", "iOS"],
+      url: undefined,
     },
     {
-      type: "Web Platform",
-      title: "GMTM Coaches",
-      description: "A specialized platform connecting athletes with coaches, featuring profile management, booking systems, and performance tracking.",
-      image: "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500&q=80",
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
-      url: "https://gmtm.com/coaches",
+      type: "AI Game",
+      title: "All Suspects",
+      description: "An immersive AI mystery game where every case is uniquely generated. Interrogate suspects, examine evidence, and solve procedurally-generated detective mysteries.",
+      image: "https://images.unsplash.com/photo-1453873623425-02f53d1cfb0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      technologies: ["Next.js", "Claude AI", "fal.ai", "Railway"],
+      url: "https://allsuspects.slateworks.io",
     },
     {
       type: "E-commerce Website",
@@ -43,12 +43,12 @@ export default function WorkSection() {
       url: "https://suncoastharvest.com/",
     },
     {
-      type: "Corporate Website",
-      title: "ELI Innovation",
-      description: "A modern corporate website showcasing innovative solutions and services with interactive elements and case studies.",
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500&q=80",
-      technologies: ["Vue.js", "GSAP", "Netlify", "Contentful"],
-      url: "https://eliinnovation.com/",
+      type: "AI Product",
+      title: "Before Bedtime Adventures",
+      description: "Turn family vacation photos into magical, personalized storybooks. AI-generated Disney-quality illustrations create keepsake books children treasure.",
+      image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      technologies: ["Next.js", "AI Generation", "Stripe", "Lulu Print"],
+      url: "https://before-bedtime-adventures.vercel.app",
     },
   ];
 

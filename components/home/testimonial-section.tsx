@@ -77,7 +77,7 @@ export default function TestimonialSection() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="border border-neutral/20 bg-neutral-darker/50 p-12 text-center backdrop-blur-md"
+                className="border border-neutral/20 bg-neutral-darker/50 p-6 text-center backdrop-blur-md sm:p-8 md:p-12"
               >
                 <div className="mb-8 flex justify-center text-secondary">
                   {[...Array(5)].map((_, i) => (
@@ -85,16 +85,16 @@ export default function TestimonialSection() {
                   ))}
                 </div>
 
-                <blockquote className="mb-8 text-2xl leading-relaxed font-light italic text-neutral md:text-3xl">
+                <blockquote className="mb-8 text-lg leading-relaxed font-light italic text-neutral sm:text-xl md:text-3xl">
                   "{testimonials[currentIndex].content}"
                 </blockquote>
 
-                <div className="flex items-center justify-center">
-                  <div className="mr-6 flex h-16 w-16 items-center justify-center rounded-full bg-secondary/20">
+                <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-0">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary/20 sm:mr-6">
                     <span className="text-xl font-bold text-secondary">{testimonials[currentIndex].initials}</span>
                   </div>
-                  <div className="text-left">
-                    <h4 className="text-xl font-semibold text-neutral">{testimonials[currentIndex].author}</h4>
+                  <div className="text-center sm:text-left">
+                    <h4 className="text-lg font-semibold text-neutral sm:text-xl">{testimonials[currentIndex].author}</h4>
                     <p className="text-neutral-dark">{testimonials[currentIndex].role}, {testimonials[currentIndex].company}</p>
                     {testimonials[currentIndex].hasDetailedFeedback && (
                       <button onClick={() => setShowDetailedFeedback(true)} className="mt-2 inline-flex items-center text-sm font-medium text-secondary transition-colors hover:text-secondary/80">
@@ -108,11 +108,11 @@ export default function TestimonialSection() {
             </AnimatePresence>
           </div>
 
-          <button onClick={() => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)} className="absolute top-1/2 left-4 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-neutral/20 bg-neutral-darker/80 backdrop-blur-md transition-all duration-300 hover:border-secondary/50 hover:bg-secondary/20">
+          <button onClick={() => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)} className="absolute top-1/2 left-2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-neutral/20 bg-neutral-darker/80 backdrop-blur-md transition-all duration-300 hover:border-secondary/50 hover:bg-secondary/20 sm:left-4 sm:flex sm:h-12 sm:w-12">
             <ChevronLeft className="h-6 w-6 text-neutral" />
           </button>
 
-          <button onClick={() => setCurrentIndex((prev) => (prev + 1) % testimonials.length)} className="absolute top-1/2 right-4 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-neutral/20 bg-neutral-darker/80 backdrop-blur-md transition-all duration-300 hover:border-secondary/50 hover:bg-secondary/20">
+          <button onClick={() => setCurrentIndex((prev) => (prev + 1) % testimonials.length)} className="absolute top-1/2 right-2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-neutral/20 bg-neutral-darker/80 backdrop-blur-md transition-all duration-300 hover:border-secondary/50 hover:bg-secondary/20 sm:right-4 sm:flex sm:h-12 sm:w-12">
             <ChevronRight className="h-6 w-6 text-neutral" />
           </button>
 

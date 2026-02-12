@@ -30,15 +30,14 @@ export default function HeroSection() {
           >
             <div className="space-y-6">
               <motion.h1
-                className="text-5xl font-black leading-tight md:text-6xl lg:text-7xl"
+                className="text-4xl font-black leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
               >
                 We craft{" "}
                 <span
-                  className="bg-gradient-to-r from-neutral via-secondary to-neutral bg-[length:200%_200%] bg-clip-text text-transparent"
-                  style={{ backgroundSize: "200% 200%", animation: "gradient 5s ease infinite" }}
+                  className="gradient-text inline-block"
                 >
                   digital experiences
                 </span>{" "}
@@ -46,7 +45,7 @@ export default function HeroSection() {
               </motion.h1>
 
               <motion.p
-                className="max-w-2xl text-xl leading-relaxed text-neutral-dark md:text-2xl"
+                className="max-w-2xl text-lg leading-relaxed text-neutral-dark md:text-2xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
@@ -81,7 +80,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="relative mt-8 h-[400px] md:h-[500px] lg:mt-0 lg:h-[600px]"
+            className="relative mt-8 h-[300px] sm:h-[400px] md:h-[500px] lg:mt-0 lg:h-[600px]"
           >
             <SplineScene scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" className="h-full w-full" />
           </motion.div>
