@@ -60,12 +60,7 @@ export default function Header() {
             </nav>
 
             <div className="flex items-center space-x-4">
-              <Link
-                href="/auth"
-                className="hidden rounded-full border border-secondary px-6 py-2 font-medium text-secondary transition-all duration-300 hover:bg-secondary hover:text-black lg:inline-block"
-              >
-                Sign In
-              </Link>
+              {/* Sign In removed — no auth portal currently */}
 
               <button
                 onClick={() => setIsMobileMenuOpen((prev) => !prev)}
@@ -111,15 +106,7 @@ export default function Header() {
               ))}
             </div>
 
-            <div className="border-t border-white/20 pt-4">
-              <Link
-                href="/auth"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full rounded border border-secondary px-4 py-3 text-center text-lg font-medium text-secondary transition-all duration-300 hover:bg-secondary hover:text-black"
-              >
-                Sign In
-              </Link>
-            </div>
+            {/* Sign In removed — no auth portal currently */}
           </div>
         </nav>
       </div>
