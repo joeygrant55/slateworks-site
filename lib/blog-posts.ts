@@ -21,17 +21,17 @@ export const blogPosts: BlogPost[] = [
     category: "Behind the Build",
     tags: ["AI Development", "Case Study", "Next.js", "Speed"],
     heroImage: "/images/haven-hero.jpg",
-    content: `We rebuilt our entire agency website in a single afternoon — not as a rush job, but as a demonstration of what's possible when AI-native development is your default mode.
+    content: `We rebuilt our entire agency website in a single afternoon. A full production site, deployed and live, built to the same standards we bring to client work.
 
 ## The Starting Point
 
-Our site was running on an older stack that had served its purpose but wasn't built for where we're headed. We needed something modern, fast, and built to scale — a platform worthy of the work we do for clients.
+Our site was running on an older stack. We needed something modern, fast, and built to scale. A platform worthy of the work we do for clients.
 
 ## The Approach
 
-This wasn't a hack job or a quick template swap. Our agents worked in concert — architecture decisions made thoughtfully, design executed with precision, every component built to production standards. The difference isn't cutting corners. It's eliminating waste.
+Our agents worked in concert. Architecture decisions made thoughtfully, design executed with precision, every component built to production standards. The entire focus was on eliminating waste.
 
-Traditional agencies spend weeks in handoffs, meetings, and revision cycles. Our agents collaborate in real-time, building on each other's work without the friction.
+Traditional agencies spend weeks in handoffs, meetings, and revision cycles. Our agents collaborate in real-time, building on each other's work without friction.
 
 ## What We Shipped
 
@@ -45,15 +45,15 @@ Every element was tested, refined, and deployed with zero downtime.
 
 ## The Takeaway
 
-Speed without quality is just chaos. What makes AI-native development powerful isn't just that it's fast — it's that it frees us to focus entirely on craft. No context switching. No waiting on approvals. No "we'll get to that next sprint."
+AI-native development frees us to focus entirely on craft. We spend our time on architecture, design, and polish. The busywork handles itself.
 
-The result is work that's both faster *and* better than the traditional process.
+The result is work that's both faster *and* better than the traditional agency process.
 
 ## What This Means For You
 
-Every project we take on gets this same level of focus and execution. Whether it's a marketing site, a web application, or a full product launch — our agents bring the same intensity and attention to detail.
+Every project we take on gets this same level of focus and execution. Marketing sites, web applications, full product launches. Same intensity, same attention to detail.
 
-If you have something that needs to be built right, [let's talk](https://slateworks.io/#contact).`
+If you have something that needs to be built, [let's talk](https://slateworks.io/#contact).`
   },
   {
     slug: "ai-agent-team",
@@ -91,10 +91,10 @@ Each agent has a real role in our delivery pipeline.
 
 ## What This Means For Clients
 
-- Faster delivery — agents work around the clock, not around a schedule
-- Consistent quality — no off days, no turnover, no onboarding ramp
-- Radical transparency about how the work actually gets done
-- More of your budget goes to the work itself, not overhead
+- Faster delivery. Agents work around the clock.
+- Consistent quality. Same standard every time, every project.
+- Radical transparency about how the work actually gets done.
+- More of your budget goes to the work itself.
 
 See the team in action at [slateworks.io/#about](https://slateworks.io/#about)`
   }
