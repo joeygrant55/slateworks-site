@@ -11,7 +11,7 @@ export default function CTASection() {
 
   return (
     <section className="relative overflow-hidden bg-black py-24 md:py-36" ref={sectionRef}>
-      <BackgroundBeams className="opacity-40" />
+      <BackgroundBeams className="pointer-events-none opacity-40" />
 
       <div className="container relative z-10 mx-auto px-4">
         <motion.div
@@ -46,7 +46,7 @@ export default function CTASection() {
           >
             <a
               href="#contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-4 text-lg font-bold text-black transition-all duration-300 hover:scale-105 hover:bg-secondary-light hover:shadow-xl hover:shadow-secondary/20"
+              className="group relative z-20 inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-4 text-lg font-bold text-black shadow-lg shadow-secondary/25 transition-all duration-300 hover:scale-105 hover:bg-secondary-light hover:shadow-xl hover:shadow-secondary/30"
             >
               Let&apos;s Talk
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
