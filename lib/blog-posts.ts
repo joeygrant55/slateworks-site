@@ -21,43 +21,39 @@ export const blogPosts: BlogPost[] = [
     category: "Behind the Build",
     tags: ["AI Development", "Case Study", "Next.js", "Speed"],
     heroImage: "/images/haven-hero.jpg",
-    content: `We ported an entire marketing website from a legacy stack to Next.js, added a lead capture system with email notifications, built 3 case study pages, a proposal system, and redesigned the team section - all in one afternoon.
+    content: `We rebuilt our entire agency website in a single afternoon — not as a rush job, but as a demonstration of what's possible when AI-native development is your default mode.
 
 ## The Starting Point
 
-The site was running on Replit with a Vite/Express setup. It worked, but we needed to move to Next.js on Vercel for better performance, stronger SEO fundamentals, and faster deployments.
+Our site was running on an older stack that had served its purpose but wasn't built for where we're headed. We needed something modern, fast, and built to scale — a platform worthy of the work we do for clients.
 
-## The Process
+## The Approach
 
-We ran AI-orchestrated development from the start.
+This wasn't a hack job or a quick template swap. Our agents worked in concert — architecture decisions made thoughtfully, design executed with precision, every component built to production standards. The difference isn't cutting corners. It's eliminating waste.
 
-One agent, Codex, handled the heavy porting work and implementation. Another, Sammy, handled architecture decisions, design direction, and copy.
-
-Total porting time for the full site was around 20 minutes.
+Traditional agencies spend weeks in handoffs, meetings, and revision cycles. Our agents collaborate in real-time, building on each other's work without the friction.
 
 ## What We Shipped
 
-- Full marketing website in Next.js
-- Mobile-responsive layouts across the site
-- Lead capture with Resend email notifications
-- 3 case study pages with real product screenshots
-- Proposal template system
-- AI agent team section
+- Complete marketing website, mobile-responsive from the ground up
+- Intelligent lead capture system with instant notifications
+- Three in-depth case study pages featuring real product screenshots
+- Custom proposal generation system for prospective clients
+- A team section that tells the truth about how modern software gets built
 
-## The Numbers
+Every element was tested, refined, and deployed with zero downtime.
 
-- 14 production deploys
-- 8 hours total
-- Zero downtime
-- Total cost: about $2 in API tokens
+## The Takeaway
 
-## Why This Matters For You
+Speed without quality is just chaos. What makes AI-native development powerful isn't just that it's fast — it's that it frees us to focus entirely on craft. No context switching. No waiting on approvals. No "we'll get to that next sprint."
 
-If we can rebuild our own agency site this fast, imagine what we can do for yours.
+The result is work that's both faster *and* better than the traditional process.
 
-This is the power of AI-native development: not AI as a gimmick, but AI as the core of how we work.
+## What This Means For You
 
-If you need something built, we're ready: [slateworks.io/contact](https://slateworks.io/contact)`
+Every project we take on gets this same level of focus and execution. Whether it's a marketing site, a web application, or a full product launch — our agents bring the same intensity and attention to detail.
+
+If you have something that needs to be built right, [let's talk](https://slateworks.io/#contact).`
   },
   {
     slug: "ai-agent-team",
@@ -95,10 +91,10 @@ Each agent has a real role in our delivery pipeline.
 
 ## What This Means For Clients
 
-- Faster delivery because agents work 24/7
-- Lower costs because there are no salaries to cover
-- Consistent quality with no bad days and no turnover
-- Radical transparency about how the work gets done
+- Faster delivery — agents work around the clock, not around a schedule
+- Consistent quality — no off days, no turnover, no onboarding ramp
+- Radical transparency about how the work actually gets done
+- More of your budget goes to the work itself, not overhead
 
 See the team in action at [slateworks.io/#about](https://slateworks.io/#about)`
   }
