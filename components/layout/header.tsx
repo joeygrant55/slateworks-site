@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -22,7 +24,14 @@ export default function Header() {
     };
   }, [isMobileMenuOpen]);
 
-  const navItems = ["Services", "Work", "About", "Contact"];
+  const isHomePage = pathname === "/";
+  const navItems = [
+    { label: "Services", href: isHomePage ? "#services" : "/#services" },
+    { label: "Work", href: isHomePage ? "#work" : "/#work" },
+    { label: "About", href: isHomePage ? "#about" : "/#about" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: isHomePage ? "#contact" : "/#contact" },
+  ];
 
   return (
     <>
@@ -48,14 +57,14 @@ export default function Header() {
 
             <nav className="hidden items-center space-x-8 lg:flex">
               {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                <Link
+                  key={item.label}
+                  href={item.href}
                   className="group relative rounded px-2 py-1 text-sm font-medium tracking-wide text-white/90 transition-all duration-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-black"
                 >
-                  {item}
+                  {item.label}
                   <span className="absolute inset-x-0 -bottom-1 h-0.5 scale-x-0 bg-secondary transition-transform duration-300 group-hover:scale-x-100" />
-                </a>
+                </Link>
               ))}
             </nav>
 
@@ -94,15 +103,15 @@ export default function Header() {
           <div className="mx-auto max-w-7xl space-y-6 px-4 py-6">
             <div className="space-y-4">
               {navItems.map((item, index) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                <Link
+                  key={item.label}
+                  href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block border-b border-white/10 py-2 text-lg font-medium tracking-wide text-white/90 transition-colors duration-300 hover:text-secondary focus:text-secondary focus:outline-none"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
-                  {item}
-                </a>
+                  {item.label}
+                </Link>
               ))}
             </div>
 
