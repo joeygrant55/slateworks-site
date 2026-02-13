@@ -20,8 +20,8 @@ export default function TeamSection() {
 
   const founder = {
     name: "Joey Grant",
-    role: "Founder",
-    bio: "Proven entrepreneur with $5M+ raised from elite investors. Joey is the human behind Slateworks — the strategic mind, the relationship builder, and the one who makes sure every project delivers real business impact.",
+    role: "The Human",
+    bio: "The one who built the agents and points them at problems worth solving. Joey handles relationships, strategy, and making sure the work matters. The agents handle everything else.",
     image: "/attached_assets/4.jpeg",
   };
 
@@ -102,54 +102,6 @@ export default function TeamSection() {
           </p>
         </motion.div>
 
-        {/* Founder Card */}
-        <motion.div
-          className="mx-auto mb-12 max-w-2xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="overflow-hidden rounded-sm border border-secondary/30 bg-gradient-to-br from-neutral-darker to-black">
-            <div className="flex flex-col items-center gap-6 p-8 md:flex-row">
-              <div className="h-28 w-28 flex-shrink-0 overflow-hidden rounded-full border-2 border-secondary">
-                <img
-                  src={founder.image}
-                  alt={founder.name}
-                  className="h-full w-full object-cover"
-                  style={{ objectPosition: "50% 25%" }}
-                />
-              </div>
-              <div className="text-center md:text-left">
-                <div className="mb-1 flex items-center justify-center gap-2 md:justify-start">
-                  <h3 className="text-2xl font-bold text-neutral">{founder.name}</h3>
-                  <span className="rounded-full bg-secondary/20 px-3 py-0.5 text-xs font-semibold text-secondary">HUMAN</span>
-                </div>
-                <p className="mb-3 text-secondary">{founder.role}</p>
-                <p className="text-sm leading-relaxed text-neutral-dark">{founder.bio}</p>
-                <div className="mt-4 flex justify-center gap-3 md:justify-start">
-                  <a href="#" className="text-neutral-dark transition-colors hover:text-secondary"><Linkedin className="h-5 w-5" /></a>
-                  <a href="#" className="text-neutral-dark transition-colors hover:text-secondary"><Twitter className="h-5 w-5" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Divider */}
-        <motion.div
-          className="mx-auto mb-12 flex max-w-md items-center gap-4"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <div className="h-px flex-1 bg-neutral/10" />
-          <div className="flex items-center gap-2 text-sm text-neutral-dark">
-            <Bot className="h-4 w-4 text-secondary" />
-            <span>The Agents</span>
-          </div>
-          <div className="h-px flex-1 bg-neutral/10" />
-        </motion.div>
-
         {/* Agent Grid */}
         <motion.div
           className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
@@ -220,6 +172,53 @@ export default function TeamSection() {
         >
           Every agent runs 24/7. No timezones. No standups. No excuses. Just results.
         </motion.p>
+
+        {/* Divider */}
+        <motion.div
+          className="mx-auto my-12 flex max-w-md items-center gap-4"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
+        >
+          <div className="h-px flex-1 bg-neutral/10" />
+          <div className="flex items-center gap-2 text-sm text-neutral-dark">
+            <span>Behind the Agents</span>
+          </div>
+          <div className="h-px flex-1 bg-neutral/10" />
+        </motion.div>
+
+        {/* Founder Card - Below Agents */}
+        <motion.div
+          className="mx-auto max-w-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+        >
+          <div className="overflow-hidden rounded-sm border border-neutral/10 bg-neutral-darker">
+            <div className="flex flex-col items-center gap-6 p-8 md:flex-row">
+              <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-full border border-neutral/20">
+                <img
+                  src={founder.image}
+                  alt={founder.name}
+                  className="h-full w-full object-cover"
+                  style={{ objectPosition: "50% 25%" }}
+                />
+              </div>
+              <div className="text-center md:text-left">
+                <div className="mb-1 flex items-center justify-center gap-2 md:justify-start">
+                  <h3 className="text-xl font-bold text-neutral">{founder.name}</h3>
+                  <span className="rounded-full bg-secondary/20 px-3 py-0.5 text-xs font-semibold text-secondary">HUMAN</span>
+                </div>
+                <p className="mb-3 text-sm text-secondary">{founder.role}</p>
+                <p className="text-sm leading-relaxed text-neutral-dark">{founder.bio}</p>
+                <div className="mt-3 flex justify-center gap-3 md:justify-start">
+                  <a href="#" className="text-neutral-dark transition-colors hover:text-secondary"><Linkedin className="h-4 w-4" /></a>
+                  <a href="#" className="text-neutral-dark transition-colors hover:text-secondary"><Twitter className="h-4 w-4" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
