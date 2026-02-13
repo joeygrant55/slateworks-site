@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Logo from "@/components/ui/logo";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -48,11 +49,7 @@ export default function Header() {
               href="/"
               className="group flex items-center rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-black"
             >
-              <img
-                src="/attached_assets/CleanShot 2025-06-24 at 22.11.16_1750817502034.png"
-                alt="Slateworks - Premium Digital Agency"
-                className="h-8 w-auto transition-all duration-300 group-hover:opacity-80 sm:h-10 lg:h-12"
-              />
+              <Logo size="md" variant="light" className="transition-all duration-300 group-hover:opacity-80" />
             </Link>
 
             <nav className="hidden items-center space-x-8 lg:flex">
