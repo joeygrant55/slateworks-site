@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  metadataBase: new URL("https://slateworks.io"),
+  openGraph: {
+    title: "Slateworks — AI-Powered Development Agency",
+    description: "An agency powered by intelligence. We design, build, and ship digital products in days, not months.",
+    url: "https://slateworks.io",
+    siteName: "Slateworks",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Slateworks — AI-Powered Development Agency",
+    description: "An agency powered by intelligence. We design, build, and ship digital products in days, not months.",
+  },
 };
 
 export default function RootLayout({
