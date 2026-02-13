@@ -21,7 +21,7 @@ export default function TeamSection() {
   const founder = {
     name: "Joey Grant",
     role: "The Human",
-    bio: "Fiesta Bowl champion turned tech founder. $4M+ raised, $2M+ in revenue contracts generated. Joey designed the agents, trained them on real-world product delivery, and points them at problems worth solving.",
+    bio: "Fiesta Bowl champion turned tech founder. $2M+ in revenue contracts generated. Joey designed the agents, trained them on real-world product delivery, and points them at problems worth solving.",
     image: "/attached_assets/4.jpeg",
   };
 
