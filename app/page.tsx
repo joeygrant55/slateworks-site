@@ -1,8 +1,8 @@
 import ContactSection from "@/components/home/contact-section";
 import CTASection from "@/components/home/cta-section";
 import HeroSection from "@/components/home/hero-section";
-import ProcessSection from "@/components/home/process-section";
-import ServicesSection from "@/components/home/services-section";
+import ModelSection from "@/components/home/model-section";
+import NumbersSection from "@/components/home/numbers-section";
 import TeamSection from "@/components/home/team-section";
 import TestimonialSection from "@/components/home/testimonial-section";
 import WorkSection from "@/components/home/work-section";
@@ -14,8 +14,8 @@ export default function Home() {
     <main className="min-h-screen bg-black">
       <Header />
       <HeroSection />
-      <ServicesSection />
-      <ProcessSection />
+      <ModelSection />
+      <NumbersSection />
       <WorkSection />
       <TestimonialSection />
       <TeamSection />
