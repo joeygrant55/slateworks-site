@@ -29,8 +29,7 @@ export default function AllSuspectsCaseStudyPage() {
           "Multiple difficulty levels",
         ],
         projectUrl: "https://allsuspects.slateworks.io",
-        heroImage:
-          "https://images.unsplash.com/photo-1416339134316-0e91dc9ded92?auto=format&fit=crop&w=1920&q=80",
+        heroImage: "/images/allsuspects-hero.jpg",
         heroOverlayClassName:
           "bg-gradient-to-br from-black/90 via-zinc-950/85 to-zinc-900/70",
       }}
