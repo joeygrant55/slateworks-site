@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
@@ -10,7 +11,8 @@ interface Project {
   description: string;
   image: string;
   technologies: string[];
-  url?: string;
+  href: string;
+  external?: boolean;
 }
 
 export default function WorkSection() {
@@ -24,7 +26,7 @@ export default function WorkSection() {
       description: "AI-powered home redesign app. Snap a photo of any room and see it transformed with AI-generated design concepts. Save, organize, and track your home projects.",
       image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
       technologies: ["React Native", "AI/ML", "Cloud Storage", "iOS"],
-      url: undefined,
+      href: "/work/haven",
     },
     {
       type: "AI Game",
@@ -32,7 +34,7 @@ export default function WorkSection() {
       description: "An immersive AI mystery game where every case is uniquely generated. Interrogate suspects, examine evidence, and solve procedurally-generated detective mysteries.",
       image: "https://images.unsplash.com/photo-1461685265823-f8d5d0b08b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
       technologies: ["Next.js", "Claude AI", "fal.ai", "Railway"],
-      url: "https://allsuspects.slateworks.io",
+      href: "/work/all-suspects",
     },
     {
       type: "E-commerce Website",
@@ -40,7 +42,8 @@ export default function WorkSection() {
       description: "A premium e-commerce platform for farm-fresh produce delivery with subscription management and order tracking.",
       image: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500&q=80",
       technologies: ["Next.js", "Tailwind CSS", "Stripe", "Vercel"],
-      url: "https://suncoastharvest.com/",
+      href: "https://suncoastharvest.com/",
+      external: true,
     },
     {
       type: "AI Product",
@@ -48,7 +51,7 @@ export default function WorkSection() {
       description: "Turn family vacation photos into magical, personalized storybooks. AI-generated Disney-quality illustrations create keepsake books children treasure.",
       image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
       technologies: ["Next.js", "AI Generation", "Stripe", "Lulu Print"],
-      url: "https://before-bedtime-adventures.vercel.app",
+      href: "/work/before-bedtime-adventures",
     },
   ];
 
@@ -73,27 +76,50 @@ export default function WorkSection() {
 
         <motion.div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4" variants={container} initial="hidden" animate={isInView ? "show" : "hidden"}>
           {projects.map((project) => (
-            <motion.div key={project.title} variants={item} className="project-card overflow-hidden rounded-sm border border-neutral/10 transition-all duration-300">
-              <div className="relative">
-                <img src={project.image} alt={project.title} className="h-60 w-full object-cover" />
-                <div className="project-overlay absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 transition-opacity duration-300">
-                  {project.url ? (
-                    <a href={project.url} target="_blank" rel="noreferrer" className="rounded-sm bg-secondary px-6 py-2 font-medium text-black transition-colors hover:bg-secondary-light">View Project</a>
-                  ) : (
-                    <button className="rounded-sm bg-secondary px-6 py-2 font-medium text-black transition-colors hover:bg-secondary-light">Case Study</button>
-                  )}
-                </div>
-              </div>
-              <div className="bg-neutral-darker p-6">
-                <span className="text-xs font-semibold uppercase tracking-wider text-secondary">{project.type}</span>
-                <h3 className="mt-2 mb-2 text-xl font-bold text-neutral">{project.title}</h3>
-                <p className="mb-4 text-sm text-neutral-dark">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span key={tech} className="rounded-sm border border-neutral/10 bg-black px-3 py-1 text-xs text-neutral-dark">{tech}</span>
-                  ))}
-                </div>
-              </div>
+            <motion.div key={project.title} variants={item}>
+              {project.external ? (
+                <a href={project.href} target="_blank" rel="noreferrer" className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-black">
+                  <div className="project-card overflow-hidden rounded-sm border border-neutral/10 transition-all duration-300">
+                    <div className="relative">
+                      <img src={project.image} alt={project.title} className="h-60 w-full object-cover" />
+                      <div className="project-overlay absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 transition-opacity duration-300">
+                        <span className="rounded-sm bg-secondary px-6 py-2 font-medium text-black transition-colors hover:bg-secondary-light">View Project</span>
+                      </div>
+                    </div>
+                    <div className="bg-neutral-darker p-6">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-secondary">{project.type}</span>
+                      <h3 className="mt-2 mb-2 text-xl font-bold text-neutral">{project.title}</h3>
+                      <p className="mb-4 text-sm text-neutral-dark">{project.description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech) => (
+                          <span key={tech} className="rounded-sm border border-neutral/10 bg-black px-3 py-1 text-xs text-neutral-dark">{tech}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              ) : (
+                <Link href={project.href} className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-black">
+                  <div className="project-card overflow-hidden rounded-sm border border-neutral/10 transition-all duration-300">
+                    <div className="relative">
+                      <img src={project.image} alt={project.title} className="h-60 w-full object-cover" />
+                      <div className="project-overlay absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 transition-opacity duration-300">
+                        <span className="rounded-sm bg-secondary px-6 py-2 font-medium text-black transition-colors hover:bg-secondary-light">Case Study</span>
+                      </div>
+                    </div>
+                    <div className="bg-neutral-darker p-6">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-secondary">{project.type}</span>
+                      <h3 className="mt-2 mb-2 text-xl font-bold text-neutral">{project.title}</h3>
+                      <p className="mb-4 text-sm text-neutral-dark">{project.description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech) => (
+                          <span key={tech} className="rounded-sm border border-neutral/10 bg-black px-3 py-1 text-xs text-neutral-dark">{tech}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              )}
             </motion.div>
           ))}
         </motion.div>
