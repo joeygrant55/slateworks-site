@@ -27,8 +27,7 @@ export default function HavenCaseStudyPage() {
           "Before/after comparisons",
         ],
         platform: "iOS (App Store)",
-        heroImage:
-          "https://images.unsplash.com/photo-1616594039964-3a8a96f4f2e5?auto=format&fit=crop&w=1920&q=80",
+        heroImage: "/images/haven-hero.jpg",
         heroOverlayClassName:
           "bg-gradient-to-br from-amber-950/80 via-stone-900/65 to-black/70",
       }}
