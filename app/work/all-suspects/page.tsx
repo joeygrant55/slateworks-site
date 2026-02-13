@@ -32,6 +32,9 @@ export default function AllSuspectsCaseStudyPage() {
         heroImage: "/images/allsuspects-hero.jpg",
         heroOverlayClassName:
           "bg-gradient-to-br from-black/90 via-zinc-950/85 to-zinc-900/70",
+        galleryImages: [
+          { src: "/images/allsuspects-gameplay.jpg", caption: "AI-powered suspect interrogation — each character responds dynamically using Claude's agent SDK" },
+        ],
       }}
     />
   );

@@ -19,6 +19,7 @@ interface CaseStudyData {
   price?: string;
   heroImage: string;
   heroOverlayClassName: string;
+  galleryImages?: { src: string; caption: string }[];
 }
 
 interface CaseStudyPageProps {
@@ -181,6 +182,29 @@ export default function CaseStudyPage({ data }: CaseStudyPageProps) {
           </ul>
         </motion.div>
       </section>
+
+      {data.galleryImages && data.galleryImages.length > 0 && (
+        <section className="container mx-auto px-4 pb-20 md:pb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="mb-6 text-2xl font-bold md:text-3xl">In Action</h2>
+            <div className="grid gap-6 md:grid-cols-1">
+              {data.galleryImages.map((img, i) => (
+                <div key={i} className="overflow-hidden rounded-sm border border-neutral/10">
+                  <img src={img.src} alt={img.caption} className="w-full object-cover" />
+                  {img.caption && (
+                    <p className="bg-neutral-darker px-4 py-3 text-sm text-neutral-dark">{img.caption}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </section>
+      )}
 
       <section className="border-t border-neutral/10 bg-neutral-darker/40 py-16">
         <div className="container mx-auto px-4 text-center">
