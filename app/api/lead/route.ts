@@ -107,7 +107,7 @@ export async function POST(request: Request) {
       try {
         const resend = new Resend(resendApiKey);
         await resend.emails.send({
-          from: "Slateworks Leads <onboarding@resend.dev>",
+          from: "Sammy @ Slateworks <sammy@send.slateworks.io>",
           to: "joey@slateworks.io",
           replyTo: payload.email,
           subject: `New lead from ${payload.name}`,
