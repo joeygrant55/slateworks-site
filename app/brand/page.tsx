@@ -547,11 +547,11 @@ export default function BrandPage() {
           <div className="rounded-lg border border-gray-800 bg-gray-950 p-8">
             <h4 className="mb-4 text-lg font-bold text-red-500">We never</h4>
             <ul className="space-y-3 text-gray-400">
-              <li><span className="font-medium text-white">Use em dashes.</span> Dead giveaway for AI copy.</li>
-              <li><span className="font-medium text-white">Write forced negatives.</span> No &ldquo;it&rsquo;s not X, it&rsquo;s Y.&rdquo; Just say Y.</li>
-              <li><span className="font-medium text-white">Oversell.</span> No &ldquo;Limited Spots!&rdquo; or fake urgency.</li>
-              <li><span className="font-medium text-white">Reveal internals.</span> No token costs, no specific timelines in marketing.</li>
-              <li><span className="font-medium text-white">Sound generic.</span> If any agency could say it, we rewrite it.</li>
+              <li><span className="font-medium text-white">Overpromise.</span> We set real expectations and deliver beyond them.</li>
+              <li><span className="font-medium text-white">Waste your time.</span> Every interaction is purposeful and moves your project forward.</li>
+              <li><span className="font-medium text-white">Hide behind jargon.</span> You will always understand what we are building and why.</li>
+              <li><span className="font-medium text-white">Disappear after launch.</span> Your project is supported long after it goes live.</li>
+              <li><span className="font-medium text-white">Treat projects as one-size-fits-all.</span> Every build is scoped to your specific goals.</li>
             </ul>
           </div>
         </div>
