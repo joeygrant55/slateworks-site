@@ -21,7 +21,7 @@ export default function TeamSection() {
   const founder = {
     name: "Joey Grant",
     role: "The Human",
-    bio: "The one who built the agents and points them at problems worth solving. Joey handles relationships, strategy, and making sure the work matters. The agents handle everything else.",
+    bio: "Fiesta Bowl champion turned tech founder. $4M+ raised, $1M+ ARR built. Joey designed the agents, trained them on real-world product delivery, and points them at problems worth solving.",
     image: "/attached_assets/4.jpeg",
   };
 
