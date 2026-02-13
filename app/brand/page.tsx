@@ -140,6 +140,120 @@ function LogoConcept4() {
   );
 }
 
+function LogoConcept5() {
+  // Slate + AI — fractured stone with circuit veins
+  return (
+    <div className="flex items-center gap-5">
+      <svg viewBox="0 0 56 56" className="h-16 w-16" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gold5" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#D4AF37" />
+            <stop offset="100%" stopColor="#F5D060" />
+          </linearGradient>
+          <linearGradient id="slate5" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#374151" />
+            <stop offset="50%" stopColor="#1f2937" />
+            <stop offset="100%" stopColor="#111827" />
+          </linearGradient>
+          <filter id="glow5">
+            <feGaussianBlur stdDeviation="1.5" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+        {/* Slate stone shape — irregular polygon */}
+        <polygon
+          points="4,8 28,2 52,6 54,28 50,50 30,54 6,48 2,26"
+          fill="url(#slate5)"
+          stroke="#4b5563"
+          strokeWidth="0.5"
+        />
+        {/* Natural slate striations */}
+        <line x1="8" y1="18" x2="48" y2="14" stroke="#4b5563" strokeWidth="0.3" opacity="0.6" />
+        <line x1="6" y1="30" x2="50" y2="28" stroke="#4b5563" strokeWidth="0.3" opacity="0.4" />
+        <line x1="10" y1="42" x2="46" y2="40" stroke="#4b5563" strokeWidth="0.3" opacity="0.5" />
+        {/* Gold circuit veins running through the stone */}
+        <path
+          d="M12,28 L20,28 L24,20 L32,20 L32,28 L44,28"
+          fill="none"
+          stroke="url(#gold5)"
+          strokeWidth="1.2"
+          filter="url(#glow5)"
+          opacity="0.9"
+        />
+        <path
+          d="M24,20 L24,12"
+          fill="none"
+          stroke="url(#gold5)"
+          strokeWidth="1"
+          filter="url(#glow5)"
+          opacity="0.7"
+        />
+        <path
+          d="M32,28 L32,38 L38,38"
+          fill="none"
+          stroke="url(#gold5)"
+          strokeWidth="1"
+          filter="url(#glow5)"
+          opacity="0.7"
+        />
+        {/* Circuit nodes */}
+        <circle cx="24" cy="20" r="2" fill="#D4AF37" filter="url(#glow5)" />
+        <circle cx="32" cy="28" r="2" fill="#D4AF37" filter="url(#glow5)" />
+        <circle cx="12" cy="28" r="1.5" fill="#D4AF37" opacity="0.6" />
+        <circle cx="44" cy="28" r="1.5" fill="#D4AF37" opacity="0.6" />
+        <circle cx="38" cy="38" r="1.5" fill="#D4AF37" opacity="0.6" />
+        <circle cx="24" cy="12" r="1.5" fill="#D4AF37" opacity="0.6" />
+      </svg>
+      <div>
+        <svg viewBox="0 0 340 45" className="h-11" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="slatetext" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#e5e7eb" />
+              <stop offset="100%" stopColor="#9ca3af" />
+            </linearGradient>
+          </defs>
+          <text
+            x="0"
+            y="28"
+            fontFamily="Inter, system-ui, sans-serif"
+            fontSize="30"
+            fontWeight="800"
+            letterSpacing="-0.5"
+            fill="url(#slatetext)"
+          >
+            slate
+          </text>
+          <text
+            x="107"
+            y="28"
+            fontFamily="Inter, system-ui, sans-serif"
+            fontSize="30"
+            fontWeight="800"
+            letterSpacing="-0.5"
+            fill="#D4AF37"
+          >
+            works
+          </text>
+          <text
+            x="0"
+            y="42"
+            fontFamily="Inter, system-ui, sans-serif"
+            fontSize="9"
+            fontWeight="500"
+            letterSpacing="3"
+            fill="#6b7280"
+          >
+            BUILT ON STONE. POWERED BY INTELLIGENCE.
+          </text>
+        </svg>
+      </div>
+    </div>
+  );
+}
+
 /* ─── COLOR PALETTE ─── */
 
 const colors = {
@@ -151,7 +265,7 @@ const colors = {
   accent: [
     { name: "Gold", hex: "#D4AF37", usage: "Primary accent, CTAs, highlights" },
     { name: "Light Gold", hex: "#F5D060", usage: "Hover states, gradients" },
-    { name: "Muted Gold", hex: "#D4AF37", opacity: "20%", usage: "Subtle backgrounds, badges" },
+    { name: "Muted Gold", hex: "#D4AF3733", usage: "Subtle backgrounds, badges" },
   ],
   neutral: [
     { name: "White", hex: "#F5F5F5", usage: "Primary text" },
@@ -301,6 +415,57 @@ export default function BrandPage() {
               </div>
             </div>
           </motion.div>
+
+          {/* Concept 5 — Slate + AI */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="rounded-lg border border-amber-900/30 bg-gray-950 p-10 md:col-span-2"
+          >
+            <p className="mb-1 text-xs font-medium uppercase tracking-wider text-amber-400">Concept E — Recommended</p>
+            <p className="mb-8 text-sm text-gray-400">Slate + AI. Fractured stone mark with gold circuit veins. &ldquo;slate&rdquo; in stone gray, &ldquo;works&rdquo; in gold. The material meets the machine.</p>
+            <div className="mb-6 flex items-center justify-center rounded-lg bg-black p-10">
+              <LogoConcept5 />
+            </div>
+            <div className="flex items-center justify-center rounded-lg bg-white p-10">
+              <div className="flex items-center gap-5">
+                <svg viewBox="0 0 56 56" className="h-16 w-16" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="slate5w" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#d1d5db" />
+                      <stop offset="50%" stopColor="#9ca3af" />
+                      <stop offset="100%" stopColor="#6b7280" />
+                    </linearGradient>
+                    <filter id="glow5w">
+                      <feGaussianBlur stdDeviation="1.5" result="blur" />
+                      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                    </filter>
+                  </defs>
+                  <polygon points="4,8 28,2 52,6 54,28 50,50 30,54 6,48 2,26" fill="url(#slate5w)" stroke="#9ca3af" strokeWidth="0.5" />
+                  <line x1="8" y1="18" x2="48" y2="14" stroke="#9ca3af" strokeWidth="0.3" opacity="0.6" />
+                  <line x1="6" y1="30" x2="50" y2="28" stroke="#9ca3af" strokeWidth="0.3" opacity="0.4" />
+                  <line x1="10" y1="42" x2="46" y2="40" stroke="#9ca3af" strokeWidth="0.3" opacity="0.5" />
+                  <path d="M12,28 L20,28 L24,20 L32,20 L32,28 L44,28" fill="none" stroke="#D4AF37" strokeWidth="1.2" filter="url(#glow5w)" opacity="0.9" />
+                  <path d="M24,20 L24,12" fill="none" stroke="#D4AF37" strokeWidth="1" filter="url(#glow5w)" opacity="0.7" />
+                  <path d="M32,28 L32,38 L38,38" fill="none" stroke="#D4AF37" strokeWidth="1" filter="url(#glow5w)" opacity="0.7" />
+                  <circle cx="24" cy="20" r="2" fill="#D4AF37" filter="url(#glow5w)" />
+                  <circle cx="32" cy="28" r="2" fill="#D4AF37" filter="url(#glow5w)" />
+                  <circle cx="12" cy="28" r="1.5" fill="#D4AF37" opacity="0.6" />
+                  <circle cx="44" cy="28" r="1.5" fill="#D4AF37" opacity="0.6" />
+                  <circle cx="38" cy="38" r="1.5" fill="#D4AF37" opacity="0.6" />
+                  <circle cx="24" cy="12" r="1.5" fill="#D4AF37" opacity="0.6" />
+                </svg>
+                <div>
+                  <svg viewBox="0 0 340 45" className="h-11" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fontFamily="Inter, system-ui, sans-serif" fontSize="30" fontWeight="800" letterSpacing="-0.5" fill="#374151">slate</text>
+                    <text x="107" y="28" fontFamily="Inter, system-ui, sans-serif" fontSize="30" fontWeight="800" letterSpacing="-0.5" fill="#D4AF37">works</text>
+                    <text x="0" y="42" fontFamily="Inter, system-ui, sans-serif" fontSize="9" fontWeight="500" letterSpacing="3" fill="#9ca3af">BUILT ON STONE. POWERED BY INTELLIGENCE.</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -318,14 +483,11 @@ export default function BrandPage() {
                   <div key={color.name} className="flex items-center gap-3">
                     <div
                       className="h-10 w-10 flex-shrink-0 rounded-md border border-gray-800"
-                      style={{
-                        backgroundColor: color.hex,
-                        opacity: 'opacity' in color ? 0.2 : 1,
-                      }}
+                      style={{ backgroundColor: color.hex }}
                     />
                     <div>
                       <p className="text-sm font-medium">{color.name}</p>
-                      <p className="text-xs text-gray-500">{color.hex} {'opacity' in color ? `@ ${color.opacity}` : ''}</p>
+                      <p className="text-xs text-gray-500">{color.hex}</p>
                       <p className="text-xs text-gray-600">{color.usage}</p>
                     </div>
                   </div>
