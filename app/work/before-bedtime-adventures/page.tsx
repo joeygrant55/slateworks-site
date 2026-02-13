@@ -29,8 +29,7 @@ export default function BeforeBedtimeAdventuresCaseStudyPage() {
         ],
         price: ".99 per book (premium keepsake quality)",
         projectUrl: "https://before-bedtime-adventures.vercel.app",
-        heroImage:
-          "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1920&q=80",
+        heroImage: "/images/bba-hero.jpg",
         heroOverlayClassName:
           "bg-gradient-to-br from-black/80 via-indigo-950/65 to-amber-900/45",
       }}
