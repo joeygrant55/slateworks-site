@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+
+// Allow up to 60s for scraping + AI analysis + PDF generation + email delivery
+export const maxDuration = 60;
 import { generateAndSendBrief } from "@/lib/brief-pipeline";
 
 type AssessmentPayload = {
@@ -183,10 +186,15 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, error: "Unable to deliver assessment notification." }, { status: 502 });
     }
 
-    // Fire-and-forget: generate AI brief + PDF
-    void generateAndSendBrief(payload).catch((err) =>
-      console.error("[Brief Pipeline] Error:", err)
-    );
+    // Generate AI brief + PDF, then respond
+    // Must await — Vercel kills serverless functions after response is sent
+    try {
+      await generateAndSendBrief(payload);
+      console.log("[Brief Pipeline] Complete for", payload.company);
+    } catch (err) {
+      // Don't fail the form submission if brief pipeline errors
+      console.error("[Brief Pipeline] Error:", err);
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
