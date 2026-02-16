@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { generateAndSendBrief } from "@/lib/brief-pipeline";
 
 type AssessmentPayload = {
   name: string;
@@ -181,6 +182,11 @@ export async function POST(request: Request) {
       console.error("Failed to deliver assessment email through Resend.", error);
       return NextResponse.json({ success: false, error: "Unable to deliver assessment notification." }, { status: 502 });
     }
+
+    // Fire-and-forget: generate AI brief + PDF
+    void generateAndSendBrief(payload).catch((err) =>
+      console.error("[Brief Pipeline] Error:", err)
+    );
 
     return NextResponse.json({ success: true });
   } catch (error) {

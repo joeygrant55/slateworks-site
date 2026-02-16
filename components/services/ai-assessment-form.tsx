@@ -135,7 +135,7 @@ export default function AIServiceAssessmentForm() {
       <div className="rounded-sm border border-secondary/20 bg-secondary/5 p-8 text-center">
         <h3 className="mb-3 text-2xl font-bold">Thanks for the submission</h3>
         <p className="text-neutral-dark">
-          We received your AI assessment. We&apos;ll send your AI Opportunity Brief within 48 hours.
+          Check your inbox — your AI Opportunity Brief is on its way.
         </p>
       </div>
     );
