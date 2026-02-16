@@ -96,7 +96,7 @@ export default function ServicesSection() {
                   <div><h4 className="font-semibold">Interactive Prototyping</h4><p className="text-sm text-neutral-dark">Testing and refining experiences before development</p></div>
                 </div>
               </div>
-              <a href="#contact" className="inline-block w-fit rounded-sm bg-secondary px-8 py-3 font-medium text-black transition-colors hover:bg-secondary-light">Learn more</a>
+              <a href="/services" className="inline-block w-fit rounded-sm bg-secondary px-8 py-3 font-medium text-black transition-colors hover:bg-secondary-light">Learn more</a>
             </div>
             <div className="md:w-1/2">
               <img
