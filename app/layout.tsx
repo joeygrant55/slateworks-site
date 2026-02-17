@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "An agency powered by intelligence. We design, build, and ship digital products in days, not months.",
   icons: {
     icon: "/favicon.svg",
+    apple: "/apple-touch-icon.png",
   },
   metadataBase: new URL("https://slateworks.io"),
   openGraph: {
@@ -17,11 +18,13 @@ export const metadata: Metadata = {
     url: "https://slateworks.io",
     siteName: "Slateworks",
     type: "website",
+    images: [{ url: "/logo-512.png", width: 512, height: 512, alt: "Slateworks" }],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Slateworks — AI-Powered Development Agency",
     description: "An agency powered by intelligence. We design, build, and ship digital products in days, not months.",
+    images: ["/logo-512.png"],
   },
 };
 
