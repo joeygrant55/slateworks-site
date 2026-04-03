@@ -35,13 +35,13 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
               >
-                We craft{" "}
+                We install{" "}
                 <span
                   className="gradient-text inline-block"
                 >
-                  digital experiences
+                  AI
                 </span>{" "}
-                that transform businesses
+                into your business.
               </motion.h1>
 
               <motion.p
@@ -50,7 +50,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
               >
-                Where innovation meets execution. We build cutting-edge web applications, mobile experiences, and digital products that drive growth.
+                Custom systems built around your workflows. Not off-the-shelf software. Not an agency retainer. One focused tool, built fast, improving every month.
               </motion.p>
             </div>
 
@@ -61,17 +61,19 @@ export default function HeroSection() {
               transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
             >
               <a
-                href="#work"
+                href="https://calendar.app.google/tmqjWSF6oDNjkZ5r8"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-secondary px-8 py-4 text-center font-bold text-black shadow-secondary/25 transition-all duration-300 hover:scale-105 hover:bg-secondary-light hover:shadow-xl"
               >
-                See Our Work
+                Book a Free 15-Min Fit Call
               </a>
 
               <a
-                href="#contact"
+                href="#services"
                 className="rounded-full border-2 border-secondary bg-transparent px-8 py-4 text-center font-bold text-neutral transition-all duration-300 hover:scale-105 hover:border-secondary-light hover:bg-secondary/20 hover:text-secondary-light hover:shadow-xl"
               >
-                Let&apos;s Talk
+                See How It Works
               </a>
             </motion.div>
           </motion.div>

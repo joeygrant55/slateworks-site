@@ -3,6 +3,7 @@ import CTASection from "@/components/home/cta-section";
 import HeroSection from "@/components/home/hero-section";
 import ModelSection from "@/components/home/model-section";
 import NumbersSection from "@/components/home/numbers-section";
+import PricingSection from "@/components/home/pricing-section";
 import TeamSection from "@/components/home/team-section";
 import TestimonialSection from "@/components/home/testimonial-section";
 import WorkSection from "@/components/home/work-section";
@@ -17,6 +18,7 @@ export default function Home() {
       <ModelSection />
       <NumbersSection />
       <WorkSection />
+      <PricingSection />
       <TestimonialSection />
       <TeamSection />
       <CTASection />

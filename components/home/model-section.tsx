@@ -12,25 +12,25 @@ export default function ModelSection() {
     {
       icon: <Lightbulb className="h-8 w-8" />,
       number: "01",
-      title: "You bring the idea.",
+      title: "We audit your stack.",
       description:
-        "Tell us what you need. A website, an app, a full product. We listen, we scope it, and we map out exactly what it takes to make it real.",
+        "A free 15-minute call to understand your workflows. We identify the one system that will save you the most time and tell you exactly what we'd build.",
       accent: "from-amber-500 to-orange-600",
     },
     {
       icon: <Bot className="h-8 w-8" />,
       number: "02",
-      title: "Agents build it.",
+      title: "We build it fast.",
       description:
-        "Five specialized AI agents work in parallel. Design, code, infrastructure, content, and strategy. All moving at once, all focused on your project.",
+        "One focused custom system, built in 2–3 weeks. Not a bloated platform. Not a six-month engagement. One tool that solves one real problem.",
       accent: "from-blue-500 to-cyan-600",
     },
     {
       icon: <Rocket className="h-8 w-8" />,
       number: "03",
-      title: "You ship in days.",
+      title: "We keep it improving.",
       description:
-        "What takes traditional agencies weeks takes us days. Production-quality code, tested and deployed. You go to market while your competitors are still in meetings.",
+        "Monthly support and iteration included. Your system gets smarter as your business grows. We're on it every month so you don't have to be.",
       accent: "from-emerald-500 to-teal-600",
     },
   ];
@@ -52,10 +52,10 @@ export default function ModelSection() {
         >
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">How It Works</span>
           <h2 className="mt-4 text-3xl font-bold md:text-5xl">
-            A different kind of agency.
+            From audit to live system in weeks.
           </h2>
           <p className="mt-4 text-lg text-neutral-dark">
-            We replaced the traditional agency model with something faster, sharper, and built for the way software should be made.
+            We work with local professional services businesses to find the one workflow worth automating — then build it, deploy it, and keep it running.
           </p>
         </motion.div>
 

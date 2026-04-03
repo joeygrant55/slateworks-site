@@ -26,7 +26,7 @@ export default function CTASection() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="mb-6 text-4xl font-bold md:text-6xl"
           >
-            Have something that needs building?
+            Ready to install your first agent?
           </motion.h2>
 
           <motion.p
@@ -35,7 +35,7 @@ export default function CTASection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mx-auto mb-10 max-w-xl text-lg text-neutral-dark md:text-xl"
           >
-            Tell us what you need. We will scope it, plan it, and give you a proposal within 48 hours. No commitment required.
+            Book a free 15-minute fit call. We’ll audit your current workflows and tell you exactly what we’d build — no commitment required.
           </motion.p>
 
           <motion.div
@@ -45,17 +45,13 @@ export default function CTASection() {
             className="flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <a
-              href="#contact"
+              href="https://calendar.app.google/tmqjWSF6oDNjkZ5r8"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative z-20 inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-4 text-lg font-bold text-black shadow-lg shadow-secondary/25 transition-all duration-300 hover:scale-105 hover:bg-secondary-light hover:shadow-xl hover:shadow-secondary/30"
             >
-              Let&apos;s Talk
+              Book Your Fit Call
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
-              href="/blog"
-              className="inline-flex items-center gap-2 rounded-full border border-neutral/20 px-8 py-4 text-lg font-medium text-neutral transition-all duration-300 hover:border-secondary/40 hover:text-secondary"
-            >
-              Read Our Blog
             </a>
           </motion.div>
         </motion.div>

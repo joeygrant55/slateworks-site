@@ -27,10 +27,10 @@ export default function NumbersSection() {
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
   const stats = [
-    { value: 48, suffix: "h", label: "Average time to first deliverable" },
-    { value: 5, suffix: "", label: "Specialized agents on every project" },
-    { value: 24, suffix: "/7", label: "Development cycle. No waiting." },
-    { value: 16, suffix: "+", label: "Production deploys in a single day" },
+    { value: 230, suffix: "+", label: "Submissions processed for one client in 3 months" },
+    { value: 100, suffix: "K", label: "Partnership closed off the back of the system" },
+    { value: 3, suffix: "K/mo", label: "Average ongoing client value" },
+    { value: 3, suffix: "", label: "Weeks from kickoff to live system" },
   ];
 
   return (
