@@ -6,38 +6,38 @@ import { useRef } from "react";
 
 const plans = [
   {
-    name: "Eval",
-    price: "$1,500 upfront",
-    description: "Systems Fit Review",
+    name: "Launch",
+    price: "$3,000 total",
+    description: "Two clear tranches to get your first system live",
     features: [
-      "Full audit of your current software stack",
-      "Identify your highest-leverage workflow to automate",
-      "Written recommendation with scope and timeline",
-      "Credited toward your build",
-    ],
-  },
-  {
-    name: "Build",
-    price: "$3,000 upfront",
-    description: "Eval + Build",
-    features: [
-      "Everything in Eval",
-      "Custom system built in 2–3 weeks",
-      "Deployed and live",
-      "30 days of support included",
+      "$1,500 Eval — Systems Fit Review and implementation plan",
+      "$1,500 Launch — Build, deploy, and go live",
+      "One focused internal system built in 2–3 weeks",
+      "30 days of post-launch support included",
     ],
     highlight: true,
-    badge: "Most Popular",
+    badge: "Best Place to Start",
   },
   {
-    name: "Ongoing",
-    price: "$3,000/mo",
-    description: "Support + Roadmap",
+    name: "Support",
+    price: "$1,500/mo",
+    description: "Keep it running smoothly",
     features: [
-      "Monthly iteration and improvements",
-      "Priority support",
-      "New features and automations each month",
-      "Cancel anytime",
+      "Hosting, monitoring, and maintenance",
+      "Bug fixes and ongoing support",
+      "Reliable help when something breaks",
+      "Ideal if you want stability without ongoing build work",
+    ],
+  },
+  {
+    name: "Growth",
+    price: "$3,000/mo",
+    description: "Support plus continued building",
+    features: [
+      "Everything in Support",
+      "Ongoing roadmap and priority planning",
+      "1–2 feature additions or workflow improvements per month",
+      "Best fit when you want the system improving continuously",
     ],
   },
 ];
@@ -52,15 +52,15 @@ export default function PricingSection() {
 
       <div className="container relative z-10 mx-auto px-4">
         <motion.div
-          className="mx-auto mb-16 max-w-2xl text-center"
+          className="mx-auto mb-16 max-w-3xl text-center"
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.6 }}
         >
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Pricing</span>
-          <h2 className="mt-4 text-3xl font-bold md:text-5xl">Simple, transparent pricing.</h2>
+          <h2 className="mt-4 text-3xl font-bold md:text-5xl">Simple pricing. Clear upgrade path.</h2>
           <p className="mt-4 text-lg text-neutral-dark">
-            One focused system per engagement. No retainer surprises.
+            Start with one focused system. Then choose whether you want ongoing support only, or support plus continued feature development.
           </p>
         </motion.div>
 
