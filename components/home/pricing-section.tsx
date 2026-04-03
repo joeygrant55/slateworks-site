@@ -7,8 +7,7 @@ import { useRef } from "react";
 const plans = [
   {
     name: "Eval",
-    price: "$1,500",
-    period: "one-time",
+    price: "$1,500 upfront",
     description: "Systems Fit Review",
     features: [
       "Full audit of your current software stack",
@@ -16,14 +15,10 @@ const plans = [
       "Written recommendation with scope and timeline",
       "Credited toward your build",
     ],
-    cta: "Book a Fit Call",
-    href: "https://calendar.app.google/tmqjWSF6oDNjkZ5r8",
-    highlight: false,
   },
   {
     name: "Build",
-    price: "$3,000",
-    period: "one-time",
+    price: "$3,000 upfront",
     description: "Eval + Build",
     features: [
       "Everything in Eval",
@@ -31,15 +26,12 @@ const plans = [
       "Deployed and live",
       "30 days of support included",
     ],
-    cta: "Get Started",
-    href: "https://calendar.app.google/tmqjWSF6oDNjkZ5r8",
     highlight: true,
     badge: "Most Popular",
   },
   {
     name: "Ongoing",
-    price: "$3,000",
-    period: "per month",
+    price: "$3,000/mo",
     description: "Support + Roadmap",
     features: [
       "Monthly iteration and improvements",
@@ -47,9 +39,6 @@ const plans = [
       "New features and automations each month",
       "Cancel anytime",
     ],
-    cta: "Let's Talk",
-    href: "https://calendar.app.google/tmqjWSF6oDNjkZ5r8",
-    highlight: false,
   },
 ];
 
@@ -82,10 +71,10 @@ export default function PricingSection() {
               initial={{ opacity: 0, y: 24 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className={`relative flex flex-col rounded-2xl border p-8 ${
+              className={`relative flex flex-col rounded-lg border p-8 ${
                 plan.highlight
-                  ? "border-secondary bg-secondary/5"
-                  : "border-neutral/10 bg-white/[0.02]"
+                  ? "border-secondary/40 bg-neutral-darker shadow-lg shadow-secondary/10"
+                  : "border-neutral/10 bg-neutral-darker/50"
               }`}
             >
               {plan.badge && (
@@ -98,14 +87,11 @@ export default function PricingSection() {
 
               <div className="mb-6">
                 <p className="text-sm font-semibold uppercase tracking-[0.15em] text-secondary">{plan.name}</p>
-                <div className="mt-2 flex items-baseline gap-2">
-                  <span className="text-4xl font-black text-neutral">{plan.price}</span>
-                  <span className="text-sm text-neutral-dark">{plan.period}</span>
-                </div>
+                <span className="mt-2 block text-4xl font-black text-neutral">{plan.price}</span>
                 <p className="mt-1 text-sm text-neutral-dark">{plan.description}</p>
               </div>
 
-              <ul className="mb-8 flex-1 space-y-3">
+              <ul className="flex-1 space-y-3">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-secondary" />
@@ -113,19 +99,6 @@ export default function PricingSection() {
                   </li>
                 ))}
               </ul>
-
-              <a
-                href={plan.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`rounded-full px-6 py-3 text-center text-sm font-bold transition-all duration-300 hover:scale-105 ${
-                  plan.highlight
-                    ? "bg-secondary text-black hover:bg-secondary-light"
-                    : "border border-secondary/40 text-secondary hover:border-secondary hover:bg-secondary/10"
-                }`}
-              >
-                {plan.cta}
-              </a>
             </motion.div>
           ))}
         </div>

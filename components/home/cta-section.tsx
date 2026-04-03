@@ -35,7 +35,7 @@ export default function CTASection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mx-auto mb-10 max-w-xl text-lg text-neutral-dark md:text-xl"
           >
-            Book a free 15-minute fit call. We’ll audit your current workflows and tell you exactly what we’d build — no commitment required.
+            Book a free 15-minute fit call. We&apos;ll audit your current workflows and tell you exactly what we&apos;d build - no commitment required.
           </motion.p>
 
           <motion.div
@@ -52,6 +52,13 @@ export default function CTASection() {
             >
               Book Your Fit Call
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </a>
+
+            <a
+              href="#pricing"
+              className="inline-flex items-center gap-2 rounded-full border border-neutral/20 px-8 py-4 text-lg font-medium text-neutral transition-all duration-300 hover:border-secondary/40 hover:text-secondary"
+            >
+              See Pricing
             </a>
           </motion.div>
         </motion.div>

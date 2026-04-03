@@ -3,7 +3,17 @@
 import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-function AnimatedNumber({ value, suffix = "", isInView }: { value: number; suffix?: string; isInView: boolean }) {
+function AnimatedNumber({
+  value,
+  prefix = "",
+  suffix = "",
+  isInView,
+}: {
+  value: number;
+  prefix?: string;
+  suffix?: string;
+  isInView: boolean;
+}) {
   const count = useMotionValue(0);
   const rounded = useTransform(count, (v) => Math.round(v));
 
@@ -16,21 +26,30 @@ function AnimatedNumber({ value, suffix = "", isInView }: { value: number; suffi
 
   return (
     <span className="flex items-baseline">
+      {prefix && <span>{prefix}</span>}
       <motion.span>{rounded}</motion.span>
       {suffix && <span>{suffix}</span>}
     </span>
   );
 }
 
+interface Stat {
+  label: string;
+  value?: number;
+  prefix?: string;
+  suffix?: string;
+  display?: string;
+}
+
 export default function NumbersSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
-  const stats = [
+  const stats: Stat[] = [
     { value: 230, suffix: "+", label: "Submissions processed for one client in 3 months" },
-    { value: 100, suffix: "K", label: "Partnership closed off the back of the system" },
-    { value: 3, suffix: "K/mo", label: "Average ongoing client value" },
-    { value: 3, suffix: "", label: "Weeks from kickoff to live system" },
+    { value: 100, prefix: "$", suffix: "K", label: "Partnership closed off the back of the system" },
+    { display: "2–3 weeks", label: "Typical time from kickoff to live system" },
+    { value: 3, prefix: "$", suffix: "K/mo", label: "Average ongoing client value" },
   ];
 
   return (
@@ -50,7 +69,16 @@ export default function NumbersSection() {
               className="text-center"
             >
               <div className="mb-2 text-4xl font-black text-secondary md:text-5xl lg:text-6xl">
-                <AnimatedNumber value={stat.value} suffix={stat.suffix} isInView={isInView} />
+                {stat.display ? (
+                  <span>{stat.display}</span>
+                ) : (
+                  <AnimatedNumber
+                    value={stat.value ?? 0}
+                    prefix={stat.prefix}
+                    suffix={stat.suffix}
+                    isInView={isInView}
+                  />
+                )}
               </div>
               <p className="text-sm text-neutral-dark">{stat.label}</p>
             </motion.div>

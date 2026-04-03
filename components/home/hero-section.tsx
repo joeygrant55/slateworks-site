@@ -73,7 +73,7 @@ export default function HeroSection() {
                 href="#services"
                 className="rounded-full border-2 border-secondary bg-transparent px-8 py-4 text-center font-bold text-neutral transition-all duration-300 hover:scale-105 hover:border-secondary-light hover:bg-secondary/20 hover:text-secondary-light hover:shadow-xl"
               >
-                See How It Works
+                See how it works
               </a>
             </motion.div>
           </motion.div>
