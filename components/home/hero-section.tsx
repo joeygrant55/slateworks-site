@@ -50,7 +50,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
               >
-                Custom systems built around your workflows. Not off-the-shelf software. Not an agency retainer. One focused tool, built fast, improving every month.
+                Websites, automations, and custom software for growing businesses. We build the right thing for where you are now, then help it keep getting better.
               </motion.p>
             </div>
 

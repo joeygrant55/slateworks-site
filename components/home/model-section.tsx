@@ -12,9 +12,9 @@ export default function ModelSection() {
     {
       icon: <Lightbulb className="h-8 w-8" />,
       number: "01",
-      title: "We audit your stack.",
+      title: "We figure out what you need.",
       description:
-        "A free 15-minute call to understand your workflows. We identify the one system that will save you the most time and tell you exactly what we'd build.",
+        "A quick call to understand your business, where things are getting stuck, and whether you need a website, an internal tool, an automation, or something custom.",
       accent: "from-amber-500 to-orange-600",
     },
     {
@@ -22,15 +22,15 @@ export default function ModelSection() {
       number: "02",
       title: "We build it fast.",
       description:
-        "One focused custom system, built in 2–3 weeks. Not a bloated platform. Not a six-month engagement. One tool that solves one real problem.",
+        "One focused project, built in 2–3 weeks. Sometimes that is a better website. Sometimes it is a custom system behind the scenes. Either way, it is built to solve a real problem.",
       accent: "from-blue-500 to-cyan-600",
     },
     {
       icon: <Rocket className="h-8 w-8" />,
       number: "03",
-      title: "We keep it improving.",
+      title: "We keep it moving.",
       description:
-        "Monthly support and iteration included. Your system gets smarter as your business grows. We're on it every month so you don't have to be.",
+        "After launch, we can either keep it stable with support or keep improving it with new features and workflow upgrades each month.",
       accent: "from-emerald-500 to-teal-600",
     },
   ];
@@ -52,10 +52,10 @@ export default function ModelSection() {
         >
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">How It Works</span>
           <h2 className="mt-4 text-3xl font-bold md:text-5xl">
-            From audit to live system in weeks.
+            From idea to live solution in weeks.
           </h2>
           <p className="mt-4 text-lg text-neutral-dark">
-            We work with local professional services businesses to find the one workflow worth automating — then build it, deploy it, and keep it running.
+            Whether you need a stronger website, a better internal workflow, or a custom tool your business has been missing, we help you scope it, build it, and keep it useful.
           </p>
         </motion.div>
 
