@@ -20,10 +20,10 @@ export default function ContactSection() {
               transition={{ duration: 0.6 }}
             >
               <span className="text-sm font-semibold tracking-wider text-secondary uppercase">Get In Touch</span>
-              <h2 className="mt-3 mb-6 text-3xl font-bold md:text-4xl">Let&apos;s bring your vision to life</h2>
+              <h2 className="mt-3 mb-6 text-3xl font-bold md:text-4xl">Ready to find your leak?</h2>
               <p className="mb-8 text-neutral-dark">
-                Ready to start your project? Get a personalized proposal and let&apos;s discuss how we can help bring your vision to life.
-                We&apos;re excited to hear from you.
+                Book a free 15-minute fit call. We&apos;ll map where your business is losing money and tell you exactly what software would capture it.
+                No commitment required.
               </p>
 
               <div className="mb-8 space-y-6">

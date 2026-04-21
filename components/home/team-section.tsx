@@ -95,10 +95,10 @@ export default function TeamSection() {
         >
           <span className="text-sm font-semibold uppercase tracking-wider text-secondary">Meet the Team</span>
           <h2 className="mt-3 mb-4 text-3xl font-bold text-neutral md:text-4xl">
-            An agency powered by intelligence — artificial and otherwise.
+            A team built to find profit and ship fast.
           </h2>
           <p className="text-lg text-neutral-dark">
-            No overhead. No delays. Just agents that ship.
+            No overhead. No delays. Just results.
           </p>
         </motion.div>
 
@@ -170,7 +170,7 @@ export default function TeamSection() {
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          Every agent runs 24/7. No timezones. No standups. No excuses. Just results.
+          We work fast, communicate clearly, and ship in weeks — not months.
         </motion.p>
 
         {/* Divider */}

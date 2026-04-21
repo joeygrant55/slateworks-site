@@ -13,7 +13,7 @@ export default function Footer() {
               <Logo size="sm" variant="light" />
             </Link>
             <p className="mb-6 text-sm text-neutral-dark">
-              AI-powered development agency. We design, build, and ship digital products at a pace traditional agencies can only talk about.
+              We find profit hiding in broken processes, then build software to capture it. Based in St. Petersburg, FL.
             </p>
           </div>
 
@@ -23,7 +23,7 @@ export default function Footer() {
               <li><a href="/#services" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Websites</a></li>
               <li><a href="/#services" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Web Applications</a></li>
               <li><a href="/#services" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Mobile Apps</a></li>
-              <li><a href="/#services" className="text-sm text-neutral-dark transition-colors hover:text-secondary">AI Products</a></li>
+              <li><a href="/#services" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Integrations & Automations</a></li>
             </ul>
           </div>
 

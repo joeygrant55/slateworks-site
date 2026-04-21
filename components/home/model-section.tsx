@@ -14,7 +14,7 @@ export default function ModelSection() {
       number: "01",
       title: "We figure out what would help most.",
       description:
-        "A quick call to understand your business, where things feel clunky, and whether you need a better website, a simple web app, stronger integrations, or automation.",
+        "A quick call to find where your business is losing money — whether it's a broken process, a manual workflow, or a system that never got built.",
       accent: "from-amber-500 to-orange-600",
     },
     {
