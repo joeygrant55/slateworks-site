@@ -45,10 +45,10 @@ export default function CTASection() {
             className="flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <a
-              href="https://calendar.app.google/tmqjWSF6oDNjkZ5r8"
+              href="https://calendar.app.google/XWTydYq9gFKd8fv3A"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative z-20 inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-4 text-lg font-bold text-black shadow-lg shadow-secondary/25 transition-all duration-300 hover:scale-105 hover:bg-secondary-light hover:shadow-xl hover:shadow-secondary/30"
+              className="group relative z-20 inline-flex items-center gap-2 rounded-full bg-amber-400 px-8 py-4 text-lg font-bold text-black shadow-lg shadow-amber-400/25 transition-all duration-300 hover:scale-105 hover:bg-amber-300 hover:shadow-xl hover:shadow-amber-400/30"
             >
               Book Your Fit Call
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

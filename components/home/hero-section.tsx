@@ -55,10 +55,10 @@ export default function HeroSection() {
               transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
             >
               <a
-                href="https://calendar.app.google/tmqjWSF6oDNjkZ5r8"
+                href="https://calendar.app.google/XWTydYq9gFKd8fv3A"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-secondary px-8 py-4 text-center font-bold text-black shadow-secondary/25 transition-all duration-300 hover:scale-105 hover:bg-secondary-light hover:shadow-xl"
+                className="rounded-full bg-amber-400 px-8 py-4 text-center font-bold text-black shadow-amber-400/25 transition-all duration-300 hover:scale-105 hover:bg-amber-300 hover:shadow-xl"
               >
                 Book a Free 15-Min Fit Call
               </a>
