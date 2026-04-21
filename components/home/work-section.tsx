@@ -28,22 +28,7 @@ export default function WorkSection() {
       technologies: ["Next.js", "Claude AI", "Railway", "Vercel"],
       href: "/work/profluence",
     },
-    {
-      type: "Mobile App",
-      title: "Haven",
-      description: "AI-powered home redesign app. Snap a photo of any room and see it transformed with AI-generated design concepts. Save, organize, and track your home projects.",
-      image: "/images/haven-hero.jpg",
-      technologies: ["React Native", "AI/ML", "Cloud Storage", "iOS"],
-      href: "/work/haven",
-    },
-    {
-      type: "AI Game",
-      title: "All Suspects",
-      description: "An immersive AI mystery game where every case is uniquely generated. Interrogate suspects, examine evidence, and solve procedurally-generated detective mysteries.",
-      image: "/images/allsuspects-hero.jpg",
-      technologies: ["Next.js", "Claude AI", "fal.ai", "Railway"],
-      href: "/work/all-suspects",
-    },
+
     {
       type: "E-commerce Website",
       title: "Suncoast Harvest",
@@ -71,8 +56,8 @@ export default function WorkSection() {
       <div className="container mx-auto px-4">
         <motion.div className="mx-auto mb-16 max-w-3xl text-center" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ duration: 0.6 }}>
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Our Work</span>
-          <h2 className="mt-3 mb-6 text-3xl font-bold text-neutral md:text-5xl">Built by agents. Loved by users.</h2>
-          <p className="text-lg text-neutral-dark">Real products, live in production. Every one designed, built, and shipped by our agent team.</p>
+          <h2 className="mt-3 mb-6 text-3xl font-bold text-neutral md:text-5xl">What we've fixed.</h2>
+          <p className="text-lg text-neutral-dark">Real business problems turned into profit. Every project starts with a broken process and ends with working software.</p>
         </motion.div>
 
         <motion.div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4" variants={container} initial="hidden" animate={isInView ? "show" : "hidden"}>

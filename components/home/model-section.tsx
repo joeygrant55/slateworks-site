@@ -55,7 +55,7 @@ export default function ModelSection() {
             Simple work, scoped clearly, shipped fast.
           </h2>
           <p className="mt-4 text-lg text-neutral-dark">
-            Whether you need a stronger website, a lightweight app, better software handoffs, or automation behind the scenes, we help you figure it out, build it, and keep it running.
+            Because we build with AI agents, you get senior-level engineering at startup speed — without the agency overhead. Whether you need a stronger website, a lightweight app, better software handoffs, or automation behind the scenes, we help you figure it out, build it, and keep it running.
           </p>
         </motion.div>
 

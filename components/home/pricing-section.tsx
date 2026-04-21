@@ -102,6 +102,15 @@ export default function PricingSection() {
             </motion.div>
           ))}
         </div>
+
+        <motion.p
+          className="mx-auto mt-12 max-w-2xl text-center text-sm text-neutral-dark"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          If our fit call doesn't surface a clear path to ROI, we'll tell you honestly — no pitch, no pressure.
+        </motion.p>
       </div>
     </section>
   );
