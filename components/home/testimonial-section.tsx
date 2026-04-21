@@ -49,11 +49,11 @@ export default function TestimonialSection() {
             {/* Author */}
             <div className="flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-secondary to-amber-600 text-lg font-bold text-black">
-                JR
+                AP
               </div>
               <div>
-                <p className="font-bold text-neutral">Jordan Rudd</p>
-                <p className="text-sm text-neutral-dark">Founder, Sparked Digital</p>
+                <p className="font-bold text-neutral">Andrew Petcash</p>
+                <p className="text-sm text-neutral-dark">Founder/CEO, Profluence</p>
               </div>
             </div>
 

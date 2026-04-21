@@ -53,14 +53,7 @@ export default function WorkSection() {
       href: "https://suncoastharvest.com/",
       external: true,
     },
-    {
-      type: "AI Product",
-      title: "Before Bedtime Adventures",
-      description: "Turn family vacation photos into magical, personalized storybooks. AI-generated Disney-quality illustrations create keepsake books children treasure.",
-      image: "/images/bba-hero.jpg",
-      technologies: ["Next.js", "AI Generation", "Stripe", "Lulu Print"],
-      href: "/work/before-bedtime-adventures",
-    },
+
   ];
 
   const container = {
