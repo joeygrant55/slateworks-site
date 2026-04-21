@@ -12,25 +12,25 @@ export default function ModelSection() {
     {
       icon: <Lightbulb className="h-8 w-8" />,
       number: "01",
-      title: "We figure out what you need.",
+      title: "We figure out what would help most.",
       description:
-        "A quick call to understand your business, where things are getting stuck, and whether you need a website, an internal tool, an automation, or something custom.",
+        "A quick call to understand your business, where things feel clunky, and whether you need a better website, a simple web app, stronger integrations, or automation."},{
       accent: "from-amber-500 to-orange-600",
     },
     {
       icon: <Bot className="h-8 w-8" />,
       number: "02",
-      title: "We build it fast.",
+      title: "We build the right thing fast.",
       description:
-        "One focused project, built in 2–3 weeks. Sometimes that is a better website. Sometimes it is a custom system behind the scenes. Either way, it is built to solve a real problem.",
+        "One focused project, usually live in 2 to 3 weeks. Sometimes that is a better website. Sometimes it is a simple internal tool or automation. Either way, it is built to solve a real problem."
       accent: "from-blue-500 to-cyan-600",
     },
     {
       icon: <Rocket className="h-8 w-8" />,
       number: "03",
-      title: "We keep it moving.",
+      title: "We keep it useful.",
       description:
-        "After launch, we can either keep it stable with support or keep improving it with new features and workflow upgrades each month.",
+        "After launch, we can either keep it stable with support or continue improving it with updates, new features, and workflow upgrades each month."
       accent: "from-emerald-500 to-teal-600",
     },
   ];
@@ -52,10 +52,10 @@ export default function ModelSection() {
         >
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">How It Works</span>
           <h2 className="mt-4 text-3xl font-bold md:text-5xl">
-            From idea to live solution in weeks.
+            Simple work, scoped clearly, shipped fast.
           </h2>
           <p className="mt-4 text-lg text-neutral-dark">
-            Whether you need a stronger website, a better internal workflow, or a custom tool your business has been missing, we help you scope it, build it, and keep it useful.
+            Whether you need a stronger website, a lightweight app, better software handoffs, or automation behind the scenes, we help you figure it out, build it, and keep it running.
           </p>
         </motion.div>
 

@@ -35,13 +35,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
               >
-                We install{" "}
-                <span
-                  className="gradient-text inline-block"
-                >
-                  AI
-                </span>{" "}
-                into your business.
+                Practical software for St. Pete businesses.
               </motion.h1>
 
               <motion.p
@@ -50,7 +44,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
               >
-                Websites, automations, and custom software for growing businesses. We build the right thing for where you are now, then help it keep getting better.
+                We help local businesses with better websites, simple web apps, cleaner software integrations, and automation that removes repetitive admin work.
               </motion.p>
             </div>
 
