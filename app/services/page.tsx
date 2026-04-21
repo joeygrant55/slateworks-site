@@ -106,15 +106,15 @@ export default function ServicesPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden px-4 pb-20 pt-32 md:pt-40">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.08),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.08),transparent_70%)]" />
         <div className="relative mx-auto max-w-5xl text-center">
-          <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-green-400">
+          <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
             Services
           </span>
           <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
             Your business is leaking profit.
             <br />
-            <span className="text-green-400">Let's find it.</span>
+            <span className="text-amber-400">Let's find it.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60 md:text-xl">
             Every business has broken processes that waste time and bleed revenue. We evaluate the leak, build software to capture it, and turn waste into profit.
@@ -122,7 +122,7 @@ export default function ServicesPage() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="#pricing"
-              className="inline-flex items-center gap-2 rounded-lg bg-green-400 px-8 py-4 font-semibold text-black transition-all hover:bg-green-300"
+              className="inline-flex items-center gap-2 rounded-lg bg-amber-400 px-8 py-4 font-semibold text-black transition-all hover:bg-amber-300"
             >
               See Pricing
               <ArrowRight className="h-4 w-4" />
@@ -141,7 +141,7 @@ export default function ServicesPage() {
       <section className="px-4 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-green-400">How It Works</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">How It Works</span>
             <h2 className="mt-4 text-3xl font-bold md:text-5xl">From broken process to profit center</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
               We don't just build software. We find where your business is losing money, then we build the fix.
@@ -152,12 +152,12 @@ export default function ServicesPage() {
             {process.map((item) => (
               <div
                 key={item.step}
-                className="group relative rounded-xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-green-400/30 hover:bg-white/[0.04]"
+                className="group relative rounded-xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-amber-400/30 hover:bg-white/[0.04]"
               >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg border border-green-400/20 bg-green-400/10">
-                  <item.icon className="h-5 w-5 text-green-400" />
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg border border-amber-400/20 bg-amber-400/10">
+                  <item.icon className="h-5 w-5 text-amber-400" />
                 </div>
-                <p className="mb-2 text-xs font-bold uppercase tracking-wider text-green-400">{item.step}</p>
+                <p className="mb-2 text-xs font-bold uppercase tracking-wider text-amber-400">{item.step}</p>
                 <h3 className="mb-3 text-xl font-semibold">{item.title}</h3>
                 <p className="text-sm leading-relaxed text-white/60">{item.description}</p>
               </div>
@@ -170,7 +170,7 @@ export default function ServicesPage() {
       <section className="px-4 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-green-400">What We Build</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">What We Build</span>
             <h2 className="mt-4 text-3xl font-bold md:text-5xl">Software that captures profit</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
               We don't do everything. We do what moves the needle.
@@ -181,10 +181,10 @@ export default function ServicesPage() {
             {capabilities.map((cap) => (
               <div
                 key={cap.title}
-                className="flex gap-6 rounded-xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-green-400/30 hover:bg-white/[0.04]"
+                className="flex gap-6 rounded-xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-amber-400/30 hover:bg-white/[0.04]"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-green-400/20 bg-green-400/10">
-                  <cap.icon className="h-5 w-5 text-green-400" />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-amber-400/20 bg-amber-400/10">
+                  <cap.icon className="h-5 w-5 text-amber-400" />
                 </div>
                 <div>
                   <h3 className="mb-2 text-lg font-semibold">{cap.title}</h3>
@@ -200,7 +200,7 @@ export default function ServicesPage() {
       <section id="pricing" className="px-4 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-green-400">Pricing</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">Pricing</span>
             <h2 className="mt-4 text-3xl font-bold md:text-5xl">Simple. Transparent. No surprises.</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
               Start with one focused system. Then choose how you want to maintain and grow it.
@@ -213,20 +213,20 @@ export default function ServicesPage() {
                 key={plan.name}
                 className={`relative flex flex-col rounded-xl border p-8 ${
                   plan.highlight
-                    ? "border-green-400/40 bg-white/[0.04] shadow-lg shadow-green-400/10"
+                    ? "border-amber-400/40 bg-white/[0.04] shadow-lg shadow-amber-400/10"
                     : "border-white/10 bg-white/[0.02]"
                 }`}
               >
                 {plan.badge && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="rounded-full bg-green-400 px-4 py-1 text-xs font-bold text-black">
+                    <span className="rounded-full bg-amber-400 px-4 py-1 text-xs font-bold text-black">
                       {plan.badge}
                     </span>
                   </div>
                 )}
 
                 <div className="mb-6">
-                  <p className="text-sm font-semibold uppercase tracking-[0.15em] text-green-400">{plan.name}</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.15em] text-amber-400">{plan.name}</p>
                   <div className="mt-2 flex items-baseline gap-1">
                     <span className="text-4xl font-black">{plan.price}</span>
                     {plan.period && <span className="text-lg text-white/60">{plan.period}</span>}
@@ -237,7 +237,7 @@ export default function ServicesPage() {
                 <ul className="flex-1 space-y-3">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-400" />
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
                       <span className="text-sm text-white/70">{feature}</span>
                     </li>
                   ))}
@@ -253,28 +253,28 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-4xl rounded-2xl border border-white/10 bg-white/[0.02] p-8 md:p-12">
           <div className="flex flex-col items-center gap-8 md:flex-row">
             <div className="flex-1">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-green-400">Proof</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">Proof</span>
               <h2 className="mt-4 text-2xl font-bold md:text-3xl">Profluence: From broken intake to profit center</h2>
               <p className="mt-4 text-white/60">
                 Profluence's team was manually reviewing every founder deck by email. We evaluated the process, built a custom intake system, and turned it into 250+ qualified leads and a new revenue stream.
               </p>
               <div className="mt-6 flex flex-wrap gap-6">
                 <div>
-                  <p className="text-3xl font-bold text-green-400">250+</p>
+                  <p className="text-3xl font-bold text-amber-400">250+</p>
                   <p className="text-sm text-white/60">Qualified leads</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-green-400">$100K</p>
+                  <p className="text-3xl font-bold text-amber-400">$100K</p>
                   <p className="text-sm text-white/60">Partnership closed</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-green-400">3 weeks</p>
+                  <p className="text-3xl font-bold text-amber-400">3 weeks</p>
                   <p className="text-sm text-white/60">From kickoff to live</p>
                 </div>
               </div>
               <Link
                 href="/work/profluence"
-                className="mt-8 inline-flex items-center gap-2 font-semibold text-green-400 transition-colors hover:text-green-300"
+                className="mt-8 inline-flex items-center gap-2 font-semibold text-amber-400 transition-colors hover:text-amber-300"
               >
                 Read the full case study
                 <ArrowRight className="h-4 w-4" />
@@ -295,7 +295,7 @@ export default function ServicesPage() {
             href="https://cal.com/slateworks/discovery"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-green-400 px-8 py-4 font-semibold text-black transition-all hover:bg-green-300"
+            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-amber-400 px-8 py-4 font-semibold text-black transition-all hover:bg-amber-300"
           >
             Book a Free 15-Min Fit Call
             <ArrowRight className="h-4 w-4" />
