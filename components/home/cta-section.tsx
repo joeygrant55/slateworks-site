@@ -26,7 +26,7 @@ export default function CTASection() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="mb-6 text-4xl font-bold md:text-6xl"
           >
-            Ready to install your first agent?
+            Ready to find your leak?
           </motion.h2>
 
           <motion.p
@@ -35,7 +35,7 @@ export default function CTASection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mx-auto mb-10 max-w-xl text-lg text-neutral-dark md:text-xl"
           >
-            Book a free 15-minute fit call. We&apos;ll audit your current workflows and tell you exactly what we&apos;d build - no commitment required.
+            Book a free 15-minute fit call. We&apos;ll map where your business is losing money and tell you exactly what we&apos;d build to capture it.
           </motion.p>
 
           <motion.div
