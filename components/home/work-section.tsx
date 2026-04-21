@@ -68,7 +68,7 @@ export default function WorkSection() {
           <p className="text-lg text-neutral-dark">Real business problems turned into profit. Every project starts with a broken process and ends with working software.</p>
         </motion.div>
 
-        <motion.div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4" variants={container} initial="hidden" animate={isInView ? "show" : "hidden"}>
+        <motion.div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3" variants={container} initial="hidden" animate={isInView ? "show" : "hidden"}>
           {projects.map((project) => (
             <motion.div key={project.title} variants={item}>
               {project.external ? (
