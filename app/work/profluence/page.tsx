@@ -20,7 +20,7 @@ export default function ProuenceCaseStudyPage() {
         challenge:
           "As inbound submissions grew, the process was getting harder to manage by hand. Reviewing each entry manually was slow, inconsistent, and pulled time away from higher-value conversations. A basic form and spreadsheet setup was no longer enough.",
         solution:
-          "We built a simple web application around that workflow. Submissions come in through a cleaner intake flow, the system helps organize and analyze them, and the team can focus on the strongest opportunities instead of sorting through everything manually."
+          "We built a simple web application around that workflow. Submissions come in through a cleaner intake flow, the system helps organize and analyze them, and the team can focus on the strongest opportunities instead of sorting through everything manually.",
         techStack: [
           "Next.js",
           "Claude AI (Anthropic)",

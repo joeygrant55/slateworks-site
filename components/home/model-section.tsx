@@ -14,7 +14,7 @@ export default function ModelSection() {
       number: "01",
       title: "We figure out what would help most.",
       description:
-        "A quick call to understand your business, where things feel clunky, and whether you need a better website, a simple web app, stronger integrations, or automation."},{
+        "A quick call to understand your business, where things feel clunky, and whether you need a better website, a simple web app, stronger integrations, or automation.",
       accent: "from-amber-500 to-orange-600",
     },
     {
@@ -22,7 +22,7 @@ export default function ModelSection() {
       number: "02",
       title: "We build the right thing fast.",
       description:
-        "One focused project, usually live in 2 to 3 weeks. Sometimes that is a better website. Sometimes it is a simple internal tool or automation. Either way, it is built to solve a real problem."
+        "One focused project, usually live in 2 to 3 weeks. Sometimes that is a better website. Sometimes it is a simple internal tool or automation. Either way, it is built to solve a real problem.",
       accent: "from-blue-500 to-cyan-600",
     },
     {
@@ -30,7 +30,7 @@ export default function ModelSection() {
       number: "03",
       title: "We keep it useful.",
       description:
-        "After launch, we can either keep it stable with support or continue improving it with updates, new features, and workflow upgrades each month."
+        "After launch, we can either keep it stable with support or continue improving it with updates, new features, and workflow upgrades each month.",
       accent: "from-emerald-500 to-teal-600",
     },
   ];
