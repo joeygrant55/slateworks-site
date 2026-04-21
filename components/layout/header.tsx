@@ -28,10 +28,10 @@ export default function Header() {
   const isHomePage = pathname === "/";
   const navItems = [
     { label: "Services", href: isHomePage ? "#services" : "/services" },
-    { label: "Work", href: isHomePage ? "#work" : "/#work" },
-    { label: "About", href: isHomePage ? "#about" : "/#about" },
+    { label: "Work", href: isHomePage ? "#work" : "/work" },
+    { label: "About", href: isHomePage ? "#about" : "/about" },
     { label: "Blog", href: "/blog" },
-    { label: "Contact", href: isHomePage ? "#contact" : "/#contact" },
+    { label: "Contact", href: isHomePage ? "#contact" : "/contact" },
   ];
 
   return (
