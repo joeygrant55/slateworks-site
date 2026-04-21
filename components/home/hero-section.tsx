@@ -35,7 +35,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
               >
-                Practical software for St. Pete businesses.
+                There's profit hiding in your business.
               </motion.h1>
 
               <motion.p
@@ -44,7 +44,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
               >
-                We help local businesses with better websites, simple web apps, cleaner software integrations, and automation that removes repetitive admin work.
+                In the manual work, the scattered spreadsheets, the processes that eat time but never get fixed. We find the biggest leak, build software to capture it, and turn waste into revenue. No massive budget. No six-month timeline. Just results.
               </motion.p>
             </div>
 

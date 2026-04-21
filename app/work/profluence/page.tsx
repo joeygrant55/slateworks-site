@@ -3,24 +3,24 @@ import CaseStudyPage from "@/components/work/case-study-page";
 export const metadata = {
   title: "Profluence — Slateworks",
   description:
-    "How a lightweight web application helped a local business manage 230+ submissions and support a $100K partnership in under 3 months.",
+    "How Slateworks found a broken process eating Profluence's margins, replaced it with custom software, and turned it into a profit center.",
 };
 
 export default function ProuenceCaseStudyPage() {
   return (
     <CaseStudyPage
       data={{
-        category: "Lightweight Web Application",
+        category: "Process → Profit",
         title: "Profluence",
         subtitle:
-          "A lightweight web application that helped a local business manage 230+ submissions in under 3 months and support a $100K partnership.",
+          "How a broken intake process became a profit center — 250+ qualified leads and a new revenue stream in under 3 months.",
         description:
-          "Profluence needed a better way to handle growing inbound demand without turning every submission into a manual review project. We built a lightweight web application that made intake, review, and follow-up much easier for the team running it.",
+          "Profluence's founders were drowning in inbound. Decks and applications arrived by email, scattered across inboxes and spreadsheets. Someone had to manually review, grade, and organize every submission before the right founders ever got a conversation. The process was eating their margins and capping their growth.",
         timeline: "3 weeks to launch, iterating monthly",
         challenge:
-          "As inbound submissions grew, the process was getting harder to manage by hand. Reviewing each entry manually was slow, inconsistent, and pulled time away from higher-value conversations. A basic form and spreadsheet setup was no longer enough.",
+          "Founders emailed their decks directly. A team member had to open each one, evaluate it against their criteria, grade it, then organize it within their process — manually. As volume grew, the bottleneck got worse. Strong founders slipped through the cracks. The team spent more time sorting than actually investing. What started as a manageable workflow had become a full-time job that didn't scale.",
         solution:
-          "We built a simple web application around that workflow. Submissions come in through a cleaner intake flow, the system helps organize and analyze them, and the team can focus on the strongest opportunities instead of sorting through everything manually.",
+          "Slateworks evaluated the process end-to-end, then built a custom web application that replaced the manual workflow entirely. Founders now submit through a structured intake flow. The system organizes, scores, and surfaces the strongest opportunities automatically. The team focuses on conversations, not spreadsheets. The same software also opened a new revenue channel — service partners now access qualified founder data that Profluence was previously throwing away.",
         techStack: [
           "Next.js",
           "Claude AI (Anthropic)",
@@ -29,10 +29,11 @@ export default function ProuenceCaseStudyPage() {
           "Tailwind CSS",
         ],
         keyFeatures: [
-          "Custom intake flow for inbound submissions",
-          "Simple internal review and ranking system",
-          "Cleaner handoff from submission to follow-up",
-          "230+ submissions processed in 3 months",
+          "Custom intake flow replaced email chaos",
+          "Automated scoring and organization",
+          "Team focuses on deals, not data entry",
+          "250+ qualified leads in 3 months",
+          "New revenue stream from partner access to qualified data",
           "$100K partnership supported by better inbound handling",
         ],
         projectUrl: "https://profluence-landing.vercel.app",
