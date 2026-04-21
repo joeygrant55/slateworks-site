@@ -30,6 +30,14 @@ export default function WorkSection() {
     },
 
     {
+      type: "Landing Page",
+      title: "SPARQ Certified",
+      description: "Facility partnership landing page with revenue calculator. Helped SPARQ sign 100+ facilities to a waitlist in 30 days.",
+      image: "/images/sparqcertified-screenshot.png",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
+      href: "/work/sparq-certified",
+    },
+    {
       type: "E-commerce Website",
       title: "Suncoast Harvest",
       description: "A premium e-commerce platform for farm-fresh produce delivery with subscription management and order tracking.",
