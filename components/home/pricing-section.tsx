@@ -1,44 +1,44 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { useRef } from "react";
 
 const plans = [
   {
     name: "Launch",
-    price: "$3,000 total",
-    description: "Two clear tranches to get your first system live",
+    subtitle: "One focused system, live in 2–3 weeks",
     features: [
-      "$1,500 Eval — Systems Fit Review and implementation plan",
-      "$1,500 Launch — Build, deploy, and go live",
-      "One focused internal system built in 2–3 weeks",
+      "Systems Fit Review and implementation plan",
+      "Build, deploy, and go live",
+      "One focused internal system",
       "30 days of post-launch support included",
     ],
     highlight: true,
     badge: "Best Place to Start",
+    cta: "Book a fit call",
   },
   {
     name: "Support",
-    price: "$1,500/mo",
-    description: "Keep it running smoothly",
+    subtitle: "Keep it running smoothly",
     features: [
       "Hosting, monitoring, and maintenance",
       "Bug fixes and ongoing support",
       "Reliable help when something breaks",
       "Ideal if you want stability without ongoing build work",
     ],
+    cta: "Talk about support",
   },
   {
     name: "Growth",
-    price: "$3,000/mo",
-    description: "Support plus continued building",
+    subtitle: "Support plus continued building",
     features: [
       "Everything in Support",
       "Ongoing roadmap and priority planning",
-      "1–2 feature additions or workflow improvements per month",
+      "Continuous feature additions and workflow improvements",
       "Best fit when you want the system improving continuously",
     ],
+    cta: "Talk about partnership",
   },
 ];
 
@@ -57,10 +57,10 @@ export default function PricingSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Pricing</span>
-          <h2 className="mt-4 text-3xl font-bold md:text-5xl">Simple pricing. Clear upgrade path.</h2>
+          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Engagements</span>
+          <h2 className="mt-4 text-3xl font-bold md:text-5xl">Three ways to work together.</h2>
           <p className="mt-4 text-lg text-neutral-dark">
-            Start with one focused system. Then choose whether you want ongoing support only, or support plus continued feature development.
+            Start with one focused system. Then choose how you want to maintain and grow it. Investment scales with scope — we'll talk it through on a fit call.
           </p>
         </motion.div>
 
@@ -87,8 +87,8 @@ export default function PricingSection() {
 
               <div className="mb-6">
                 <p className="text-sm font-semibold uppercase tracking-[0.15em] text-secondary">{plan.name}</p>
-                <span className="mt-2 block text-4xl font-black text-neutral">{plan.price}</span>
-                <p className="mt-1 text-sm text-neutral-dark">{plan.description}</p>
+                <p className="mt-3 text-2xl font-bold leading-tight text-neutral">{plan.subtitle}</p>
+                <p className="mt-3 text-sm text-neutral-dark/80">Investment depends on scope</p>
               </div>
 
               <ul className="flex-1 space-y-3">
@@ -99,6 +99,20 @@ export default function PricingSection() {
                   </li>
                 ))}
               </ul>
+
+              <a
+                href="https://cal.com/slateworks/discovery"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`mt-8 inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-all ${
+                  plan.highlight
+                    ? "bg-secondary text-black hover:bg-secondary/90"
+                    : "border border-neutral/20 text-neutral hover:border-neutral/40 hover:bg-white/5"
+                }`}
+              >
+                {plan.cta}
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </motion.div>
           ))}
         </div>

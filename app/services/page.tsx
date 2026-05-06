@@ -12,22 +12,21 @@ export const metadata: Metadata = {
 const plans = [
   {
     name: "Launch",
-    price: "$3,000",
     subtitle: "One focused system, live in 2–3 weeks",
     highlight: true,
     badge: "Best Place to Start",
+    cta: "Book a fit call",
     features: [
-      "$1,500 Systems Fit Review — we map your biggest leak",
-      "$1,500 Build — custom software to capture it",
+      "Systems Fit Review — we map your biggest leak",
+      "Custom build — software to capture it",
       "One focused system (website, app, integration, or automation)",
       "30 days post-launch support included",
     ],
   },
   {
     name: "Support",
-    price: "$1,500",
-    period: "/mo",
     subtitle: "Keep it running, keep it stable",
+    cta: "Talk about support",
     features: [
       "Hosting, monitoring, and maintenance",
       "Bug fixes and security updates",
@@ -37,13 +36,12 @@ const plans = [
   },
   {
     name: "Growth",
-    price: "$3,000",
-    period: "/mo",
     subtitle: "Support plus continuous improvement",
+    cta: "Talk about partnership",
     features: [
       "Everything in Support",
       "Ongoing roadmap and priority planning",
-      "1–2 feature additions or workflow improvements per month",
+      "Continuous feature additions and workflow improvements",
       "Best when you want the system improving continuously",
     ],
   },
@@ -124,7 +122,7 @@ export default function ServicesPage() {
               href="#pricing"
               className="inline-flex items-center gap-2 rounded-lg bg-amber-400 px-8 py-4 font-semibold text-black transition-all hover:bg-amber-300"
             >
-              See Pricing
+              Find Your Fit
               <ArrowRight className="h-4 w-4" />
             </a>
             <Link
@@ -200,10 +198,10 @@ export default function ServicesPage() {
       <section id="pricing" className="px-4 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">Pricing</span>
-            <h2 className="mt-4 text-3xl font-bold md:text-5xl">Simple. Transparent. No surprises.</h2>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">Engagements</span>
+            <h2 className="mt-4 text-3xl font-bold md:text-5xl">Three ways to work together.</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
-              Start with one focused system. Then choose how you want to maintain and grow it.
+              Start with one focused system. Then choose how you want to maintain and grow it. Investment scales with scope — we'll talk it through on a fit call.
             </p>
           </div>
 
@@ -227,11 +225,8 @@ export default function ServicesPage() {
 
                 <div className="mb-6">
                   <p className="text-sm font-semibold uppercase tracking-[0.15em] text-amber-400">{plan.name}</p>
-                  <div className="mt-2 flex items-baseline gap-1">
-                    <span className="text-4xl font-black">{plan.price}</span>
-                    {plan.period && <span className="text-lg text-white/60">{plan.period}</span>}
-                  </div>
-                  <p className="mt-1 text-sm text-white/60">{plan.subtitle}</p>
+                  <p className="mt-3 text-2xl font-bold leading-tight">{plan.subtitle}</p>
+                  <p className="mt-3 text-sm text-white/50">Investment depends on scope</p>
                 </div>
 
                 <ul className="flex-1 space-y-3">
@@ -242,6 +237,20 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
+
+                <a
+                  href="https://cal.com/slateworks/discovery"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-8 inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-all ${
+                    plan.highlight
+                      ? "bg-amber-400 text-black hover:bg-amber-300"
+                      : "border border-white/20 text-white hover:border-white/40 hover:bg-white/5"
+                  }`}
+                >
+                  {plan.cta}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
             ))}
           </div>
