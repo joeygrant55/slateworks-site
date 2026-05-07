@@ -111,10 +111,10 @@ export default function LeadCaptureForm() {
             className="w-full rounded-md border border-zinc-700 bg-zinc-900 px-3 py-2 text-white focus:border-secondary focus:outline-none"
           >
             <option value="" disabled>Select budget range</option>
-            <option value="Under $2,000">Under $2,000</option>
-            <option value="$2,000 - $5,000">$2,000 - $5,000</option>
-            <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-            <option value="$10,000+">$10,000+</option>
+            <option value="Under $5,000">Under $5,000</option>
+            <option value="$5,000 - $25,000">$5,000 - $25,000</option>
+            <option value="$25,000 - $50,000">$25,000 - $50,000</option>
+            <option value="$50,000+">$50,000+</option>
             <option value="Not sure yet">Not sure yet</option>
           </select>
         </div>
