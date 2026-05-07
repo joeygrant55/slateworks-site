@@ -23,7 +23,7 @@ export default function WorkSection() {
     {
       type: "AI Workflow System",
       title: "Profluence",
-      description: "Custom AI intake system that processed 230+ founder applications in under 3 months and helped close a $100K partnership. Built for a private investor network.",
+      description: "Custom AI intake system that processed 230+ founder applications in under 3 months and helped close multiple large partnerships. Built for a private investor network.",
       image: "/images/profluence-hero.jpg",
       technologies: ["Next.js", "Claude AI", "Railway", "Vercel"],
       href: "/work/profluence",

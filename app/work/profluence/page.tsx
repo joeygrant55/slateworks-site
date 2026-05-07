@@ -34,7 +34,7 @@ export default function ProuenceCaseStudyPage() {
           "Team focuses on deals, not data entry",
           "250+ qualified leads in 3 months",
           "New revenue stream from partner access to qualified data",
-          "$100K partnership supported by better inbound handling",
+          "Helped close multiple large partnerships through better inbound handling",
         ],
         projectUrl: "https://profluence-landing.vercel.app",
         heroImage: "/images/profluence-hero.jpg",

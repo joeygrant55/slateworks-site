@@ -129,7 +129,7 @@ export default function ServicesPage() {
               href="/work/profluence"
               className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-8 py-4 font-semibold text-white transition-all hover:border-white/40 hover:bg-white/5"
             >
-              See How We Found $100K
+              See How We Drive Partnerships
             </Link>
           </div>
         </div>
@@ -273,8 +273,8 @@ export default function ServicesPage() {
                   <p className="text-sm text-white/60">Qualified leads</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-amber-400">$100K</p>
-                  <p className="text-sm text-white/60">Partnership closed</p>
+                  <p className="text-3xl font-bold text-amber-400">Multiple</p>
+                  <p className="text-sm text-white/60">Large partnerships closed</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-amber-400">3 weeks</p>
