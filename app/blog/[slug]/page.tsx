@@ -42,6 +42,7 @@ function markdownToHtml(markdown: string) {
   const html: string[] = [];
   let paragraph: string[] = [];
   let listItems: string[] = [];
+  let orderedListItems: string[] = [];
 
   const flushParagraph = () => {
     if (paragraph.length === 0) return;
@@ -60,18 +61,38 @@ function markdownToHtml(markdown: string) {
     listItems = [];
   };
 
+  const flushOrderedList = () => {
+    if (orderedListItems.length === 0) return;
+    html.push('<ol class="mb-6 list-decimal space-y-2 pl-6 text-white/80">');
+    orderedListItems.forEach((item) => {
+      html.push(`<li>${renderInlineMarkdown(escapeHtml(item))}</li>`);
+    });
+    html.push("</ol>");
+    orderedListItems = [];
+  };
+
   for (const rawLine of lines) {
     const line = rawLine.trim();
 
     if (!line) {
       flushParagraph();
       flushList();
+      flushOrderedList();
+      continue;
+    }
+
+    if (line.startsWith("### ")) {
+      flushParagraph();
+      flushList();
+      flushOrderedList();
+      html.push(`<h3 class=\"mb-3 mt-8 text-xl font-semibold text-white\">${renderInlineMarkdown(escapeHtml(line.replace("### ", "")))}</h3>`);
       continue;
     }
 
     if (line.startsWith("## ")) {
       flushParagraph();
       flushList();
+      flushOrderedList();
       html.push(`<h2 class=\"mb-4 mt-10 text-2xl font-semibold text-white\">${renderInlineMarkdown(escapeHtml(line.replace("## ", "")))}</h2>`);
       continue;
     }
@@ -79,13 +100,23 @@ function markdownToHtml(markdown: string) {
     if (line.startsWith("# ")) {
       flushParagraph();
       flushList();
+      flushOrderedList();
       html.push(`<h1 class=\"mb-4 mt-8 text-3xl font-semibold text-white\">${renderInlineMarkdown(escapeHtml(line.replace("# ", "")))}</h1>`);
       continue;
     }
 
     if (line.startsWith("- ")) {
       flushParagraph();
+      flushOrderedList();
       listItems.push(line.replace("- ", ""));
+      continue;
+    }
+
+    const orderedMatch = line.match(/^\d+\.\s+(.+)$/);
+    if (orderedMatch) {
+      flushParagraph();
+      flushList();
+      orderedListItems.push(orderedMatch[1]);
       continue;
     }
 
@@ -94,6 +125,7 @@ function markdownToHtml(markdown: string) {
 
   flushParagraph();
   flushList();
+  flushOrderedList();
 
   return html.join("\n");
 }
@@ -162,17 +194,23 @@ export default async function BlogPostPage({ params }: PageProps) {
 
         <section className="mt-14 rounded-2xl border border-white/10 bg-neutral-950 p-6">
           <p className="text-xs uppercase tracking-[0.2em] text-white/55">Written by</p>
-          <p className="mt-2 text-lg font-semibold text-white">The Slateworks Agents</p>
+          <p className="mt-2 text-lg font-semibold text-white">The Slateworks Operator</p>
+          <p className="mt-2 text-sm leading-relaxed text-white/60">
+            Field notes from Slateworks&apos; AI operator. Human judgment still required where it counts.
+          </p>
         </section>
 
         <section className="mt-8 rounded-2xl border border-white/10 bg-gradient-to-br from-neutral-900 to-black p-7">
-          <h2 className="text-2xl font-semibold text-white">Ready to build something?</h2>
-          <p className="mt-2 text-white/70">Let&apos;s ship your next product, campaign, or internal tool.</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-white/55">Performance leak diagnostic</p>
+          <h2 className="mt-3 text-2xl font-semibold text-white">What workflow is your team working around?</h2>
+          <p className="mt-2 text-white/70">
+            Send us the workflow, handoff, support loop, or aging system that keeps leaking time, revenue, or attention.
+          </p>
           <Link
             href="/#contact"
             className="mt-5 inline-flex rounded-lg border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white transition-colors hover:border-white/40 hover:bg-white/10"
           >
-            Contact Slateworks
+            Map the leak
           </Link>
         </section>
       </article>

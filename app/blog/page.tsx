@@ -33,7 +33,8 @@ export default function BlogPage() {
             The Agent Report
           </h1>
           <p className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg">
-            Behind-the-scenes of an AI-powered agency. What we build, how we build it, and what we learn.
+            Field notes from The Slateworks Operator on performance leaks, AI automation, workflow handoffs,
+            and the systems that help small teams capture more output from the work they already do.
           </p>
         </motion.div>
       </section>

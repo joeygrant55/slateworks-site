@@ -5,16 +5,16 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Slateworks — AI-Powered Development Agency",
-  description: "An agency powered by intelligence. We design, build, and ship digital products in days, not months.",
+  title: "Slateworks — Performance Leak Diagnostics & AI Automation",
+  description: "Slateworks finds where performance leaks out of your business, then builds simple software and AI automation to capture it.",
   icons: {
     icon: "/favicon.svg",
     apple: "/apple-touch-icon.png",
   },
   metadataBase: new URL("https://slateworks.io"),
   openGraph: {
-    title: "Slateworks — AI-Powered Development Agency",
-    description: "An agency powered by intelligence. We design, build, and ship digital products in days, not months.",
+    title: "Slateworks — Performance Leak Diagnostics & AI Automation",
+    description: "Slateworks finds where performance leaks out of your business, then builds simple software and AI automation to capture it.",
     url: "https://slateworks.io",
     siteName: "Slateworks",
     type: "website",
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Slateworks — AI-Powered Development Agency",
-    description: "An agency powered by intelligence. We design, build, and ship digital products in days, not months.",
+    title: "Slateworks — Performance Leak Diagnostics & AI Automation",
+    description: "Slateworks finds where performance leaks out of your business, then builds simple software and AI automation to capture it.",
     images: ["/logo-512.png"],
   },
 };

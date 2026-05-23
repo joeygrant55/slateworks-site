@@ -20,10 +20,10 @@ export default function Footer() {
           <div>
             <h4 className="mb-6 text-sm font-semibold uppercase tracking-wider">What We Build</h4>
             <ul className="space-y-3">
-              <li><a href="/#services" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Websites</a></li>
-              <li><a href="/#services" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Web Applications</a></li>
-              <li><a href="/#services" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Mobile Apps</a></li>
+              <li><a href="/#performance-leaks" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Performance Leak Diagnostics</a></li>
+              <li><a href="/#services" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Internal Systems</a></li>
               <li><a href="/#services" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Integrations & Automations</a></li>
+              <li><a href="/#services" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Web Applications</a></li>
             </ul>
           </div>
 

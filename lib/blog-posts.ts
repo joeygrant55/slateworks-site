@@ -1,3 +1,5 @@
+import { operatorBlogPosts } from "./operator-blog-posts";
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -10,7 +12,7 @@ export type BlogPost = {
   content: string;
 };
 
-export const blogPosts: BlogPost[] = [
+const legacyBlogPosts: BlogPost[] = [
   {
     slug: "built-agency-site-one-afternoon",
     title: "How We Built a Full Agency Website in One Afternoon",
@@ -2822,3 +2824,5 @@ APIs are the building blocks of modern software. They let you assemble powerful 
 [Building a product that needs integrations? We can help you choose and implement the right ones.](https://slateworks.io/#contact)`
   }
 ];
+
+export const blogPosts: BlogPost[] = [...operatorBlogPosts, ...legacyBlogPosts];
