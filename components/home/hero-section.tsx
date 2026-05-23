@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Spotlight } from "@/components/ui/spotlight";
 import { SplineScene } from "@/components/ui/spline-scene";
+import { analyticsEvents, trackEvent } from "@/lib/analytics-events";
 
 export default function HeroSection() {
   return (
@@ -58,6 +59,13 @@ export default function HeroSection() {
                 href="https://calendar.app.google/XWTydYq9gFKd8fv3A"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackEvent(analyticsEvents.ctaClick, {
+                    location: "hero",
+                    label: "Book a Free 15-Min Fit Call",
+                    destination: "google_calendar",
+                  })
+                }
                 className="rounded-full bg-amber-400 px-8 py-4 text-center font-bold text-black shadow-amber-400/25 transition-all duration-300 hover:scale-105 hover:bg-amber-300 hover:shadow-xl"
               >
                 Book a Free 15-Min Fit Call

@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
+import { analyticsEvents, trackEvent } from "@/lib/analytics-events";
 
 type AssessmentData = {
   name: string;
@@ -101,9 +102,21 @@ export default function AIServiceAssessmentForm() {
       }
 
       setStatus("success");
+      trackEvent(analyticsEvents.assessmentSubmitted, {
+        industry: formData.industry || "unknown",
+        teamSize: formData.teamSize || "unknown",
+        budgetRange: formData.budgetRange || "unknown",
+        timeline: formData.timeline || "unknown",
+      });
     } catch (error) {
       setStatus("error");
       setErrorMessage(error instanceof Error ? error.message : "Submission failed. Please try again.");
+      trackEvent(analyticsEvents.assessmentFailed, {
+        step,
+        industry: formData.industry || "unknown",
+        teamSize: formData.teamSize || "unknown",
+        budgetRange: formData.budgetRange || "unknown",
+      });
       setIsSubmitting(false);
       return;
     }
@@ -398,7 +411,13 @@ export default function AIServiceAssessmentForm() {
         {step < 4 ? (
           <button
             type="button"
-            onClick={() => setStep((prev) => prev + 1)}
+            onClick={() => {
+              trackEvent(analyticsEvents.assessmentStepCompleted, {
+                step,
+                nextStep: step + 1,
+              });
+              setStep((prev) => prev + 1);
+            }}
             disabled={!stepIsValid}
             className="ml-auto rounded-md bg-white px-6 py-2 font-medium text-black transition-colors hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50"
           >

@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { analyticsEvents, trackEvent } from "@/lib/analytics-events";
 
 export default function LeadCaptureForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -22,6 +23,12 @@ export default function LeadCaptureForm() {
       budget: String(formData.get("budget") ?? ""),
     };
 
+    trackEvent(analyticsEvents.leadFormStarted, {
+      projectType: payload.projectType || "unknown",
+      budget: payload.budget || "unknown",
+      source: "contact_form",
+    });
+
     try {
       const response = await fetch("/api/lead", {
         method: "POST",
@@ -38,9 +45,19 @@ export default function LeadCaptureForm() {
 
       form.reset();
       setStatus("success");
+      trackEvent(analyticsEvents.leadFormSubmitted, {
+        projectType: payload.projectType,
+        budget: payload.budget,
+        source: "contact_form",
+      });
     } catch (error) {
       setStatus("error");
       setErrorMessage(error instanceof Error ? error.message : "Submission failed. Please try again.");
+      trackEvent(analyticsEvents.leadFormFailed, {
+        projectType: payload.projectType || "unknown",
+        budget: payload.budget || "unknown",
+        source: "contact_form",
+      });
     }
   };
 

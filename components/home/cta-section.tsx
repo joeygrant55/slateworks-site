@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import { analyticsEvents, trackEvent } from "@/lib/analytics-events";
 
 export default function CTASection() {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -48,6 +49,13 @@ export default function CTASection() {
               href="https://calendar.app.google/XWTydYq9gFKd8fv3A"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackEvent(analyticsEvents.ctaClick, {
+                  location: "pre_contact_cta",
+                  label: "Book Your Fit Call",
+                  destination: "google_calendar",
+                })
+              }
               className="group relative z-20 inline-flex items-center gap-2 rounded-full bg-amber-400 px-8 py-4 text-lg font-bold text-black shadow-lg shadow-amber-400/25 transition-all duration-300 hover:scale-105 hover:bg-amber-300 hover:shadow-xl hover:shadow-amber-400/30"
             >
               Book Your Fit Call
