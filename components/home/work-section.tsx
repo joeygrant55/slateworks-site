@@ -38,13 +38,12 @@ export default function WorkSection() {
       href: "/work/sparq-certified",
     },
     {
-      type: "E-commerce Website",
-      title: "Suncoast Harvest",
-      description: "A premium e-commerce platform for farm-fresh produce delivery with subscription management and order tracking.",
-      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500&q=80",
-      technologies: ["Next.js", "Tailwind CSS", "Stripe", "Vercel"],
-      href: "https://suncoastharvest.com/",
-      external: true,
+      type: "AI Diagnostic Tool",
+      title: "Sparked Inbound",
+      description: "The Three Gaps Diagnostic — an AI tool that reads a visitor's website and returns a personalized brand messaging analysis in 90 seconds. Built to turn an agency's proprietary framework into the top of their pipeline.",
+      image: "/images/sparked-inbound-hero.jpg",
+      technologies: ["Next.js", "TypeScript", "Claude AI", "Vercel"],
+      href: "/work/sparked-inbound",
     },
 
   ];
