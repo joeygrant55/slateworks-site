@@ -40,32 +40,33 @@ export default function LoopVisual({ className = "" }: { className?: string }) {
           </radialGradient>
         </defs>
 
-        {/* faint outer + inner tracks */}
-        <circle cx={CX} cy={CY} r={R} stroke="white" strokeOpacity="0.08" strokeWidth="1" />
-        <circle cx={CX} cy={CY} r={R - 34} stroke="white" strokeOpacity="0.05" strokeWidth="1" />
-        <circle cx={CX} cy={CY} r={R + 34} stroke="white" strokeOpacity="0.04" strokeWidth="1" />
+        {/* the ring the loop runs on + faint concentric tracks */}
+        <circle cx={CX} cy={CY} r={R} stroke="#d4af37" strokeOpacity="0.18" strokeWidth="1.25" />
+        <circle cx={CX} cy={CY} r={R - 34} stroke="white" strokeOpacity="0.06" strokeWidth="1" />
+        <circle cx={CX} cy={CY} r={R + 34} stroke="white" strokeOpacity="0.05" strokeWidth="1" />
 
         {/* core glow */}
-        <circle cx={CX} cy={CY} r="70" fill="url(#coreGlow)" />
+        <circle cx={CX} cy={CY} r="80" fill="url(#coreGlow)" />
 
-        {/* rotating gold arc — the loop "running" */}
-        <motion.g
-          style={{ originX: "200px", originY: "200px" }}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+        {/* rotating gold arc — the loop "running".
+            Rotation is driven by the global `rotate` keyframe + transform-box:fill-box
+            so it pivots around the circle's own centre (200,200), not the SVG origin. */}
+        <g
+          className="animate-[rotate_16s_linear_infinite]"
+          style={{ transformBox: "fill-box", transformOrigin: "center" }}
         >
           <circle
             cx={CX}
             cy={CY}
             r={R}
             stroke="url(#arcGold)"
-            strokeWidth="2.5"
+            strokeWidth="3"
             strokeLinecap="round"
             strokeDasharray={`${(2 * Math.PI * R) * 0.32} ${(2 * Math.PI * R) * 0.68}`}
           />
-          {/* leading dot on the arc */}
-          <circle cx={CX} cy={CY - R} r="4" fill="#f3e0a3" />
-        </motion.g>
+          {/* leading dot, sitting on the head of the visible arc (3 o'clock) */}
+          <circle cx={CX + R} cy={CY} r="4.5" fill="#f3e0a3" />
+        </g>
 
         {/* fixed nodes around the ring */}
         {nodePoints.map((p, i) => (
@@ -75,13 +76,13 @@ export default function LoopVisual({ className = "" }: { className?: string }) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.15 * i, duration: 0.5 }}
           >
-            <circle cx={p.x} cy={p.y} r="9" fill="#0a0a0a" stroke="#d4af37" strokeOpacity="0.5" strokeWidth="1" />
+            <circle cx={p.x} cy={p.y} r="11" fill="#0a0a0a" stroke="#d4af37" strokeOpacity="0.75" strokeWidth="1.25" />
             <motion.circle
               cx={p.x}
               cy={p.y}
-              r="3.5"
+              r="4.5"
               fill="#d4af37"
-              animate={{ opacity: [0.4, 1, 0.4] }}
+              animate={{ opacity: [0.45, 1, 0.45] }}
               transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
             />
           </motion.g>
