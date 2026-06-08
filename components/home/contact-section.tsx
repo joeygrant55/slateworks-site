@@ -1,8 +1,9 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { useRef } from "react";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 import LeadCaptureForm from "@/components/home/lead-capture-form";
 
 export default function ContactSection() {
@@ -10,64 +11,44 @@ export default function ContactSection() {
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   return (
-    <section id="contact" className="bg-black py-20 text-neutral md:py-28" ref={sectionRef}>
-      <div className="container mx-auto px-4">
+    <section id="contact" className="relative overflow-hidden bg-black py-24 text-neutral md:py-32" ref={sectionRef}>
+      <BackgroundBeams className="pointer-events-none opacity-25" />
+      <div className="container relative z-10 mx-auto px-4">
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-sm font-semibold tracking-wider text-secondary uppercase">Get In Touch</span>
-              <h2 className="mt-3 mb-6 text-3xl font-bold md:text-4xl">Ready to find your leak?</h2>
-              <p className="mb-8 text-neutral-dark">
-                Book a free 15-minute fit call. We&apos;ll map where your business is losing money and tell you exactly what software would capture it.
-                No commitment required.
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">Start Here</span>
+              <h2 className="mt-5 text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl">
+                Bring us one broken handoff.
+              </h2>
+              <p className="mt-5 max-w-md text-lg leading-relaxed text-neutral-dark">
+                Book a free 15-minute fit call. We&apos;ll map the loop behind it, show you where the value is
+                leaking, and tell you exactly what we&apos;d build to close it. No commitment required.
               </p>
 
-              <div className="mb-8 space-y-6">
-                <div className="flex items-start">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-sm border border-neutral/10 bg-neutral-darker">
+              <div className="mt-10 space-y-5">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-neutral/10 bg-neutral-darker">
                     <MapPin className="h-5 w-5 text-secondary" />
                   </div>
-                  <div>
-                    <h4 className="mb-1 font-semibold">Office Location</h4>
-                    <p className="text-neutral-dark">St. Petersburg, FL</p>
-                  </div>
+                  <p className="text-neutral-dark">St. Petersburg, FL</p>
                 </div>
-
-                <div className="flex items-start">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-sm border border-neutral/10 bg-neutral-darker">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-neutral/10 bg-neutral-darker">
                     <Mail className="h-5 w-5 text-secondary" />
                   </div>
-                  <div>
-                    <h4 className="mb-1 font-semibold">Email Us</h4>
-                    <p className="text-neutral-dark">joey@slateworks.io</p>
-                  </div>
+                  <a href="mailto:joey@slateworks.io" className="text-neutral-dark transition-colors hover:text-neutral">joey@slateworks.io</a>
                 </div>
-
-                <div className="flex items-start">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-sm border border-neutral/10 bg-neutral-darker">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-neutral/10 bg-neutral-darker">
                     <Phone className="h-5 w-5 text-secondary" />
                   </div>
-                  <div>
-                    <h4 className="mb-1 font-semibold">Call Us</h4>
-                    <p className="text-neutral-dark">(727) 266-6378</p>
-                  </div>
+                  <a href="tel:+17272666378" className="text-neutral-dark transition-colors hover:text-neutral">(727) 266-6378</a>
                 </div>
-              </div>
-
-              <div className="flex space-x-4">
-                {[Twitter, Linkedin].map((Icon, index) => (
-                  <a
-                    href="#"
-                    key={index}
-                    className="flex h-12 w-12 items-center justify-center rounded-sm border border-neutral/10 bg-neutral-darker transition-colors hover:border-secondary hover:bg-secondary"
-                  >
-                    <Icon className="h-5 w-5 text-neutral" />
-                  </a>
-                ))}
               </div>
             </motion.div>
 

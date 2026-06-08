@@ -3,24 +3,24 @@ import CaseStudyPage from "@/components/work/case-study-page";
 export const metadata = {
   title: "Profluence — Slateworks",
   description:
-    "How Slateworks found a broken process eating Profluence's margins, replaced it with custom software, and turned it into a profit center.",
+    "How Slateworks turned Profluence's broken intake loop into a repeatable partnership engine — 250+ qualified leads captured and a new revenue motion launched.",
 };
 
 export default function ProuenceCaseStudyPage() {
   return (
     <CaseStudyPage
       data={{
-        category: "Process → Profit",
+        category: "Broken Loop → Engine",
         title: "Profluence",
         subtitle:
-          "How a broken intake process became a profit center — 250+ qualified leads and a new revenue stream in under 3 months.",
+          "How a broken intake loop became a repeatable partnership engine — 250+ qualified leads captured and a new revenue motion launched in under 3 months.",
         description:
-          "Profluence's founders were drowning in inbound. Decks and applications arrived by email, scattered across inboxes and spreadsheets. Someone had to manually review, grade, and organize every submission before the right founders ever got a conversation. The process was eating their margins and capping their growth.",
+          "Profluence's intake loop was broken. Founder decks came in, but qualification, routing, partner follow-up, and performance visibility were all too manual. Every submission had to be reviewed, graded, and organized by hand before the right founders ever got a conversation. The loop never closed on its own — so it ate their margins and capped their growth.",
         timeline: "3 weeks to launch, iterating monthly",
         challenge:
-          "Founders emailed their decks directly. A team member had to open each one, evaluate it against their criteria, grade it, then organize it within their process — manually. As volume grew, the bottleneck got worse. Strong founders slipped through the cracks. The team spent more time sorting than actually investing. What started as a manageable workflow had become a full-time job that didn't scale.",
+          "Founders emailed their decks directly. A team member had to open each one, evaluate it against their criteria, grade it, then organize it within their process — manually. The loop had no automatic signal, decision, or follow-up, so every step waited on a person. As volume grew, the bottleneck got worse. Strong founders slipped through the cracks. The team spent more time sorting than investing. What started as a manageable workflow had become a full-time job that didn't scale.",
         solution:
-          "Slateworks evaluated the process end-to-end, then built a custom web application that replaced the manual workflow entirely. Founders now submit through a structured intake flow. The system organizes, scores, and surfaces the strongest opportunities automatically. The team focuses on conversations, not spreadsheets. The same software also opened a new revenue channel — service partners now access qualified founder data that Profluence was previously throwing away.",
+          "Slateworks mapped the intake loop end-to-end, then built the system that closed it. Founders now submit through a structured intake flow. The system qualifies, scores, routes, and surfaces the strongest opportunities automatically — and makes the whole pipeline visible. The team focuses on conversations, not spreadsheets. The same loop opened a new revenue motion: service partners now access qualified founder data that Profluence was previously throwing away. What was a manual bottleneck is now a repeatable partnership engine that runs and improves.",
         techStack: [
           "Next.js",
           "Claude AI (Anthropic)",
@@ -29,12 +29,12 @@ export default function ProuenceCaseStudyPage() {
           "Tailwind CSS",
         ],
         keyFeatures: [
-          "Custom intake flow replaced email chaos",
-          "Automated scoring and organization",
-          "Team focuses on deals, not data entry",
-          "250+ qualified leads in 3 months",
-          "New revenue stream from partner access to qualified data",
-          "Helped close multiple large partnerships through better inbound handling",
+          "Custom intake loop replaced manual email chaos",
+          "250+ qualified leads captured in 3 months",
+          "Automatic qualification, scoring, and routing",
+          "Manual review reduced — the team focuses on deals, not data entry",
+          "Partner pipeline created from qualified founder data",
+          "New revenue motion launched off the same loop",
         ],
         projectUrl: "https://profluence-landing.vercel.app",
         heroImage: "/images/profluence-hero.jpg",

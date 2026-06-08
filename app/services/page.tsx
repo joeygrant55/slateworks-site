@@ -12,37 +12,37 @@ export const metadata: Metadata = {
 const plans = [
   {
     name: "Launch",
-    subtitle: "One focused system, live in 2–3 weeks",
+    subtitle: "One loop, closed and live in 2–3 weeks",
     highlight: true,
     badge: "Best Place to Start",
     cta: "Book a fit call",
     features: [
-      "Systems Fit Review — we map your biggest leak",
-      "Custom build — software to capture it",
-      "One focused system (website, app, integration, or automation)",
+      "Loop Map — we trace the broken loop and the leak it's causing",
+      "Custom build — the system that closes it",
+      "One focused system (tool, automation, agent, or dashboard)",
       "30 days post-launch support included",
     ],
   },
   {
     name: "Support",
-    subtitle: "Keep it running, keep it stable",
+    subtitle: "Keep the loop running",
     cta: "Talk about support",
     features: [
       "Hosting, monitoring, and maintenance",
       "Bug fixes and security updates",
       "Reliable help when something breaks",
-      "Ideal when you want stability without ongoing build work",
+      "Ideal when you want the loop stable without ongoing build work",
     ],
   },
   {
     name: "Growth",
-    subtitle: "Support plus continuous improvement",
+    subtitle: "We run and improve your operating loop",
     cta: "Talk about partnership",
     features: [
       "Everything in Support",
       "Ongoing roadmap and priority planning",
-      "Continuous feature additions and workflow improvements",
-      "Best when you want the system improving continuously",
+      "We measure the loop and tighten it every month",
+      "Best when you want the loop compounding, not just holding",
     ],
   },
 ];
@@ -56,20 +56,20 @@ const process = [
   },
   {
     step: "02",
-    title: "Map the Fix",
-    description: "We scope the simplest software that captures the lost profit. No bloated builds. Just the fix you need.",
+    title: "Map the Loop",
+    description: "We trace the loop underneath the leak — signal, decision, action, measurement — and find the exact step that broke.",
     icon: Workflow,
   },
   {
     step: "03",
-    title: "Build & Ship",
-    description: "We build custom software in 2–3 weeks. You review, we refine, then it goes live.",
+    title: "Build the System",
+    description: "We build the smallest system that closes the loop in 2–3 weeks. You review, we refine, then it goes live.",
     icon: Zap,
   },
   {
     step: "04",
-    title: "Capture Profit",
-    description: "The system runs. You save time, reduce waste, and often discover new revenue channels you didn't know existed.",
+    title: "Manage the Improvement",
+    description: "The loop runs. We measure what it captures and tighten it every month, so it gets better instead of drifting back to manual.",
     icon: DollarSign,
   },
 ];
@@ -112,10 +112,10 @@ export default function ServicesPage() {
           <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
             Your business is leaking profit.
             <br />
-            <span className="text-amber-400">Let's find it.</span>
+            <span className="text-amber-400">Usually it's a broken loop.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60 md:text-xl">
-            Every business has broken processes that waste time and bleed revenue. We evaluate the leak, build software to capture it, and turn waste into profit.
+            Every business has loops that were supposed to run on their own and stopped. We find the leak, map the loop underneath it, build the system that closes it, then manage it so it keeps improving.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
@@ -140,9 +140,9 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">How It Works</span>
-            <h2 className="mt-4 text-3xl font-bold md:text-5xl">From broken process to profit center</h2>
+            <h2 className="mt-4 text-3xl font-bold md:text-5xl">From broken loop to managed loop</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
-              We don't just build software. We find where your business is losing money, then we build the fix.
+              We don't just build software. We find where your business is losing money, map the loop underneath it, then build and manage the fix.
             </p>
           </div>
 
@@ -169,9 +169,9 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">What We Build</span>
-            <h2 className="mt-4 text-3xl font-bold md:text-5xl">Software that captures profit</h2>
+            <h2 className="mt-4 text-3xl font-bold md:text-5xl">Whatever closes the loop</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
-              We don't do everything. We do what moves the needle.
+              We're not married to a tool. We build the smallest thing that closes the loop and keeps it running.
             </p>
           </div>
 
@@ -201,7 +201,7 @@ export default function ServicesPage() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">Engagements</span>
             <h2 className="mt-4 text-3xl font-bold md:text-5xl">Three ways to work together.</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
-              Start with one focused system. Then choose how you want to maintain and grow it. Investment scales with scope — we'll talk it through on a fit call.
+              Start by closing one loop. Then choose how you want to keep it running and improving. Investment scales with scope — we'll talk it through on a fit call.
             </p>
           </div>
 
@@ -263,18 +263,18 @@ export default function ServicesPage() {
           <div className="flex flex-col items-center gap-8 md:flex-row">
             <div className="flex-1">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">Proof</span>
-              <h2 className="mt-4 text-2xl font-bold md:text-3xl">Profluence: From broken intake to profit center</h2>
+              <h2 className="mt-4 text-2xl font-bold md:text-3xl">Profluence: From broken intake loop to partnership engine</h2>
               <p className="mt-4 text-white/60">
-                Profluence's team was manually reviewing every founder deck by email. We evaluated the process, built a custom intake system, and turned it into 250+ qualified leads and a new revenue stream.
+                Profluence's intake loop was broken — decks came in, but qualification, routing, and follow-up were all manual. We mapped the loop and built the system that closed it: 250+ qualified leads captured, a partner pipeline created, and a new revenue motion launched.
               </p>
               <div className="mt-6 flex flex-wrap gap-6">
                 <div>
                   <p className="text-3xl font-bold text-amber-400">250+</p>
-                  <p className="text-sm text-white/60">Qualified leads</p>
+                  <p className="text-sm text-white/60">Qualified leads captured</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-amber-400">Multiple</p>
-                  <p className="text-sm text-white/60">Large partnerships closed</p>
+                  <p className="text-3xl font-bold text-amber-400">Partner</p>
+                  <p className="text-sm text-white/60">Pipeline created</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-amber-400">3 weeks</p>
@@ -296,9 +296,9 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="px-4 py-20 md:py-28">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold md:text-5xl">Ready to find your leak?</h2>
+          <h2 className="text-3xl font-bold md:text-5xl">Bring us one broken handoff.</h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-white/60">
-            Book a free 15-minute fit call. We'll tell you honestly if we can help — and if we can't, we'll point you toward someone who can.
+            Book a free 15-minute fit call. We'll map the loop behind it and tell you honestly if we can help — and if we can't, we'll point you toward someone who can.
           </p>
           <a
             href="https://cal.com/slateworks/discovery"

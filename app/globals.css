@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@theme {
+  /* Brand palette — these were lost in the Tailwind v3 → v4 migration.
+     amber-* still resolves as a default; these custom tokens did not. */
+  --color-primary: #0a0a0a;
+  --color-primary-light: #16161a;
+  --color-secondary: #d4af37;        /* brand gold (matches OG image + services radial) */
+  --color-secondary-light: #e6c667;
+  --color-neutral: #fafafa;          /* headlines / near-white */
+  --color-neutral-dark: #9aa0aa;     /* muted body text — restores hierarchy */
+  --color-neutral-darker: #141417;   /* card surface, just above black */
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

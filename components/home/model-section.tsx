@@ -1,101 +1,112 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { Lightbulb, Bot, Rocket } from "lucide-react";
+import { Bot, Boxes, Gauge, Globe, Plug, Workflow } from "lucide-react";
 import { useRef } from "react";
+
+const steps = [
+  {
+    number: "01",
+    title: "Find the leak",
+    description:
+      "A quick call to find where your business is losing money — the lead that goes cold, the work done by hand, the exception that always lands on you.",
+  },
+  {
+    number: "02",
+    title: "Map the loop",
+    description:
+      "We trace the loop underneath it — signal, decision, action, measurement — and find the exact step that broke. The tool comes after the map, never before.",
+  },
+  {
+    number: "03",
+    title: "Build the system",
+    description:
+      "One focused build, usually live in 2 to 3 weeks. An internal tool, an automation, an AI agent, a dashboard — whatever is smallest that closes the loop.",
+  },
+  {
+    number: "04",
+    title: "Manage the improvement",
+    description:
+      "We keep the loop running and measure what it captures, then tighten it every month so it gets better instead of quietly drifting back to manual.",
+  },
+];
+
+const buildTypes = [
+  { icon: <Boxes className="h-4 w-4" />, label: "Internal tools" },
+  { icon: <Workflow className="h-4 w-4" />, label: "Automations" },
+  { icon: <Bot className="h-4 w-4" />, label: "AI agents" },
+  { icon: <Gauge className="h-4 w-4" />, label: "Dashboards" },
+  { icon: <Plug className="h-4 w-4" />, label: "Integrations" },
+  { icon: <Globe className="h-4 w-4" />, label: "Websites, when they serve the loop" },
+];
 
 export default function ModelSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
-  const steps = [
-    {
-      icon: <Lightbulb className="h-8 w-8" />,
-      number: "01",
-      title: "We figure out what would help most.",
-      description:
-        "A quick call to find where your business is losing money — whether it's a broken process, a manual workflow, or a system that never got built.",
-      accent: "from-amber-500 to-orange-600",
-    },
-    {
-      icon: <Bot className="h-8 w-8" />,
-      number: "02",
-      title: "We build the right thing fast.",
-      description:
-        "One focused project, usually live in 2 to 3 weeks. Sometimes that is a better website. Sometimes it is a simple internal tool or automation. Either way, it is built to solve a real problem.",
-      accent: "from-blue-500 to-cyan-600",
-    },
-    {
-      icon: <Rocket className="h-8 w-8" />,
-      number: "03",
-      title: "We keep it useful.",
-      description:
-        "After launch, we can either keep it stable with support or continue improving it with updates, new features, and workflow upgrades each month.",
-      accent: "from-emerald-500 to-teal-600",
-    },
-  ];
-
   return (
-    <section id="services" className="relative bg-black py-24 text-neutral md:py-32" ref={sectionRef}>
-      {/* Subtle background texture */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-        backgroundSize: "40px 40px",
-      }} />
-
+    <section id="how-it-works" className="relative bg-black py-24 text-neutral md:py-32" ref={sectionRef}>
       <div className="container relative z-10 mx-auto px-4">
-        <motion.div
-          className="mx-auto mb-20 max-w-2xl text-center"
-          initial={{ opacity: 0, y: 24 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">How It Works</span>
-          <h2 className="mt-4 text-3xl font-bold md:text-5xl">
-            Simple work, scoped clearly, shipped fast.
-          </h2>
-          <p className="mt-4 text-lg text-neutral-dark">
-            Because we build with AI agents, you get senior-level engineering at startup speed — without the agency overhead. Whether you need a stronger website, a lightweight app, better software handoffs, or automation behind the scenes, we help you figure it out, build it, and keep it running.
-          </p>
-        </motion.div>
-
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
-          {steps.map((step, i) => (
-            <motion.div
-              key={step.number}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.5, delay: 0.15 * i }}
-              className="group relative"
-            >
-              <div className="relative h-full overflow-hidden rounded-lg border border-neutral/10 bg-neutral-darker/50 p-8 transition-all duration-500 hover:border-secondary/20">
-                {/* Number watermark */}
-                <span className="absolute -right-2 -top-4 text-[120px] font-black leading-none text-white/[0.02] transition-all duration-500 group-hover:text-white/[0.04]">
-                  {step.number}
-                </span>
-
-                {/* Icon */}
-                <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-gradient-to-br ${step.accent} text-white shadow-lg`}>
-                  {step.icon}
-                </div>
-
-                {/* Content */}
-                <h3 className="mb-3 text-xl font-bold text-neutral">{step.title}</h3>
-                <p className="text-[15px] leading-relaxed text-neutral-dark">{step.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Connecting line (desktop only) */}
-        <div className="mx-auto mt-8 hidden max-w-3xl md:block">
+        <div className="mx-auto max-w-3xl">
           <motion.div
-            className="h-[2px] w-full bg-gradient-to-r from-amber-500/40 via-blue-500/40 to-emerald-500/40"
-            initial={{ scaleX: 0 }}
-            animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            style={{ transformOrigin: "left" }}
-          />
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+            transition={{ duration: 0.6 }}
+            className="mb-14"
+          >
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">How It Works</span>
+            <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight md:text-5xl">
+              How a leak becomes a managed loop.
+            </h2>
+            <p className="mt-5 max-w-xl text-lg text-neutral-dark">
+              Senior-level engineering at startup speed, without the agency overhead. We find the leak, map the
+              loop, build the smallest system that closes it, then manage it so it keeps improving.
+            </p>
+          </motion.div>
+
+          {/* Vertical numbered list */}
+          <div className="border-l border-neutral/10">
+            {steps.map((step, i) => (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, x: 16 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 16 }}
+                transition={{ duration: 0.5, delay: 0.1 * i }}
+                className="relative pb-12 pl-8 last:pb-0 md:pl-12"
+              >
+                <span className="absolute -left-px top-1 h-8 w-px bg-secondary" />
+                <div className="flex items-baseline gap-4">
+                  <span className="text-sm font-bold tabular-nums text-secondary">{step.number}</span>
+                  <h3 className="text-xl font-semibold text-neutral md:text-2xl">{step.title}</h3>
+                </div>
+                <p className="mt-3 max-w-xl text-base leading-relaxed text-neutral-dark">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* What we build — inline tag strip */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-16 rounded-2xl border border-neutral/10 bg-neutral-darker/40 p-7 md:p-8"
+          >
+            <p className="text-sm text-neutral-dark">
+              <span className="font-semibold text-neutral">We&apos;re not married to a tool.</span> We build whatever
+              is smallest that closes the loop:
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2.5">
+              {buildTypes.map((b) => (
+                <span
+                  key={b.label}
+                  className="inline-flex items-center gap-2 rounded-full border border-neutral/10 bg-black/40 px-4 py-2 text-sm text-neutral-dark"
+                >
+                  <span className="text-secondary">{b.icon}</span>
+                  {b.label}
+                </span>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

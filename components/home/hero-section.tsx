@@ -1,59 +1,53 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { Spotlight } from "@/components/ui/spotlight";
-import { SplineScene } from "@/components/ui/spline-scene";
+import LoopVisual from "@/components/ui/loop-visual";
 import { analyticsEvents, trackEvent } from "@/lib/analytics-events";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black text-neutral">
-      <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white" />
+    <section className="relative overflow-hidden bg-black text-neutral">
+      <Spotlight className="-top-40 left-0 opacity-20 md:-top-20 md:left-60" fill="#d4af37" />
 
-      <div className="absolute inset-0">
-        <div
-          className="absolute -left-1/2 -top-1/2 h-[200%] w-[200%] opacity-20"
-          style={{
-            background:
-              "radial-gradient(circle at 20% 80%, rgba(100, 100, 100, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(150, 150, 150, 0.2) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(200, 200, 200, 0.1) 0%, transparent 50%)",
-            animation: "rotate 30s linear infinite",
-          }}
-        />
-      </div>
+      <div className="container relative z-10 mx-auto px-4 pb-24 pt-36 md:pb-32 md:pt-44">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+          <div>
+            <motion.span
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-secondary"
+            >
+              Managed Operating Loops
+            </motion.span>
 
-      <div className="container relative z-10 mx-auto px-4 pb-16 pt-32">
-        <div className="grid min-h-[80vh] grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="space-y-8"
-          >
-            <div className="space-y-6">
-              <motion.h1
-                className="text-4xl font-black leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
-              >
-                There's profit hiding in your business.
-              </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
+              className="mt-6 max-w-2xl text-balance text-5xl font-black leading-[1.04] tracking-tight sm:text-6xl lg:text-7xl"
+            >
+              There&apos;s profit hiding in your business.
+            </motion.h1>
 
-              <motion.p
-                className="max-w-2xl text-lg leading-relaxed text-neutral-dark md:text-2xl"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
-              >
-                In the manual work, the scattered spreadsheets, the processes that eat time but never get fixed. We find the biggest leak, build software to capture it, and turn waste into revenue. No massive budget. No six-month timeline. Just results.
-              </motion.p>
-            </div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.8, ease: "easeOut" }}
+              className="mt-7 max-w-xl text-lg leading-relaxed text-neutral-dark md:text-xl"
+            >
+              In the manual work, the scattered spreadsheets, the handoffs that quietly drop. Slateworks finds
+              the biggest performance leak, then turns it into a managed operating loop — a system that captures
+              the value and keeps improving.
+            </motion.p>
 
             <motion.div
-              className="flex flex-col gap-4 sm:flex-row"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
+              transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+              className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
             >
               <a
                 href="https://calendar.app.google/XWTydYq9gFKd8fv3A"
@@ -66,27 +60,28 @@ export default function HeroSection() {
                     destination: "google_calendar",
                   })
                 }
-                className="rounded-full bg-amber-400 px-8 py-4 text-center font-bold text-black shadow-amber-400/25 transition-all duration-300 hover:scale-105 hover:bg-amber-300 hover:shadow-xl"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-secondary px-7 py-3.5 text-center font-semibold text-black transition-all duration-300 hover:bg-secondary-light"
               >
                 Book a Free 15-Min Fit Call
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
 
               <a
-                href="#services"
-                className="rounded-full border-2 border-secondary bg-transparent px-8 py-4 text-center font-bold text-neutral transition-all duration-300 hover:scale-105 hover:border-secondary-light hover:bg-secondary/20 hover:text-secondary-light hover:shadow-xl"
+                href="#how-it-works"
+                className="inline-flex items-center justify-center rounded-full border border-neutral/15 px-7 py-3.5 text-center font-semibold text-neutral transition-all duration-300 hover:border-neutral/30 hover:bg-white/5"
               >
                 See how it works
               </a>
             </motion.div>
-          </motion.div>
+          </div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8, duration: 1 }}
-            className="relative mt-8 h-[300px] sm:h-[400px] md:h-[500px] lg:mt-0 lg:h-[600px]"
+            transition={{ delay: 0.3, duration: 1 }}
+            className="relative mx-auto w-full max-w-md lg:max-w-none"
           >
-            <SplineScene scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" className="h-full w-full" />
+            <LoopVisual />
           </motion.div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { ArrowRight, Gauge, LifeBuoy, Repeat2, UserRound } from "lucide-react";
+import { ArrowRight, FileStack, Gauge, LifeBuoy, Repeat2, UserRound } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 
@@ -22,9 +22,14 @@ const leakTypes = [
     description: "Every exception escalates to the same person because the operating logic still lives in their head.",
   },
   {
+    icon: <FileStack className="h-5 w-5" />,
+    title: "Output leaks",
+    description: "Work that should generate itself — reports, summaries, content, follow-ups — still gets done by hand, every time.",
+  },
+  {
     icon: <Repeat2 className="h-5 w-5" />,
-    title: "Aging-product leaks",
-    description: "The product still creates value, but the team, documentation, or automation around it has moved on.",
+    title: "Stale product & data leaks",
+    description: "The product or dataset still creates value, but the team, documentation, and automation around it have moved on.",
   },
 ];
 
@@ -57,6 +62,9 @@ export default function PerformanceLeaksSection() {
               We map the leak first, then build the smallest useful system to plug it. Sometimes that is AI.
               Sometimes it is a better handoff, dashboard, integration, or internal tool. The point is not novelty.
               The point is captured performance.
+            </p>
+            <p className="mt-4 text-base font-medium leading-relaxed text-neutral">
+              And under almost every leak is the same root cause: a loop that was supposed to run on its own, but doesn&apos;t.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">

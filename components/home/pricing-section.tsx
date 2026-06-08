@@ -7,11 +7,11 @@ import { useRef } from "react";
 const plans = [
   {
     name: "Launch",
-    subtitle: "One focused system, live in 2–3 weeks",
+    subtitle: "One loop, closed and live in 2–3 weeks",
     features: [
-      "Systems Fit Review and implementation plan",
-      "Build, deploy, and go live",
-      "One focused internal system",
+      "Loop Map — we trace the broken loop and the leak it's causing",
+      "Build, deploy, and close the loop",
+      "One focused system — tool, automation, agent, or dashboard",
       "30 days of post-launch support included",
     ],
     highlight: true,
@@ -20,23 +20,23 @@ const plans = [
   },
   {
     name: "Support",
-    subtitle: "Keep it running smoothly",
+    subtitle: "Keep the loop running",
     features: [
       "Hosting, monitoring, and maintenance",
       "Bug fixes and ongoing support",
       "Reliable help when something breaks",
-      "Ideal if you want stability without ongoing build work",
+      "Ideal if you want the loop stable without ongoing build work",
     ],
     cta: "Talk about support",
   },
   {
     name: "Growth",
-    subtitle: "Support plus continued building",
+    subtitle: "We run and improve your operating loop",
     features: [
       "Everything in Support",
       "Ongoing roadmap and priority planning",
-      "Continuous feature additions and workflow improvements",
-      "Best fit when you want the system improving continuously",
+      "We measure the loop and tighten it every month",
+      "Best fit when you want the loop compounding, not just holding",
     ],
     cta: "Talk about partnership",
   },
@@ -57,10 +57,10 @@ export default function PricingSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Engagements</span>
-          <h2 className="mt-4 text-3xl font-bold md:text-5xl">Three ways to work together.</h2>
-          <p className="mt-4 text-lg text-neutral-dark">
-            Start with one focused system. Then choose how you want to maintain and grow it. Investment scales with scope — we'll talk it through on a fit call.
+          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">Engagements</span>
+          <h2 className="mt-5 text-4xl font-bold tracking-tight md:text-5xl">Three ways to work together.</h2>
+          <p className="mt-5 text-lg text-neutral-dark">
+            Start by closing one loop. Then choose how you want to keep it running and improving. Investment scales with scope — we'll talk it through on a fit call.
           </p>
         </motion.div>
 

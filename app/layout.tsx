@@ -7,16 +7,16 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Slateworks — Performance Leak Diagnostics & AI Automation",
-  description: "Slateworks finds where performance leaks out of your business, then builds simple software and AI automation to capture it.",
+  title: "Slateworks — Managed Operating Loops for Small Teams",
+  description: "Slateworks finds performance leaks and turns them into managed operating loops — simple software, automations, and AI agents that capture the value and keep improving.",
   icons: {
     icon: "/favicon.svg",
     apple: "/apple-touch-icon.png",
   },
   metadataBase: new URL("https://slateworks.io"),
   openGraph: {
-    title: "Slateworks — Performance Leak Diagnostics & AI Automation",
-    description: "Slateworks finds where performance leaks out of your business, then builds simple software and AI automation to capture it.",
+    title: "Slateworks — Managed Operating Loops for Small Teams",
+    description: "Slateworks finds performance leaks and turns them into managed operating loops — simple software, automations, and AI agents that capture the value and keep improving.",
     url: "https://slateworks.io",
     siteName: "Slateworks",
     type: "website",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Slateworks — Performance Leak Diagnostics & AI Automation",
-    description: "Slateworks finds where performance leaks out of your business, then builds simple software and AI automation to capture it.",
+    title: "Slateworks — Managed Operating Loops for Small Teams",
+    description: "Slateworks finds performance leaks and turns them into managed operating loops — simple software, automations, and AI agents that capture the value and keep improving.",
     images: ["/logo-512.png"],
   },
 };

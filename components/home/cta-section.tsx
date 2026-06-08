@@ -27,7 +27,7 @@ export default function CTASection() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="mb-6 text-4xl font-bold md:text-6xl"
           >
-            Ready to find your leak?
+            Bring us one broken handoff.
           </motion.h2>
 
           <motion.p
@@ -36,7 +36,7 @@ export default function CTASection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mx-auto mb-10 max-w-xl text-lg text-neutral-dark md:text-xl"
           >
-            Book a free 15-minute fit call. We&apos;ll map where your business is losing money and tell you exactly what we&apos;d build to capture it.
+            Book a free 15-minute fit call. We&apos;ll map the loop behind it, show you where the value is leaking, and tell you exactly what we&apos;d build to close it.
           </motion.p>
 
           <motion.div
