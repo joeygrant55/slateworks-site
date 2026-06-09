@@ -854,4 +854,91 @@ Every recurring escalation is a decision that has not been externalized yet. Eac
 
 — The Slateworks Operator`
   },
+  {
+    slug: "what-a-fractional-ai-team-actually-does",
+    title: "What a Fractional AI Team Actually Does",
+    excerpt:
+      "Companies everywhere are posting 'AI Enablement Lead' roles. A fractional AI team is that function, delivered now — the systems get built, your people learn to run them, and you skip the six-month search.",
+    date: "2026-06-09",
+    readTime: "7 min read",
+    category: "AI Enablement",
+    tags: ["AI Enablement", "Fractional AI Team", "Operations", "Slateworks Operator"],
+    heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+    content: `A fractional AI team is the AI function your company needs this quarter, delivered as a service instead of a salary.
+
+If you have looked at job boards lately, you have seen the postings: AI Enablement Lead. Head of AI Operations. Internal AI Lead. The brief is almost always the same — find the operational bottlenecks, build AI workflows and internal tools, drive training and adoption, measure the impact, build the company's AI operating system.
+
+That is a real function. Most growing companies genuinely need it now.
+
+What they do not need is the way it is usually bought.
+
+## The hiring math nobody says out loud
+
+The standard play is to hire for it. Here is what that actually costs:
+
+- a $180K–$250K+ fully-loaded salary for someone senior enough to matter
+- a 4–6 month search, because everyone is hunting the same profile
+- onboarding time before anything ships
+- one person's bandwidth, taste, and blind spots
+- severance-shaped risk if it does not work out
+
+Call it nine months and a quarter-million dollars before you know whether it worked. The bottlenecks you wanted fixed are still running the whole time, charging you their daily tax.
+
+## What the fractional version looks like
+
+A fractional AI team does the same job, structured differently:
+
+- **It starts in weeks, not quarters.** No search. The first build is usually live before a recruiter would have finished screening candidates.
+- **It ships systems, not decks.** Internal tools, automations, AI agents, dashboards — working software wired into your actual workflows. Not a strategy PDF.
+- **It trains your people as it goes.** Every system ships with walkthroughs, a plain-English runbook, and a live working session. Your team learns to run it, tweak it, and extend it.
+- **It is a team, not a person.** Senior engineering, design, and AI capability on tap — without one hire's ceiling.
+- **You can leave.** Month-to-month after an initial period. If the value is not obvious, the exit is an email, not a severance negotiation.
+
+The test of a good fractional AI partner is blunt: if they disappeared tomorrow, could your team keep running what they built? If the answer is no, you did not buy capability. You bought dependency with better branding.
+
+## What the work actually is
+
+A typical engagement keeps two builds in flight at all times. The shape repeats:
+
+### 1. Find the leak
+
+Every company has a few places where money or time quietly escapes — leads that go cold between tools, support tickets that bounce, reports a human rebuilds every Monday, exceptions that always escalate to the founder. The first job is to name the biggest one and put a dollar figure on it.
+
+### 2. Build the smallest system that fixes it
+
+Not a platform. Not a rebuild. The smallest tool, automation, or agent that closes the gap — usually live in two to three weeks.
+
+One recent example: a private investor network whose founder applications arrived by email and were reviewed by hand. We rebuilt intake into an automated qualification engine. It captured 250+ qualified leads in three months and opened a new revenue stream from data the team had been throwing away.
+
+### 3. Hand it off, level them up
+
+The runbook, the walkthrough, the working session. Then the monthly cadence: what shipped, what it captured, what is next — and a working session where your team gets practically better at using AI in their own roles. Sales learns to automate follow-up. Ops learns to automate reporting. The capability compounds inside your walls.
+
+### 4. Repeat
+
+The roadmap reprioritizes quarterly. The leaks get smaller. The team gets stronger. That is the whole loop.
+
+## Who this is for
+
+Honest fit criteria, because this is not for everyone:
+
+- funded or profitable companies, roughly 10–150 people
+- a real operational pain — drowning ops, a founder bottleneck, an AI mandate from the board, or systems that need to be sale-ready before a transaction
+- a team worth enabling — at least a few people who touch the workflows every day
+- a decision-maker who wants working systems, not an innovation theater program
+
+If you are pre-revenue, or you want one cheap website, or you are shopping hourly rates — this is the wrong product, and a good fractional partner will tell you so on the first call.
+
+## The question to ask any AI vendor
+
+Before you sign anything — agency, consultant, or fractional team — ask one question:
+
+> "When you leave, what can my team do that it cannot do today?"
+
+If the answer is a list of systems your people can run and extend, you are buying the right thing. If the answer is a renewal pitch, you already know how that story ends.
+
+[Bring us one broken handoff](https://slateworks.io/#contact). Fifteen minutes, and we will tell you exactly what we would build first — and whether the fractional model even makes sense for you.
+
+— The Slateworks Operator`
+  },
 ];

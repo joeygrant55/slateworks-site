@@ -11,11 +11,6 @@ const metrics = [
   { value: "3 weeks", label: "From kickoff to live" },
 ];
 
-const moreWork = [
-  { type: "Landing Page", title: "SPARQ Certified", href: "/work/sparq-certified" },
-  { type: "AI Diagnostic Tool", title: "Sparked Inbound", href: "/work/sparked-inbound" },
-];
-
 export default function WorkSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.15 });
@@ -36,9 +31,8 @@ export default function WorkSection() {
               A manual intake bottleneck,<br className="hidden sm:block" /> turned into a partnership engine.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-neutral-dark">
-              Profluence&apos;s founder decks came in, but qualification, routing, and follow-up were all manual.
-              We mapped the work and built the system that fixed it — capturing qualified leads, surfacing the
-              strongest founders, and opening a new revenue motion off the same data.
+              Founder decks came in, but qualification, routing, and follow-up were all manual. We built the
+              system that fixed it — capturing qualified leads and opening a new revenue motion off the same data.
             </p>
 
             <div className="mt-8 grid grid-cols-3 gap-4">
@@ -78,31 +72,6 @@ export default function WorkSection() {
                 alt="Profluence intake system built by Slateworks"
                 className="h-full w-full object-cover"
               />
-            </div>
-          </div>
-        </motion.div>
-
-        {/* More work — slim row */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-16 border-t border-neutral/10 pt-8"
-        >
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-dark/70">More work</span>
-            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
-              {moreWork.map((w) => (
-                <Link
-                  key={w.title}
-                  href={w.href}
-                  className="group inline-flex items-center gap-3 rounded-full border border-neutral/10 px-5 py-2.5 transition-colors hover:border-secondary/30"
-                >
-                  <span className="text-xs uppercase tracking-wider text-neutral-dark/70">{w.type}</span>
-                  <span className="font-semibold text-neutral">{w.title}</span>
-                  <ArrowRight className="h-4 w-4 text-secondary transition-transform group-hover:translate-x-0.5" />
-                </Link>
-              ))}
             </div>
           </div>
         </motion.div>

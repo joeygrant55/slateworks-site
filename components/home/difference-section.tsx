@@ -8,17 +8,17 @@ const points = [
   {
     icon: <Users className="h-5 w-5" />,
     title: "Build with, not just for",
-    description: "We work alongside your team while we build, so the knowledge transfers as we go — not in a doc nobody reads.",
+    description: "We work alongside your team while we build, so the knowledge transfers as we go.",
   },
   {
     icon: <PlayCircle className="h-5 w-5" />,
     title: "A handover that sticks",
-    description: "Every build ships with walkthroughs, a plain-English runbook, and a live working session so your team actually owns it.",
+    description: "Walkthroughs, a plain-English runbook, and a live working session — so your team owns it.",
   },
   {
     icon: <Rocket className="h-5 w-5" />,
-    title: "Your team can run and extend it",
-    description: "When we're done, your people can operate the system, tweak it, and keep building — without waiting on us.",
+    title: "Run and extend it yourself",
+    description: "When we're done, your people can run it, extend it, and keep building — without us.",
   },
 ];
 

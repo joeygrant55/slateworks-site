@@ -8,26 +8,22 @@ const steps = [
   {
     number: "01",
     title: "Find the leak",
-    description:
-      "A quick call to find where your business is losing money — the lead that goes cold, the work done by hand, the exception that always lands on you.",
+    description: "A quick call to find where your business is quietly losing money or time.",
   },
   {
     number: "02",
     title: "Map it with your team",
-    description:
-      "We map the work end-to-end alongside your team and find the exact step that's broken. The tool comes after the map, never before.",
+    description: "We map the work with your team and find the exact step that's broken.",
   },
   {
     number: "03",
     title: "Build the system",
-    description:
-      "One focused build, usually live in 2 to 3 weeks. An internal tool, an automation, an AI agent, a dashboard — whatever is smallest that fixes it.",
+    description: "One focused build — tool, automation, agent, or dashboard — usually live in 2–3 weeks.",
   },
   {
     number: "04",
     title: "Hand off + level up",
-    description:
-      "We hand it over with walkthroughs and a live working session, then bring your team up to speed to run and extend it — so you own the capability, not a dependency.",
+    description: "We hand it over and level your team up to run and extend it — capability, not dependency.",
   },
 ];
 

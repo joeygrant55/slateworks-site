@@ -6,6 +6,7 @@ import LoopThesisSection from "@/components/home/loop-thesis-section";
 import ModelSection from "@/components/home/model-section";
 import NoAutomateSection from "@/components/home/no-automate-section";
 import PricingSection from "@/components/home/pricing-section";
+import ShowcaseSection from "@/components/home/showcase-section";
 import TeamSection from "@/components/home/team-section";
 import WorkSection from "@/components/home/work-section";
 import Footer from "@/components/layout/footer";
@@ -18,6 +19,7 @@ export default function Home() {
       <HeroSection />
       <LoopThesisSection />
       <DifferenceSection />
+      <ShowcaseSection />
       <LoopMapSection />
       <ModelSection />
       <WorkSection />

@@ -31,12 +31,12 @@ const plans = [
   },
   {
     name: "Growth",
-    subtitle: "We keep building — and your team levels up",
+    subtitle: "Your fractional AI team",
     features: [
       "Everything in Support",
-      "Ongoing roadmap and priority planning",
-      "New systems and improvements every month",
-      "Working sessions that level up your team to build alongside us",
+      "Builds always in flight — tools, automations, AI agents",
+      "Monthly working sessions that level up your team",
+      "Runbooks and walkthroughs for everything we ship",
     ],
     cta: "Talk about partnership",
   },
@@ -123,7 +123,7 @@ export default function PricingSection() {
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          If our fit call doesn't surface a clear path to ROI, we'll tell you honestly — no pitch, no pressure.
+          Not sure where to start? Ask about the two-week AI Opportunity Sprint — we map your biggest leaks, ship one quick win live, and hand you a costed roadmap. And if our fit call doesn't surface a clear path to ROI, we'll tell you honestly — no pitch, no pressure.
         </motion.p>
       </div>
     </section>

@@ -36,13 +36,13 @@ const plans = [
   },
   {
     name: "Growth",
-    subtitle: "We keep building — and your team levels up",
+    subtitle: "Your fractional AI team",
     cta: "Talk about partnership",
     features: [
       "Everything in Support",
-      "Ongoing roadmap and priority planning",
-      "New systems and improvements every month",
-      "Working sessions that level up your team to build alongside us",
+      "Builds always in flight — tools, automations, AI agents",
+      "Monthly working sessions that level up your team",
+      "Runbooks and walkthroughs for everything we ship",
     ],
   },
 ];
@@ -201,7 +201,7 @@ export default function ServicesPage() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">Engagements</span>
             <h2 className="mt-4 text-3xl font-bold md:text-5xl">Three ways to work together.</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
-              Start by fixing one system. Then choose how you want to keep building and leveling up your team. Investment scales with scope — we'll talk it through on a fit call.
+              Start by fixing one system — or with a two-week AI Opportunity Sprint that maps your biggest leaks, ships one quick win, and hands you a costed roadmap. Investment scales with scope — we'll talk it through on a fit call.
             </p>
           </div>
 

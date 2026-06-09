@@ -5,11 +5,11 @@ import { FileStack, Gauge, LifeBuoy, Repeat2, UserRound } from "lucide-react";
 import { useRef } from "react";
 
 const leaks = [
-  { icon: <Gauge className="h-4 w-4" />, title: "Conversion leaks", description: "Leads raise their hand, then context, ownership, or follow-up disappears between tools." },
-  { icon: <LifeBuoy className="h-4 w-4" />, title: "Support leaks", description: "Customers repeat themselves because context is scattered and recurring issues never become systems." },
-  { icon: <UserRound className="h-4 w-4" />, title: "Founder-time leaks", description: "Every exception escalates to the same person because the operating logic still lives in their head." },
-  { icon: <FileStack className="h-4 w-4" />, title: "Output leaks", description: "Work that should generate itself — reports, summaries, follow-ups — still gets done by hand." },
-  { icon: <Repeat2 className="h-4 w-4" />, title: "Stale product & data leaks", description: "The product still creates value, but the team, docs, and automation around it have moved on." },
+  { icon: <Gauge className="h-4 w-4" />, title: "Conversion leaks", tag: "leads that go cold" },
+  { icon: <LifeBuoy className="h-4 w-4" />, title: "Support leaks", tag: "customers repeating themselves" },
+  { icon: <UserRound className="h-4 w-4" />, title: "Founder-time leaks", tag: "every exception hits you" },
+  { icon: <FileStack className="h-4 w-4" />, title: "Output leaks", tag: "work still done by hand" },
+  { icon: <Repeat2 className="h-4 w-4" />, title: "Stale product & data", tag: "systems nobody maintains" },
 ];
 
 export default function LoopThesisSection() {
@@ -52,15 +52,13 @@ export default function LoopThesisSection() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
                 transition={{ duration: 0.45, delay: 0.08 * i }}
-                className="flex items-start gap-4 border-b border-neutral/10 py-5 last:border-b-0"
+                className="flex items-center gap-4 border-b border-neutral/10 py-4 last:border-b-0"
               >
-                <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
                   {leak.icon}
                 </div>
-                <div>
-                  <h3 className="text-base font-semibold text-neutral">{leak.title}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-neutral-dark">{leak.description}</p>
-                </div>
+                <h3 className="text-base font-semibold text-neutral">{leak.title}</h3>
+                <span className="ml-auto text-sm text-neutral-dark">{leak.tag}</span>
               </motion.div>
             ))}
           </div>

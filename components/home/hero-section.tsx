@@ -38,9 +38,8 @@ export default function HeroSection() {
               transition={{ delay: 0.25, duration: 0.8, ease: "easeOut" }}
               className="mt-7 max-w-xl text-lg leading-relaxed text-neutral-dark md:text-xl"
             >
-              Slateworks builds the systems to capture it — the tools, automations, and AI your team is missing —
-              then brings your people up to speed to run and extend them. You get the software and the capability,
-              not a dependency.
+              We build the tools, automations, and AI your team is missing — then level your team up to run them.
+              The software and the capability, not a dependency.
             </motion.p>
 
             <motion.div
