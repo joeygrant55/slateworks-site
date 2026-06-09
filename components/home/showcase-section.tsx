@@ -32,12 +32,12 @@ const builds = [
     href: "/work/haven",
   },
   {
-    src: "/images/allsuspects-hero.jpg",
-    url: "All Suspects",
+    src: "/images/allsaints-hero.png",
+    url: "allsaints.slateworks.io",
     imgClassName: "object-top",
-    name: "All Suspects",
-    blurb: "An AI-driven murder-mystery game with generated suspects, clues, and interrogation.",
-    href: "/work/all-suspects",
+    name: "All Saints",
+    blurb: "A Catholic AI companion for counsel, study, formation, and voice-enabled conversations with the saints.",
+    href: "/work/all-saints",
   },
 ];
 
