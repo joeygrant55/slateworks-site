@@ -22,7 +22,7 @@ const stages = [
   { icon: <GitBranch className="h-5 w-5" />, label: "Decision", blurb: "Logic decides what it means." },
   { icon: <Zap className="h-5 w-5" />, label: "Action", blurb: "The system does the work." },
   { icon: <BarChart3 className="h-5 w-5" />, label: "Measurement", blurb: "You see what actually happened." },
-  { icon: <Sparkles className="h-5 w-5" />, label: "Learning", blurb: "The loop gets smarter." },
+  { icon: <Sparkles className="h-5 w-5" />, label: "Learning", blurb: "The system gets smarter." },
   { icon: <TrendingUp className="h-5 w-5" />, label: "Better Action", blurb: "Next time, it does better." },
 ];
 
@@ -41,7 +41,7 @@ export default function LoopMapSection() {
 
   return (
     <section
-      id="the-loop"
+      id="what-we-build"
       className="relative overflow-hidden border-y border-neutral/10 bg-neutral-darker/30 py-24 text-neutral md:py-36"
       ref={sectionRef}
     >
@@ -54,13 +54,13 @@ export default function LoopMapSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">The Loop</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">What We Build</span>
           <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight md:text-5xl">
-            What a managed loop looks like.
+            We build systems that run — and get better.
           </h2>
           <p className="mt-5 text-lg text-neutral-dark">
-            Every loop we build runs the same circuit. The last step feeds the first — so the system doesn&apos;t
-            just run, it improves.
+            Every system we build runs the same circuit. The last step feeds the first — so it doesn&apos;t just
+            run on its own, it improves on its own.
           </p>
         </motion.div>
 
@@ -99,7 +99,7 @@ export default function LoopMapSection() {
             <RotateCw className="h-4 w-4 text-secondary" />
             <span>
               …and <span className="text-neutral">Better Action</span> becomes the next{" "}
-              <span className="text-neutral">Signal</span>. That&apos;s the loop.
+              <span className="text-neutral">Signal</span>. That&apos;s how it improves itself.
             </span>
           </motion.div>
         </div>
@@ -112,7 +112,7 @@ export default function LoopMapSection() {
           className="mx-auto mt-16 flex max-w-3xl flex-col items-center"
         >
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-neutral-dark/70">
-            Loops we manage
+            Systems we build
           </p>
           <div className="flex flex-wrap justify-center gap-2.5">
             {exampleLoops.map((loop) => (

@@ -28,7 +28,7 @@ export default function Header() {
   const isHomePage = pathname === "/";
   const navItems = [
     { label: "Services", href: isHomePage ? "#how-it-works" : "/services" },
-    { label: "The Loop", href: isHomePage ? "#the-loop" : "/#the-loop" },
+    { label: "What We Build", href: isHomePage ? "#what-we-build" : "/#what-we-build" },
     { label: "Work", href: isHomePage ? "#work" : "/work" },
     { label: "About", href: "/about" },
     { label: "Blog", href: "/blog" },

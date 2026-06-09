@@ -26,8 +26,8 @@ export default function ContactSection() {
                 Bring us one broken handoff.
               </h2>
               <p className="mt-5 max-w-md text-lg leading-relaxed text-neutral-dark">
-                Book a free 15-minute fit call. We&apos;ll map the loop behind it, show you where the value is
-                leaking, and tell you exactly what we&apos;d build to close it. No commitment required.
+                Book a free 15-minute fit call. We&apos;ll map the problem behind it, show you where the value is
+                leaking, and tell you exactly what we&apos;d build to fix it. No commitment required.
               </p>
 
               <div className="mt-10 space-y-5">

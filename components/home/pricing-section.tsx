@@ -7,12 +7,12 @@ import { useRef } from "react";
 const plans = [
   {
     name: "Launch",
-    subtitle: "One loop, closed and live in 2–3 weeks",
+    subtitle: "One system, built and live in 2–3 weeks",
     features: [
-      "Loop Map — we trace the broken loop and the leak it's causing",
-      "Build, deploy, and close the loop",
+      "We map the biggest leak and the system that fixes it",
+      "Build, deploy, and go live",
       "One focused system — tool, automation, agent, or dashboard",
-      "30 days of post-launch support included",
+      "Handover walkthroughs so your team can run it",
     ],
     highlight: true,
     badge: "Best Place to Start",
@@ -20,23 +20,23 @@ const plans = [
   },
   {
     name: "Support",
-    subtitle: "Keep the loop running",
+    subtitle: "Keep it running",
     features: [
       "Hosting, monitoring, and maintenance",
       "Bug fixes and ongoing support",
       "Reliable help when something breaks",
-      "Ideal if you want the loop stable without ongoing build work",
+      "Ideal if you want it stable without ongoing build work",
     ],
     cta: "Talk about support",
   },
   {
     name: "Growth",
-    subtitle: "We run and improve your operating loop",
+    subtitle: "We keep building — and your team levels up",
     features: [
       "Everything in Support",
       "Ongoing roadmap and priority planning",
-      "We measure the loop and tighten it every month",
-      "Best fit when you want the loop compounding, not just holding",
+      "New systems and improvements every month",
+      "Working sessions that level up your team to build alongside us",
     ],
     cta: "Talk about partnership",
   },
@@ -60,7 +60,7 @@ export default function PricingSection() {
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">Engagements</span>
           <h2 className="mt-5 text-4xl font-bold tracking-tight md:text-5xl">Three ways to work together.</h2>
           <p className="mt-5 text-lg text-neutral-dark">
-            Start by closing one loop. Then choose how you want to keep it running and improving. Investment scales with scope — we'll talk it through on a fit call.
+            Start by fixing one system. Then choose how you want to keep building and leveling up your team. Investment scales with scope — we'll talk it through on a fit call.
           </p>
         </motion.div>
 

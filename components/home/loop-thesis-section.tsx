@@ -27,17 +27,17 @@ export default function LoopThesisSection() {
             transition={{ duration: 0.6 }}
             className="lg:sticky lg:top-32 lg:self-start"
           >
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">The Thesis</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">The Problem</span>
             <h2 className="mt-5 text-4xl font-bold leading-[1.08] tracking-tight md:text-5xl">
-              A leak is usually a<br className="hidden sm:block" /> broken loop.
+              Where your business is<br className="hidden sm:block" /> leaking profit.
             </h2>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-neutral-dark">
-              A leak is the symptom — the lead that goes cold, the ticket that bounces, the report that never
-              writes itself. The cause is almost always a loop that was supposed to run on its own and stopped.
+              The lead that goes cold. The ticket that bounces. The report someone rebuilds by hand every week.
+              Small leaks, but they repeat — and they add up to real money and real time.
             </p>
             <p className="mt-6 max-w-md text-lg font-medium leading-snug text-neutral">
-              Slateworks finds performance leaks and turns them into{" "}
-              <span className="text-secondary">managed operating loops</span>.
+              We find the biggest one first, then build the system that{" "}
+              <span className="text-secondary">closes it for good</span>.
             </p>
           </motion.div>
 

@@ -12,37 +12,37 @@ export const metadata: Metadata = {
 const plans = [
   {
     name: "Launch",
-    subtitle: "One loop, closed and live in 2–3 weeks",
+    subtitle: "One system, built and live in 2–3 weeks",
     highlight: true,
     badge: "Best Place to Start",
     cta: "Book a fit call",
     features: [
-      "Loop Map — we trace the broken loop and the leak it's causing",
-      "Custom build — the system that closes it",
+      "We map the biggest leak and the system that fixes it",
+      "Custom build — the system that captures it",
       "One focused system (tool, automation, agent, or dashboard)",
-      "30 days post-launch support included",
+      "Handover walkthroughs so your team can run it",
     ],
   },
   {
     name: "Support",
-    subtitle: "Keep the loop running",
+    subtitle: "Keep it running",
     cta: "Talk about support",
     features: [
       "Hosting, monitoring, and maintenance",
       "Bug fixes and security updates",
       "Reliable help when something breaks",
-      "Ideal when you want the loop stable without ongoing build work",
+      "Ideal when you want it stable without ongoing build work",
     ],
   },
   {
     name: "Growth",
-    subtitle: "We run and improve your operating loop",
+    subtitle: "We keep building — and your team levels up",
     cta: "Talk about partnership",
     features: [
       "Everything in Support",
       "Ongoing roadmap and priority planning",
-      "We measure the loop and tighten it every month",
-      "Best when you want the loop compounding, not just holding",
+      "New systems and improvements every month",
+      "Working sessions that level up your team to build alongside us",
     ],
   },
 ];
@@ -56,20 +56,20 @@ const process = [
   },
   {
     step: "02",
-    title: "Map the Loop",
-    description: "We trace the loop underneath the leak — signal, decision, action, measurement — and find the exact step that broke.",
+    title: "Map It With Your Team",
+    description: "We map the work end-to-end alongside your team and find the exact step that's broken. The tool comes after the map, never before.",
     icon: Workflow,
   },
   {
     step: "03",
     title: "Build the System",
-    description: "We build the smallest system that closes the loop in 2–3 weeks. You review, we refine, then it goes live.",
+    description: "We build the smallest system that fixes it in 2–3 weeks. You review, we refine, then it goes live.",
     icon: Zap,
   },
   {
     step: "04",
-    title: "Manage the Improvement",
-    description: "The loop runs. We measure what it captures and tighten it every month, so it gets better instead of drifting back to manual.",
+    title: "Hand Off + Level Up",
+    description: "We hand it over with walkthroughs and a working session, then bring your team up to speed to run and extend it — so you own the capability, not a dependency.",
     icon: DollarSign,
   },
 ];
@@ -112,10 +112,10 @@ export default function ServicesPage() {
           <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
             Your business is leaking profit.
             <br />
-            <span className="text-amber-400">Usually it's a broken loop.</span>
+            <span className="text-amber-400">We build the fix — with your team.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60 md:text-xl">
-            Every business has loops that were supposed to run on their own and stopped. We find the leak, map the loop underneath it, build the system that closes it, then manage it so it keeps improving.
+            We find where your business is losing money, build the system that fixes it, then bring your team up to speed to run and extend it. You get the software and the capability, not a dependency.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
@@ -140,9 +140,9 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">How It Works</span>
-            <h2 className="mt-4 text-3xl font-bold md:text-5xl">From broken loop to managed loop</h2>
+            <h2 className="mt-4 text-3xl font-bold md:text-5xl">From manual mess to a system your team runs</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
-              We don't just build software. We find where your business is losing money, map the loop underneath it, then build and manage the fix.
+              We don't just build software. We find where your business is losing money, build the fix with your team, then hand it off so they can run it.
             </p>
           </div>
 
@@ -169,9 +169,9 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">What We Build</span>
-            <h2 className="mt-4 text-3xl font-bold md:text-5xl">Whatever closes the loop</h2>
+            <h2 className="mt-4 text-3xl font-bold md:text-5xl">Whatever fixes the problem</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
-              We're not married to a tool. We build the smallest thing that closes the loop and keeps it running.
+              We're not married to a tool. We build the smallest thing that fixes the problem and keeps running.
             </p>
           </div>
 
@@ -201,7 +201,7 @@ export default function ServicesPage() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">Engagements</span>
             <h2 className="mt-4 text-3xl font-bold md:text-5xl">Three ways to work together.</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
-              Start by closing one loop. Then choose how you want to keep it running and improving. Investment scales with scope — we'll talk it through on a fit call.
+              Start by fixing one system. Then choose how you want to keep building and leveling up your team. Investment scales with scope — we'll talk it through on a fit call.
             </p>
           </div>
 
@@ -263,9 +263,9 @@ export default function ServicesPage() {
           <div className="flex flex-col items-center gap-8 md:flex-row">
             <div className="flex-1">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">Proof</span>
-              <h2 className="mt-4 text-2xl font-bold md:text-3xl">Profluence: From broken intake loop to partnership engine</h2>
+              <h2 className="mt-4 text-2xl font-bold md:text-3xl">Profluence: From manual intake bottleneck to partnership engine</h2>
               <p className="mt-4 text-white/60">
-                Profluence's intake loop was broken — decks came in, but qualification, routing, and follow-up were all manual. We mapped the loop and built the system that closed it: 250+ qualified leads captured, a partner pipeline created, and a new revenue motion launched.
+                Profluence's intake was all manual — decks came in, but qualification, routing, and follow-up ate the team's time. We mapped the work and built the system that fixed it: 250+ qualified leads captured, a partner pipeline created, and a new revenue motion launched.
               </p>
               <div className="mt-6 flex flex-wrap gap-6">
                 <div>
@@ -298,7 +298,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold md:text-5xl">Bring us one broken handoff.</h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-white/60">
-            Book a free 15-minute fit call. We'll map the loop behind it and tell you honestly if we can help — and if we can't, we'll point you toward someone who can.
+            Book a free 15-minute fit call. We'll map the problem behind it and tell you honestly if we can help — and if we can't, we'll point you toward someone who can.
           </p>
           <a
             href="https://cal.com/slateworks/discovery"

@@ -33,12 +33,12 @@ export default function WorkSection() {
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">Proof</span>
             <h2 className="mt-5 text-3xl font-bold leading-tight tracking-tight md:text-5xl">
-              A broken intake loop,<br className="hidden sm:block" /> turned into a partnership engine.
+              A manual intake bottleneck,<br className="hidden sm:block" /> turned into a partnership engine.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-neutral-dark">
               Profluence&apos;s founder decks came in, but qualification, routing, and follow-up were all manual.
-              We mapped the intake loop and built the system that closed it — capturing qualified leads, surfacing
-              the strongest founders, and opening a new revenue motion off the same data.
+              We mapped the work and built the system that fixed it — capturing qualified leads, surfacing the
+              strongest founders, and opening a new revenue motion off the same data.
             </p>
 
             <div className="mt-8 grid grid-cols-3 gap-4">

@@ -7,16 +7,16 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Slateworks — Managed Operating Loops for Small Teams",
-  description: "Slateworks finds performance leaks and turns them into managed operating loops — simple software, automations, and AI agents that capture the value and keep improving.",
+  title: "Slateworks — AI Systems, and the Team to Run Them",
+  description: "Slateworks builds the tools, automations, and AI systems your business is missing — then levels up your team to run and extend them. You get the software and the capability, not a dependency.",
   icons: {
     icon: "/favicon.svg",
     apple: "/apple-touch-icon.png",
   },
   metadataBase: new URL("https://slateworks.io"),
   openGraph: {
-    title: "Slateworks — Managed Operating Loops for Small Teams",
-    description: "Slateworks finds performance leaks and turns them into managed operating loops — simple software, automations, and AI agents that capture the value and keep improving.",
+    title: "Slateworks — AI Systems, and the Team to Run Them",
+    description: "Slateworks builds the tools, automations, and AI systems your business is missing — then levels up your team to run and extend them. You get the software and the capability, not a dependency.",
     url: "https://slateworks.io",
     siteName: "Slateworks",
     type: "website",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Slateworks — Managed Operating Loops for Small Teams",
-    description: "Slateworks finds performance leaks and turns them into managed operating loops — simple software, automations, and AI agents that capture the value and keep improving.",
+    title: "Slateworks — AI Systems, and the Team to Run Them",
+    description: "Slateworks builds the tools, automations, and AI systems your business is missing — then levels up your team to run and extend them. You get the software and the capability, not a dependency.",
     images: ["/logo-512.png"],
   },
 };

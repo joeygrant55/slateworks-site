@@ -13,21 +13,21 @@ const steps = [
   },
   {
     number: "02",
-    title: "Map the loop",
+    title: "Map it with your team",
     description:
-      "We trace the loop underneath it — signal, decision, action, measurement — and find the exact step that broke. The tool comes after the map, never before.",
+      "We map the work end-to-end alongside your team and find the exact step that's broken. The tool comes after the map, never before.",
   },
   {
     number: "03",
     title: "Build the system",
     description:
-      "One focused build, usually live in 2 to 3 weeks. An internal tool, an automation, an AI agent, a dashboard — whatever is smallest that closes the loop.",
+      "One focused build, usually live in 2 to 3 weeks. An internal tool, an automation, an AI agent, a dashboard — whatever is smallest that fixes it.",
   },
   {
     number: "04",
-    title: "Manage the improvement",
+    title: "Hand off + level up",
     description:
-      "We keep the loop running and measure what it captures, then tighten it every month so it gets better instead of quietly drifting back to manual.",
+      "We hand it over with walkthroughs and a live working session, then bring your team up to speed to run and extend it — so you own the capability, not a dependency.",
   },
 ];
 
@@ -37,7 +37,7 @@ const buildTypes = [
   { icon: <Bot className="h-4 w-4" />, label: "AI agents" },
   { icon: <Gauge className="h-4 w-4" />, label: "Dashboards" },
   { icon: <Plug className="h-4 w-4" />, label: "Integrations" },
-  { icon: <Globe className="h-4 w-4" />, label: "Websites, when they serve the loop" },
+  { icon: <Globe className="h-4 w-4" />, label: "Websites, when they're part of the system" },
 ];
 
 export default function ModelSection() {
@@ -56,11 +56,12 @@ export default function ModelSection() {
           >
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">How It Works</span>
             <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight md:text-5xl">
-              How a leak becomes a managed loop.
+              How we work with you.
             </h2>
             <p className="mt-5 max-w-xl text-lg text-neutral-dark">
               Senior-level engineering at startup speed, without the agency overhead. We find the leak, map the
-              loop, build the smallest system that closes it, then manage it so it keeps improving.
+              work with your team, build the smallest system that fixes it, then hand it off and level your
+              team up to run it.
             </p>
           </motion.div>
 
@@ -93,7 +94,7 @@ export default function ModelSection() {
           >
             <p className="text-sm text-neutral-dark">
               <span className="font-semibold text-neutral">We&apos;re not married to a tool.</span> We build whatever
-              is smallest that closes the loop:
+              is smallest that fixes the problem:
             </p>
             <div className="mt-5 flex flex-wrap gap-2.5">
               {buildTypes.map((b) => (

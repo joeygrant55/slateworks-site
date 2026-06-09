@@ -32,7 +32,7 @@ export default function NoAutomateSection() {
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-neutral-dark">
             Automating a broken process just makes broken happen faster. Some workflows need something else first —
-            and <span className="font-semibold text-neutral">Slateworks maps the loop before choosing the tool.</span>
+            and <span className="font-semibold text-neutral">Slateworks maps the problem before choosing the tool.</span>
           </p>
         </motion.div>
 

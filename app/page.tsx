@@ -1,4 +1,5 @@
 import ContactSection from "@/components/home/contact-section";
+import DifferenceSection from "@/components/home/difference-section";
 import HeroSection from "@/components/home/hero-section";
 import LoopMapSection from "@/components/home/loop-map-section";
 import LoopThesisSection from "@/components/home/loop-thesis-section";
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <LoopThesisSection />
+      <DifferenceSection />
       <LoopMapSection />
       <ModelSection />
       <WorkSection />

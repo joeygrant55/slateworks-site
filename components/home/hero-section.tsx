@@ -20,7 +20,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6 }}
               className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-secondary"
             >
-              Managed Operating Loops
+              AI systems, built with your team
             </motion.span>
 
             <motion.h1
@@ -38,9 +38,9 @@ export default function HeroSection() {
               transition={{ delay: 0.25, duration: 0.8, ease: "easeOut" }}
               className="mt-7 max-w-xl text-lg leading-relaxed text-neutral-dark md:text-xl"
             >
-              In the manual work, the scattered spreadsheets, the handoffs that quietly drop. Slateworks finds
-              the biggest performance leak, then turns it into a managed operating loop — a system that captures
-              the value and keeps improving.
+              Slateworks builds the systems to capture it — the tools, automations, and AI your team is missing —
+              then brings your people up to speed to run and extend them. You get the software and the capability,
+              not a dependency.
             </motion.p>
 
             <motion.div

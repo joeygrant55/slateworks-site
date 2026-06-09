@@ -21,7 +21,7 @@ export default function Footer() {
             <h4 className="mb-6 text-sm font-semibold uppercase tracking-wider">What We Build</h4>
             <ul className="space-y-3">
               <li><a href="/#the-leak" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Performance Leak Diagnostics</a></li>
-              <li><a href="/#the-loop" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Managed Operating Loops</a></li>
+              <li><a href="/#what-we-build" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Self-Running Systems</a></li>
               <li><a href="/#how-it-works" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Integrations & Automations</a></li>
               <li><a href="/#how-it-works" className="text-sm text-neutral-dark transition-colors hover:text-secondary">Internal Tools & Dashboards</a></li>
             </ul>
