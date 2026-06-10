@@ -37,7 +37,7 @@ Slateworks — slateworks.io`,
     subject: "Re: {{company}}'s AI function — a faster path",
     body: `{{name}} — one more thought.
 
-Companies your size solve this one of two ways: a $200K+ AI/ops hire (6-month search, one person's bandwidth), or a team that starts in two weeks and productizes the whole function.
+Companies your size solve this one of two ways: a $200K+ AI/ops hire (4–6 month search, one person's bandwidth), or a team that starts in two weeks and productizes the whole function.
 
 We do the second. Two active builds in flight at all times, monthly working sessions that make your existing team more capable, and runbooks for everything we ship — so the capability stays even if we don't.
 
@@ -74,7 +74,7 @@ export const NETWORK_INTRO_ASK = {
     subject: "Intro to {{name}} at {{company}}?",
     body: `{{mutual}} — quick ask.
 
-I'm looking to connect with {{name}} at {{company}}. I think what we built for Profluence (the intake engine — 250+ qualified leads, new partner revenue stream) maps almost exactly to what they're dealing with.
+I'm looking to connect with {{name}} at {{company}}. I think what we built for Profluence (the intake engine — 250+ qualified leads in 3 months, new partner revenue stream) maps almost exactly to what they're dealing with.
 
 If you're comfortable, here's a forwardable blurb — happy to return the favor anytime:
 
@@ -118,5 +118,8 @@ export const LINKEDIN_DMS = {
 
   variantB_hiring_signal: `{{name}} — saw {{company}} is hiring a {{roleTitle}}. While you search (usually 4–6 months for that role), we run exactly that function fractionally — find the bottlenecks, build the AI systems, drive adoption, hand over playbooks your eventual hire inherits. Want to see what that looks like?`,
 
-  variantC_ma_signal: `{{name}} — noticed {{trigger}}. We help companies heading into diligence make their systems self-running and sale-ready — dedup, automation, documentation. Did this recently for a SaaS platform in an M&A motion. Open to a quick call?`,
+  // PROOF EMBARGO: no delivered-M&A claim until IconSource is Closed won. Until then:
+  // no claim (as below), explicit pending framing Joey approves per use, or substitute
+  // registry proof (Profluence).
+  variantC_ma_signal: `{{name}} — noticed {{trigger}}. We help companies heading into diligence make their systems self-running and sale-ready — dedup, automation, documentation. Open to a quick call?`,
 } as const;
