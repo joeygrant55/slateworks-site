@@ -14,7 +14,6 @@ const plans = [
       "One focused system — tool, automation, agent, or dashboard",
       "Handover walkthroughs so your team can run it",
     ],
-    highlight: true,
     badge: "Best Place to Start",
     cta: "Book a fit call",
   },
@@ -38,6 +37,8 @@ const plans = [
       "Monthly working sessions that level up your team",
       "Runbooks and walkthroughs for everything we ship",
     ],
+    highlight: true,
+    badge: "The Partnership",
     cta: "Talk about partnership",
   },
 ];

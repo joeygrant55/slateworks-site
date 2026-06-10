@@ -67,7 +67,14 @@ export default function Header() {
             </nav>
 
             <div className="flex items-center space-x-4">
-              {/* Sign In removed — no auth portal currently */}
+              <a
+                href="https://calendar.app.google/XWTydYq9gFKd8fv3A"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden rounded-full bg-secondary px-5 py-2 text-sm font-semibold text-black transition-colors hover:bg-secondary-light lg:inline-flex"
+              >
+                Book a fit call
+              </a>
 
               <button
                 onClick={() => setIsMobileMenuOpen((prev) => !prev)}
@@ -113,7 +120,15 @@ export default function Header() {
               ))}
             </div>
 
-            {/* Sign In removed — no auth portal currently */}
+            <a
+              href="https://calendar.app.google/XWTydYq9gFKd8fv3A"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block rounded-full bg-secondary px-5 py-3 text-center text-base font-semibold text-black transition-colors hover:bg-secondary-light"
+            >
+              Book a fit call
+            </a>
           </div>
         </nav>
       </div>

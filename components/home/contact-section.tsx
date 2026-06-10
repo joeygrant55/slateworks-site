@@ -30,6 +30,19 @@ export default function ContactSection() {
                 leaking, and tell you exactly what we&apos;d build to fix it. No commitment required.
               </p>
 
+              <div className="mt-7 flex items-center gap-4">
+                <img
+                  src="/images/joey.jpg"
+                  alt="Joey Grant"
+                  className="h-12 w-12 rounded-full border border-secondary/30 object-cover"
+                />
+                <p className="text-sm text-neutral-dark">
+                  <span className="font-semibold text-neutral">Joey Grant, founder.</span>
+                  <br />
+                  You&apos;ll get a reply from me, not a funnel.
+                </p>
+              </div>
+
               <div className="mt-10 space-y-5">
                 <div className="flex items-center gap-4">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-neutral/10 bg-neutral-darker">

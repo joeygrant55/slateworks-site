@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Spotlight } from "@/components/ui/spotlight";
-import LoopVisual from "@/components/ui/loop-visual";
+import SystemFeed from "@/components/ui/system-feed";
 import { analyticsEvents, trackEvent } from "@/lib/analytics-events";
+
+const shippedFor = ["Profluence", "SPARQ Certified", "Sparked Inbound", "Suncoast Harvest"];
 
 export default function HeroSection() {
   return (
@@ -75,14 +77,35 @@ export default function HeroSection() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
-            className="relative mx-auto w-full max-w-md lg:max-w-none"
+            className="relative mx-auto flex w-full justify-center lg:justify-end"
           >
-            <LoopVisual />
+            <SystemFeed />
           </motion.div>
         </div>
+
+        {/* Trust strip — systems shipped for */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9, duration: 1 }}
+          className="mt-20 border-t border-neutral/10 pt-8"
+        >
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-8">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-neutral-dark/60">
+              Systems shipped for
+            </span>
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
+              {shippedFor.map((name) => (
+                <span key={name} className="text-sm font-semibold tracking-wide text-neutral-dark">
+                  {name}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-space-grotesk",
+});
 
 export const metadata: Metadata = {
   title: "Slateworks — AI Systems, and the Team to Run Them",
@@ -20,13 +25,11 @@ export const metadata: Metadata = {
     url: "https://slateworks.io",
     siteName: "Slateworks",
     type: "website",
-    images: [{ url: "/logo-512.png", width: 512, height: 512, alt: "Slateworks" }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Slateworks — AI Systems, and the Team to Run Them",
     description: "Slateworks builds the tools, automations, and AI systems your business is missing — then levels up your team to run and extend them. You get the software and the capability, not a dependency.",
-    images: ["/logo-512.png"],
   },
 };
 
@@ -36,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`scroll-smooth ${spaceGrotesk.variable}`}>
       <body className={`${inter.className} bg-neutral-950 text-white antialiased`}>
         {children}
         <Analytics />

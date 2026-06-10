@@ -6,7 +6,17 @@ import Link from "next/link";
 import { useRef } from "react";
 import BrowserFrame from "@/components/ui/browser-frame";
 
-const builds = [
+type Build = {
+  src: string;
+  url: string;
+  imgClassName: string;
+  name: string;
+  blurb: string;
+  href: string;
+  external?: boolean;
+};
+
+const builds: Build[] = [
   {
     src: "/images/sparked-inbound-intake.jpg",
     url: "sparkedinbound.com",
@@ -16,7 +26,7 @@ const builds = [
     href: "/work/sparked-inbound",
   },
   {
-    src: "/images/sparqcertified-screenshot.png",
+    src: "/images/sparqcertified-live.jpg",
     url: "sparqcertified.com",
     imgClassName: "object-top",
     name: "SPARQ Certified",
@@ -24,20 +34,21 @@ const builds = [
     href: "/work/sparq-certified",
   },
   {
-    src: "/images/haven-hero.jpg",
-    url: "Haven · iOS",
-    imgClassName: "object-center",
-    name: "Haven",
-    blurb: "An AI interior-design mobile app — design your home, room by room.",
-    href: "/work/haven",
+    src: "/images/suncoast-harvest-hero.jpg",
+    url: "suncoastharvest.com",
+    imgClassName: "object-top",
+    name: "Suncoast Harvest",
+    blurb: "The full product platform for a sustainable-agriculture supplier — catalog, labels, and ordering.",
+    href: "https://suncoastharvest.com/",
+    external: true,
   },
   {
-    src: "/images/allsaints-hero.png",
-    url: "allsaints.slateworks.io",
+    src: "/images/profluence-landing.jpg",
+    url: "profluence.com",
     imgClassName: "object-top",
-    name: "All Saints",
-    blurb: "A Catholic AI companion for counsel, study, formation, and voice-enabled conversations with the saints.",
-    href: "/work/all-saints",
+    name: "Profluence",
+    blurb: "The public platform site for a private sports-business network — built and maintained by Slateworks.",
+    href: "/work/profluence",
   },
 ];
 
@@ -71,24 +82,37 @@ export default function ShowcaseSection() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
               transition={{ duration: 0.5, delay: 0.1 * i }}
             >
-              <Link href={b.href} className="group block">
-                <BrowserFrame
-                  src={b.src}
-                  alt={`${b.name} — built by Slateworks`}
-                  url={b.url}
-                  imgClassName={b.imgClassName}
-                  className="transition-all duration-300 group-hover:-translate-y-1 group-hover:border-secondary/30"
-                />
-                <div className="mt-5 flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="flex items-center gap-1.5 text-lg font-semibold text-neutral">
-                      {b.name}
-                      <ArrowUpRight className="h-4 w-4 text-secondary opacity-0 transition-opacity group-hover:opacity-100" />
-                    </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-neutral-dark">{b.blurb}</p>
-                  </div>
-                </div>
-              </Link>
+              {(() => {
+                const card = (
+                  <>
+                    <BrowserFrame
+                      src={b.src}
+                      alt={`${b.name} — built by Slateworks`}
+                      url={b.url}
+                      imgClassName={b.imgClassName}
+                      className="transition-all duration-300 group-hover:-translate-y-1 group-hover:border-secondary/30"
+                    />
+                    <div className="mt-5 flex items-start justify-between gap-4">
+                      <div>
+                        <h3 className="flex items-center gap-1.5 text-lg font-semibold text-neutral">
+                          {b.name}
+                          <ArrowUpRight className="h-4 w-4 text-secondary opacity-0 transition-opacity group-hover:opacity-100" />
+                        </h3>
+                        <p className="mt-1.5 text-sm leading-relaxed text-neutral-dark">{b.blurb}</p>
+                      </div>
+                    </div>
+                  </>
+                );
+                return b.external ? (
+                  <a href={b.href} target="_blank" rel="noopener noreferrer" className="group block">
+                    {card}
+                  </a>
+                ) : (
+                  <Link href={b.href} className="group block">
+                    {card}
+                  </Link>
+                );
+              })()}
             </motion.div>
           ))}
         </div>

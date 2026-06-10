@@ -18,7 +18,13 @@ export default function TeamSection() {
           transition={{ duration: 0.6 }}
           className="mx-auto flex max-w-4xl flex-col items-start gap-6 rounded-2xl border border-neutral/10 bg-neutral-darker/40 p-8 md:flex-row md:items-center md:justify-between md:p-10"
         >
-          <div className="max-w-2xl">
+          <div className="flex max-w-2xl items-start gap-6">
+            <img
+              src="/images/joey.jpg"
+              alt="Joey Grant, founder of Slateworks"
+              className="hidden h-20 w-20 shrink-0 rounded-2xl border border-secondary/30 object-cover sm:block"
+            />
+            <div>
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">The Team</span>
             <h2 className="mt-4 text-2xl font-bold tracking-tight md:text-3xl">
               Built by Joey Grant and a team of AI agents.
@@ -28,6 +34,7 @@ export default function TeamSection() {
               agents, trained them on real product delivery, and points them at problems worth solving — senior-level
               engineering at startup speed, without the agency overhead.
             </p>
+            </div>
           </div>
 
           <Link

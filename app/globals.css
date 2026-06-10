@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  /* Display face — Space Grotesk, loaded via next/font in app/layout.tsx */
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+
   /* Brand palette — these were lost in the Tailwind v3 → v4 migration.
      amber-* still resolves as a default; these custom tokens did not. */
   --color-primary: #0a0a0a;
@@ -10,6 +13,18 @@
   --color-neutral: #fafafa;          /* headlines / near-white */
   --color-neutral-dark: #9aa0aa;     /* muted body text — restores hierarchy */
   --color-neutral-darker: #141417;   /* card surface, just above black */
+}
+
+/* Display type: every headline site-wide gets the brand face.
+   Body copy stays Inter (set on <body> in layout.tsx). */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
 }
 
 @keyframes gradient {

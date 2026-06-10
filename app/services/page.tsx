@@ -13,7 +13,6 @@ const plans = [
   {
     name: "Launch",
     subtitle: "One system, built and live in 2–3 weeks",
-    highlight: true,
     badge: "Best Place to Start",
     cta: "Book a fit call",
     features: [
@@ -37,6 +36,8 @@ const plans = [
   {
     name: "Growth",
     subtitle: "Your fractional AI team",
+    highlight: true,
+    badge: "The Partnership",
     cta: "Talk about partnership",
     features: [
       "Everything in Support",
