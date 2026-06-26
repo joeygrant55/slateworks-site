@@ -2,6 +2,95 @@ import type { BlogPost } from "./blog-posts";
 
 export const operatorBlogPosts: BlogPost[] = [
   {
+    slug: "crm-not-the-problem-handoff-after",
+    title: "Why Your CRM Is Not the Problem \u2014 The Handoff After It Is",
+    excerpt: "Most teams blame the CRM for stalled deals and dropped follow-ups. The real failure happens in the gap between when a record changes and when a human or system acts on it.",
+    date: "2026-06-26",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["CRM", "Sales Operations", "Automation", "Process Design", "Handoffs"],
+    heroImage: "TODO_PICK_HERO_IMAGE",
+    content: `Your CRM is rarely the problem. The handoff after it — the moment a record changes and someone is supposed to act — is where the work actually breaks.
+
+We see this pattern in nearly every growing company we walk through. The CRM is clean enough. The fields are there. The pipeline stages exist. And yet deals stall, follow-ups vanish, and onboarding starts a week late.
+
+The data is fine. The motion around the data is not.
+
+## What a CRM actually does, and what it does not
+
+A CRM stores state. It tells you that a deal moved to "Closed Won," that a lead filled out a form, that a contact has not been touched in 40 days.
+
+That is the whole job. Storing state.
+
+What a CRM does not do, on its own, is move work to the next person or system at the moment the state changes. It will hold a perfectly accurate record of a deal that nobody has followed up on for two weeks.
+
+The record is right. The outcome is wrong.
+
+> The CRM remembers everything and reminds no one.
+
+## Where the handoff usually leaks
+
+When we audit a sales-to-delivery flow, the leaks cluster in a few predictable places.
+
+- **Closed Won to onboarding.** The deal closes in the CRM. The onboarding team finds out when the customer emails asking where their kickoff call is.
+- **Lead to first touch.** A form fills, the lead lands in a queue, and the first reply goes out 19 hours later because nobody owned the queue at 6pm.
+- **Stage change to action.** A deal moves to "Proposal Sent," but the reminder to follow up lives only in one rep's memory.
+- **Account owner change.** The owner field updates. The new owner does not know they now hold a relationship that needs attention this week.
+- **CRM to finance.** A contract value sits in the CRM. The invoice goes out late because someone has to notice, retype it, and send it.
+
+None of these are CRM failures. Every one of them is a handoff that depends on a person remembering to look.
+
+## Why "train the team to update it" does not fix it
+
+The common response is to tighten discipline. More required fields. More reminders in the weekly meeting. A new playbook that asks people to check the pipeline every morning.
+
+This treats a structural gap as a motivation gap.
+
+The rep who forgot to follow up was not lazy. They were carrying 30 open deals in their head and the system gave them no nudge at the right moment. Adding a 31st thing to remember does not help.
+
+Discipline does not scale. Handoffs that fire on their own do.
+
+## The fix is a trigger, not a tool
+
+The answer is almost never a new CRM. It is wiring the moment of change to the next action.
+
+This is what we usually build:
+
+1. **Define the trigger.** A specific field change. Stage moves to Closed Won. Lead source equals "Demo Request." Last activity older than 30 days.
+2. **Define the next action and its owner.** Not "someone should follow up." A named person, a named system, a specific task with a due time.
+3. **Make the system do the carrying.** When the trigger fires, the work appears where the owner already looks — a task in their queue, a message in the channel they watch, an onboarding record created automatically.
+4. **Close the loop.** If the action does not happen within the window, it escalates. The point is that nobody has to notice.
+
+Most of this can be built on top of the CRM you already have. The CRM stays the source of truth. The automation becomes the source of motion.
+
+## A concrete example
+
+A company we worked with had a clean pipeline and a frustrating gap. Deals closed on Friday afternoons routinely lost three or four days before onboarding began, because the handoff was a Slack message someone had to remember to send.
+
+We wired the stage change to do the work. When a deal hits Closed Won, an onboarding record is created, the kickoff task lands on the right person's plate with a due date, and the customer gets a welcome email within minutes.
+
+The CRM did not change. The Friday-afternoon gap closed because the handoff stopped depending on memory.
+
+## How to tell which one is broken
+
+A quick test. Ask two questions about any stalled process.
+
+- Is the information in the CRM correct? If yes, the CRM is doing its job.
+- Did the next step depend on a person noticing the information? If yes, you have found your real problem.
+
+When the data is accurate but the outcome is late, you are not looking at a CRM problem. You are looking at a handoff that nobody automated.
+
+## Where to start
+
+Pick the handoff that costs you the most when it slips. Usually it is the one customers feel — first response time, or the gap between closing and onboarding.
+
+Map exactly who does what after the record changes. Write down the moment it currently depends on memory. That moment is the thing to build.
+
+If you want a second set of eyes on it, bring us one broken handoff — the one that keeps slipping through — and we will map where it leaks and what it would take to make it fire on its own. You can find us at slateworks.io.
+
+— The Slateworks Operator`,
+  },
+  {
     slug: "what-is-a-performance-leak",
     title: "What Is a Performance Leak in a Business?",
     excerpt:
