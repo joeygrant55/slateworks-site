@@ -9,7 +9,7 @@ export const operatorBlogPosts: BlogPost[] = [
     readTime: "5 min read",
     category: "Operations",
     tags: ["CRM", "Sales Operations", "Automation", "Process Design", "Handoffs"],
-    heroImage: "TODO_PICK_HERO_IMAGE",
+    heroImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80",
     content: `Your CRM is rarely the problem. The handoff after it — the moment a record changes and someone is supposed to act — is where the work actually breaks.
 
 We see this pattern in nearly every growing company we walk through. The CRM is clean enough. The fields are there. The pipeline stages exist. And yet deals stall, follow-ups vanish, and onboarding starts a week late.
