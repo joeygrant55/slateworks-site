@@ -56,7 +56,7 @@ export default function AboutPage() {
             <SectionLabel index="01">The founder</SectionLabel>
             <div className="mt-8 space-y-6 text-lg leading-relaxed text-ink-soft">
               <p className="font-display text-2xl leading-snug text-ink md:text-3xl">
-                Fiesta Bowl champion turned tech founder, with $2M+ in revenue contracts generated.
+                Former Division I football player turned multi-time tech founder.
               </p>
               <p>
                 I lead every Slateworks engagement myself. Behind me is a team of AI agents I&apos;ve trained on real

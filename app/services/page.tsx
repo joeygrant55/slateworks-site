@@ -16,7 +16,7 @@ const offers = [
     id: "sprint",
     audience: "Start here",
     title: "AI Opportunity Sprint",
-    price: "$5K · two weeks",
+    price: "Two weeks · fixed scope",
     pitch:
       "A fixed-scope engagement to find where AI will actually pay off in your business — and prove it with something live.",
     includes: [
@@ -30,7 +30,7 @@ const offers = [
     id: "fractional",
     audience: "For companies",
     title: "Fractional AI team",
-    price: "$10–15K / month",
+    price: "Monthly retainer",
     pitch:
       "A senior technical partner on retainer for funded founders, owner-operators, and family offices. Builds always in flight, judgment always on call.",
     includes: [

@@ -70,8 +70,8 @@ export default function Approach() {
                 You get senior judgment at startup speed — without the agency overhead.&rdquo;
               </blockquote>
               <figcaption className="mt-5 text-sm text-ink-muted">
-                <span className="font-medium text-ink">Joey Grant</span> — founder. Fiesta Bowl champion turned tech
-                founder; $2M+ in revenue contracts generated.
+                <span className="font-medium text-ink">Joey Grant</span> — founder. Former Division I football player
+                turned multi-time tech founder.
               </figcaption>
             </div>
           </figure>

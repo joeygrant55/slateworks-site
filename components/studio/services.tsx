@@ -5,7 +5,7 @@ const offers = [
   {
     audience: "For companies",
     title: "Your fractional AI team.",
-    price: "$10–15K / month",
+    price: "Monthly retainer",
     pitch:
       "For funded founders, owner-operators, and family offices who need a senior technical partner — not a vendor waiting on a ticket.",
     points: [
@@ -14,7 +14,7 @@ const offers = [
       "Monthly working sessions that level up your team",
       "Everything documented, and everything owned by you",
     ],
-    footnote: "Most start with a two-week AI Opportunity Sprint — $5K.",
+    footnote: "Most start with a two-week AI Opportunity Sprint.",
   },
   {
     audience: "For agencies & firms",
