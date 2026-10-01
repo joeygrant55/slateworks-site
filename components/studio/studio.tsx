@@ -11,8 +11,8 @@ const products = [
     description:
       "Sing-along songs and storybook lives of the saints for Catholic kids. An iOS app with family subscriptions, and a content engine that writes, renders, and posts on its own.",
     stats: [
-      { value: "1M+", label: "views in the first 60 days" },
-      { value: "100%", label: "AI-run content and posting" },
+      { value: "1.1M", label: "Instagram views in the first 60 days" },
+      { value: "+7.8K", label: "followers gained in the same window" },
     ],
   },
   {

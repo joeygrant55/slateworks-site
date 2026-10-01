@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const shipLog = [
   { value: "21 days", label: "Recasa — first commit to a live, paying App Store product" },
-  { value: "1M+ views", label: "Saintlings — first 60 days, from an AI-run content system" },
+  { value: "1.1M views", label: "Saintlings — first 60 days on Instagram, from an AI-run content system" },
   { value: "3 platforms", label: "Profluence — media, advisory, and venture fund, all built here" },
 ];
 
