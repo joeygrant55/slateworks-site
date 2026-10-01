@@ -1,33 +1,23 @@
-import ContactSection from "@/components/home/contact-section";
-import DifferenceSection from "@/components/home/difference-section";
-import HeroSection from "@/components/home/hero-section";
-import LoopMapSection from "@/components/home/loop-map-section";
-import LoopThesisSection from "@/components/home/loop-thesis-section";
-import ModelSection from "@/components/home/model-section";
-import NoAutomateSection from "@/components/home/no-automate-section";
-import PricingSection from "@/components/home/pricing-section";
-import ShowcaseSection from "@/components/home/showcase-section";
-import TeamSection from "@/components/home/team-section";
-import WorkSection from "@/components/home/work-section";
-import Footer from "@/components/layout/footer";
-import Header from "@/components/layout/header";
+import Approach from "@/components/studio/approach";
+import Contact from "@/components/studio/contact";
+import Hero from "@/components/studio/hero";
+import Services from "@/components/studio/services";
+import SiteFooter from "@/components/studio/site-footer";
+import SiteHeader from "@/components/studio/site-header";
+import Studio from "@/components/studio/studio";
+import Work from "@/components/studio/work";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
-      <Header />
-      <HeroSection />
-      <LoopThesisSection />
-      <DifferenceSection />
-      <ShowcaseSection />
-      <LoopMapSection />
-      <ModelSection />
-      <WorkSection />
-      <NoAutomateSection />
-      <PricingSection />
-      <TeamSection />
-      <ContactSection />
-      <Footer />
+    <main className="min-h-screen bg-paper text-ink">
+      <SiteHeader />
+      <Hero />
+      <Services />
+      <Studio />
+      <Work />
+      <Approach />
+      <Contact />
+      <SiteFooter />
     </main>
   );
 }
