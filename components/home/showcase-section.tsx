@@ -26,12 +26,13 @@ const builds: Build[] = [
     href: "/work/sparked-inbound",
   },
   {
-    src: "/images/sparqcertified-live.jpg",
-    url: "sparqcertified.com",
+    src: "/images/circulus-studio-live.jpg",
+    url: "circulusstudio.com",
     imgClassName: "object-top",
-    name: "SPARQ Certified",
-    blurb: "A facility-partnership site with a built-in revenue calculator — 100+ signups in 30 days.",
-    href: "/work/sparq-certified",
+    name: "Circulus Studio",
+    blurb: "The brand site for a talent, operating, and venture-building company — one story across three engines of value.",
+    href: "https://circulusstudio.com/",
+    external: true,
   },
   {
     src: "/images/suncoast-harvest-hero.jpg",

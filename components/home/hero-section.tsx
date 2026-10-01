@@ -6,7 +6,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 import SystemFeed from "@/components/ui/system-feed";
 import { analyticsEvents, trackEvent } from "@/lib/analytics-events";
 
-const shippedFor = ["Profluence", "SPARQ Certified", "Sparked Inbound", "Suncoast Harvest"];
+const shippedFor = ["Profluence", "Circulus Studio", "Sparked Inbound", "Suncoast Harvest"];
 
 export default function HeroSection() {
   return (
