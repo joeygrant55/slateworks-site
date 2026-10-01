@@ -1,10 +1,13 @@
-"use client";
-
-import Footer from "@/components/layout/footer";
-import Header from "@/components/layout/header";
-import { blogPosts } from "@/lib/blog-posts";
-import { motion } from "framer-motion";
 import Link from "next/link";
+import PageIntro from "@/components/studio/page-intro";
+import SiteFooter from "@/components/studio/site-footer";
+import SiteHeader from "@/components/studio/site-header";
+import { blogPosts } from "@/lib/blog-posts";
+
+export const metadata = {
+  title: "Writing — Slateworks",
+  description: "Field notes on AI systems, agents, and the work of shipping software that gets used.",
+};
 
 function formatDate(value: string) {
   return new Date(`${value}T00:00:00`).toLocaleDateString("en-US", {
@@ -15,75 +18,55 @@ function formatDate(value: string) {
 }
 
 export default function BlogPage() {
+  const posts = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date));
+
   return (
-    <main className="min-h-screen bg-black text-white">
-      <Header />
+    <main className="min-h-screen bg-paper text-ink">
+      <SiteHeader />
+      <PageIntro
+        label="Writing"
+        title="Field notes."
+        lede="What we're learning about AI systems, agents, and shipping software that actually gets used."
+      />
 
-      <section className="mx-auto max-w-7xl px-4 pb-10 pt-28 sm:px-6 lg:px-8 lg:pt-36">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="max-w-3xl"
-        >
-          <p className="mb-4 inline-block rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-white/70">
-            Blog
-          </p>
-          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            The Agent Report
-          </h1>
-          <p className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg">
-            Field notes from The Slateworks Operator on performance leaks, AI automation, workflow handoffs,
-            and the systems that help small teams capture more output from the work they already do.
-          </p>
-        </motion.div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post, index) => (
-            <motion.article
-              key={post.slug}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: index * 0.08, ease: "easeOut" }}
-              className="group overflow-hidden rounded-2xl border border-white/10 bg-neutral-950"
-            >
-              <Link href={`/blog/${post.slug}`} className="block h-full">
-                <div className="relative h-52 overflow-hidden border-b border-white/10">
-                  <img
-                    src={post.heroImage}
-                    alt={post.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <span className="absolute left-3 top-3 rounded-full border border-white/20 bg-black/70 px-3 py-1 text-xs font-medium text-white/85 backdrop-blur-sm">
-                    {post.category}
-                  </span>
-                </div>
-
-                <div className="space-y-4 p-5">
-                  <h2 className="text-xl font-semibold leading-tight text-white transition-colors duration-300 group-hover:text-white/85">
-                    {post.title}
-                  </h2>
-                  <p className="text-sm leading-relaxed text-white/70">{post.excerpt}</p>
-
-                  <div className="flex items-center gap-3 text-xs font-medium text-white/55">
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-6xl md:px-8">
+          <ul className="border-t border-ink">
+            {posts.map((post) => (
+              <li key={post.slug} className="border-b border-rule">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="group grid gap-5 px-5 py-8 md:grid-cols-[9rem_1fr_14rem] md:items-start md:gap-10 md:px-0"
+                >
+                  <p className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">
                     <time dateTime={post.date}>{formatDate(post.date)}</time>
-                    <span aria-hidden>|</span>
-                    <span>{post.readTime}</span>
+                  </p>
+                  <div>
+                    <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-signal">{post.category}</p>
+                    <h2 className="mt-3 text-2xl font-semibold leading-tight transition-colors group-hover:text-signal md:text-[1.75rem]">
+                      {post.title}
+                    </h2>
+                    <p className="mt-3 max-w-2xl leading-relaxed text-ink-soft">{post.excerpt}</p>
+                    <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">
+                      {post.readTime}
+                    </p>
                   </div>
-
-                  <span className="inline-flex items-center text-sm font-medium text-white/85 transition-colors group-hover:text-secondary">
-                    Read post
-                  </span>
-                </div>
-              </Link>
-            </motion.article>
-          ))}
+                  <div className="hidden aspect-[4/3] overflow-hidden rounded-lg border border-rule bg-paper-deep md:block">
+                    <img
+                      src={post.heroImage}
+                      alt=""
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      <Footer />
+      <SiteFooter />
     </main>
   );
 }

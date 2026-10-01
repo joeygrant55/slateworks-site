@@ -36,7 +36,7 @@ export default function ProuenceCaseStudyPage() {
           "Partner pipeline created from qualified founder data",
           "New revenue motion launched off the same loop",
         ],
-        projectUrl: "https://profluence-landing.vercel.app",
+        projectUrl: "https://profluence.com",
         heroImage: "/images/profluence-hero.jpg",
         heroOverlayClassName:
           "bg-gradient-to-br from-black/90 via-zinc-950/85 to-zinc-900/60",

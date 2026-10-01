@@ -1,5 +1,6 @@
-import Footer from "@/components/layout/footer";
-import Header from "@/components/layout/header";
+import ClosingCta from "@/components/studio/closing-cta";
+import SiteFooter from "@/components/studio/site-footer";
+import SiteHeader from "@/components/studio/site-header";
 import { blogPosts } from "@/lib/blog-posts";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -30,10 +31,10 @@ function renderInlineMarkdown(line: string) {
   return line
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
-    .replace(/`(.+?)`/g, "<code class=\"rounded bg-white/10 px-1.5 py-0.5 text-sm\">$1</code>")
+    .replace(/`(.+?)`/g, '<code class="rounded bg-paper-deep px-1.5 py-0.5 font-mono text-[0.85em]">$1</code>')
     .replace(
       /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
-      '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-secondary underline underline-offset-4">$1</a>'
+      '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-ink underline decoration-signal underline-offset-4">$1</a>',
     );
 }
 
@@ -47,13 +48,13 @@ function markdownToHtml(markdown: string) {
   const flushParagraph = () => {
     if (paragraph.length === 0) return;
     const text = renderInlineMarkdown(escapeHtml(paragraph.join(" ")));
-    html.push(`<p class=\"mb-6 leading-8 text-white/80\">${text}</p>`);
+    html.push(`<p class=\"mb-6 text-[1.075rem] leading-8 text-ink-soft\">${text}</p>`);
     paragraph = [];
   };
 
   const flushList = () => {
     if (listItems.length === 0) return;
-    html.push('<ul class="mb-6 list-disc space-y-2 pl-6 text-white/80">');
+    html.push('<ul class="mb-6 list-disc space-y-2 pl-6 text-[1.075rem] leading-8 text-ink-soft marker:text-signal">');
     listItems.forEach((item) => {
       html.push(`<li>${renderInlineMarkdown(escapeHtml(item))}</li>`);
     });
@@ -63,7 +64,9 @@ function markdownToHtml(markdown: string) {
 
   const flushOrderedList = () => {
     if (orderedListItems.length === 0) return;
-    html.push('<ol class="mb-6 list-decimal space-y-2 pl-6 text-white/80">');
+    html.push(
+      '<ol class="mb-6 list-decimal space-y-2 pl-6 text-[1.075rem] leading-8 text-ink-soft marker:font-mono marker:text-signal">',
+    );
     orderedListItems.forEach((item) => {
       html.push(`<li>${renderInlineMarkdown(escapeHtml(item))}</li>`);
     });
@@ -85,7 +88,9 @@ function markdownToHtml(markdown: string) {
       flushParagraph();
       flushList();
       flushOrderedList();
-      html.push(`<h3 class=\"mb-3 mt-8 text-xl font-semibold text-white\">${renderInlineMarkdown(escapeHtml(line.replace("### ", "")))}</h3>`);
+      html.push(
+        `<h3 class=\"mb-3 mt-10 text-xl font-semibold text-ink\">${renderInlineMarkdown(escapeHtml(line.replace("### ", "")))}</h3>`,
+      );
       continue;
     }
 
@@ -93,7 +98,9 @@ function markdownToHtml(markdown: string) {
       flushParagraph();
       flushList();
       flushOrderedList();
-      html.push(`<h2 class=\"mb-4 mt-10 text-2xl font-semibold text-white\">${renderInlineMarkdown(escapeHtml(line.replace("## ", "")))}</h2>`);
+      html.push(
+        `<h2 class=\"mb-4 mt-14 text-2xl font-semibold text-ink md:text-3xl\">${renderInlineMarkdown(escapeHtml(line.replace("## ", "")))}</h2>`,
+      );
       continue;
     }
 
@@ -101,7 +108,9 @@ function markdownToHtml(markdown: string) {
       flushParagraph();
       flushList();
       flushOrderedList();
-      html.push(`<h1 class=\"mb-4 mt-8 text-3xl font-semibold text-white\">${renderInlineMarkdown(escapeHtml(line.replace("# ", "")))}</h1>`);
+      html.push(
+        `<h1 class=\"mb-4 mt-10 text-3xl font-semibold text-ink\">${renderInlineMarkdown(escapeHtml(line.replace("# ", "")))}</h1>`,
+      );
       continue;
     }
 
@@ -159,63 +168,39 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white">
-      <Header />
+    <main className="min-h-screen bg-paper text-ink">
+      <SiteHeader />
 
-      <article className="mx-auto max-w-3xl px-4 pb-20 pt-28 sm:px-6 lg:pt-36">
-        <Link href="/blog" className="inline-flex items-center text-sm text-white/70 transition-colors hover:text-secondary">
-          {"<-"} Back to blog
+      <article className="mx-auto max-w-3xl px-5 pb-24 pt-28 md:px-8 md:pt-40">
+        <Link href="/blog" className="text-sm text-ink-muted hover:text-ink">
+          ← All writing
         </Link>
 
-        <div className="mt-8 space-y-5 border-b border-white/10 pb-8">
-          <span className="inline-flex rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">
-            {post.category}
-          </span>
+        <header className="mt-10 border-b border-rule pb-10">
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal">{post.category}</p>
+          <h1 className="mt-5 text-4xl font-semibold leading-[1.06] md:text-5xl">{post.title}</h1>
+          <p className="mt-6 font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">
+            <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readTime}
+          </p>
+        </header>
 
-          <h1 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
-            {post.title}
-          </h1>
-
-          <div className="flex items-center gap-3 text-sm text-white/60">
-            <time dateTime={post.date}>{formatDate(post.date)}</time>
-            <span aria-hidden>|</span>
-            <span>{post.readTime}</span>
-          </div>
+        <div className="mt-10 overflow-hidden rounded-xl border border-rule bg-paper-deep">
+          <img src={post.heroImage} alt={post.title} className="max-h-[440px] w-full object-cover" />
         </div>
 
-        <div className="mt-10 overflow-hidden rounded-2xl border border-white/10">
-          <img src={post.heroImage} alt={post.title} className="h-full max-h-[420px] w-full object-cover" />
-        </div>
+        <div className="mt-12" dangerouslySetInnerHTML={{ __html: markdownToHtml(post.content) }} />
 
-        <div
-          className="mt-10 text-base"
-          dangerouslySetInnerHTML={{ __html: markdownToHtml(post.content) }}
-        />
-
-        <section className="mt-14 rounded-2xl border border-white/10 bg-neutral-950 p-6">
-          <p className="text-xs uppercase tracking-[0.2em] text-white/55">Written by</p>
-          <p className="mt-2 text-lg font-semibold text-white">The Slateworks Operator</p>
-          <p className="mt-2 text-sm leading-relaxed text-white/60">
+        <footer className="mt-16 border-t border-rule pt-8">
+          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">Written by</p>
+          <p className="mt-2 text-lg font-semibold">The Slateworks Operator</p>
+          <p className="mt-1 text-ink-muted">
             Field notes from Slateworks&apos; AI operator. Human judgment still required where it counts.
           </p>
-        </section>
-
-        <section className="mt-8 rounded-2xl border border-white/10 bg-gradient-to-br from-neutral-900 to-black p-7">
-          <p className="text-xs uppercase tracking-[0.2em] text-white/55">Performance leak diagnostic</p>
-          <h2 className="mt-3 text-2xl font-semibold text-white">What workflow is your team working around?</h2>
-          <p className="mt-2 text-white/70">
-            Send us the workflow, handoff, support loop, or aging system that keeps leaking time, revenue, or attention.
-          </p>
-          <Link
-            href="/#contact"
-            className="mt-5 inline-flex rounded-lg border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white transition-colors hover:border-white/40 hover:bg-white/10"
-          >
-            Map the leak
-          </Link>
-        </section>
+        </footer>
       </article>
 
-      <Footer />
+      <ClosingCta title="Working on something like this?" />
+      <SiteFooter />
     </main>
   );
 }

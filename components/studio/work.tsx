@@ -2,58 +2,9 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/studio/reveal";
 import SectionLabel from "@/components/studio/section-label";
+import { type Build, clientBuilds } from "@/lib/work";
 
-type Build = {
-  name: string;
-  url: string;
-  href: string;
-  external?: boolean;
-  image: string;
-  description: string;
-};
-
-const builds: Build[] = [
-  {
-    name: "Profluence",
-    url: "profluence.com",
-    href: "/work/profluence",
-    image: "/images/profluence-landing.jpg",
-    description: "The platform behind a private sports-business network — media, community, and technology.",
-  },
-  {
-    name: "Profluence Advisory",
-    url: "advisory.profluence.com",
-    href: "https://advisory.profluence.com/",
-    external: true,
-    image: "/images/profluence-advisory-live.jpg",
-    description: "A growth-advisory product with a free AI diagnostic as its front door.",
-  },
-  {
-    name: "Profluence Capital",
-    url: "profluencecapital.com",
-    href: "https://profluencecapital.com/",
-    external: true,
-    image: "/images/profluence-capital-live.jpg",
-    description: "The investor-facing home for a sports, media, and entertainment venture fund.",
-  },
-  {
-    name: "Sparked Inbound",
-    url: "sparkedinbound.com",
-    href: "/work/sparked-inbound",
-    image: "/images/sparked-inbound-intake.jpg",
-    description: "An AI brand-messaging diagnostic that reads a site and returns an analysis in 90 seconds.",
-  },
-  {
-    name: "Suncoast Harvest",
-    url: "suncoastharvest.com",
-    href: "https://suncoastharvest.com/",
-    external: true,
-    image: "/images/suncoast-harvest-hero.jpg",
-    description: "The product platform for a sustainable-agriculture supplier — catalog, labels, and ordering.",
-  },
-];
-
-function BuildCard({ build, featured = false }: { build: Build; featured?: boolean }) {
+export function BuildCard({ build, featured = false }: { build: Build; featured?: boolean }) {
   const inner = (
     <>
       <div
@@ -89,7 +40,7 @@ function BuildCard({ build, featured = false }: { build: Build; featured?: boole
 }
 
 export default function Work() {
-  const [featured, ...rest] = builds;
+  const [featured, ...rest] = clientBuilds;
 
   return (
     <section id="work" className="scroll-mt-20 border-b border-rule bg-paper py-24 md:py-32">

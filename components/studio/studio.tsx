@@ -36,12 +36,12 @@ const products = [
   },
 ];
 
-export default function Studio() {
+export default function Studio({ index = "02" }: { index?: string }) {
   return (
     <section id="studio" className="scroll-mt-20 bg-ink py-24 text-paper md:py-32">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="[&_p]:text-paper/50">
-          <SectionLabel index="02">Slateworks Studio</SectionLabel>
+          <SectionLabel index={index}>Slateworks Studio</SectionLabel>
         </div>
         <div className="mt-5 grid gap-6 md:grid-cols-[1fr_22rem] md:items-end">
           <h2 className="max-w-3xl text-4xl font-semibold leading-[1.05] md:text-5xl">

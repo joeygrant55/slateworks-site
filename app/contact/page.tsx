@@ -1,20 +1,20 @@
-import Footer from "@/components/layout/footer";
-import Header from "@/components/layout/header";
-import ContactSection from "@/components/home/contact-section";
+import Contact from "@/components/studio/contact";
+import SiteFooter from "@/components/studio/site-footer";
+import SiteHeader from "@/components/studio/site-header";
 
 export const metadata = {
   title: "Contact — Slateworks",
-  description: "Ready to find the profit hiding in your business? Get in touch with Slateworks.",
+  description: "Tell us what you're building. Every inquiry reaches Joey Grant directly.",
 };
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
-      <Header />
-      <div className="pt-20">
-        <ContactSection />
+    <main className="min-h-screen bg-paper-deep text-ink">
+      <SiteHeader />
+      <div className="pt-12 md:pt-16">
+        <Contact />
       </div>
-      <Footer />
+      <SiteFooter />
     </main>
   );
 }
