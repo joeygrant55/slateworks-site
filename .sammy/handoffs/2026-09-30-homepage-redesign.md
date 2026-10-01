@@ -45,3 +45,9 @@ Deploy was via `npx vercel --prod --yes` after push to main.
 - Motion: `Reveal` (scroll fade-up), `CountUp` (ship log), `LoopVideo` (plays only while on screen); all respect reduced motion.
 - OG image rebuilt (`app/opengraph-image.tsx`, node runtime, fonts in `app/_og/`).
 - Verified: build passes; live slateworks.io serves the page, all videos (200 video/mp4), and the OG PNG.
+
+## Update — interior pages (commit 015c314, deployed to prod)
+- Restyled /work (new index: client work, Studio, experiments), all case studies (shared `CaseStudyPage`), /about, /services, /contact, /blog, /blog/[slug] onto the studio system. Body background now paper.
+- Services copy follows `clawd/docs/projects/slateworks-ai-partner-offer.md` (Sprint weeks, two builds in flight, Embedded tier, terms).
+- Untouched: /brand, /proposal, /haven (internal or separate products). Old `components/home/*` and `components/layout/*` are now unused except `home/contact-section` dependencies; safe to delete later.
+- Open question for Joey: offer spec says "never publish prices on the site", but the redesign shows $5K / $10–15K per his approval of the pitch.
