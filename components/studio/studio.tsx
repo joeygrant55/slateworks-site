@@ -7,7 +7,7 @@ const products = [
     url: "saintlings.app",
     href: "https://saintlings.app/",
     image: "/images/saintlings-live.jpg",
-    alt: "Saintlings homepage showing an illustrated St. Jerome sing-along video",
+    alt: "Saintlings homepage showing an illustrated St. Thérèse of Lisieux sing-along video",
     description:
       "Sing-along songs and storybook lives of the saints for Catholic kids. An iOS app with family subscriptions, and a content engine that writes, renders, and posts on its own.",
     stats: [
