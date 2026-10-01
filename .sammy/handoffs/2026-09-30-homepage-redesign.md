@@ -37,3 +37,11 @@ Does `docs/state/current-state.md` need updating? No (repo has none).
 
 ## Notes for Sammy
 Deploy was via `npx vercel --prod --yes` after push to main.
+
+## Update — polish pass (commit ee1a6e9, deployed to prod)
+- Higgsfield CLI updated to 1.1.26 via npm, signed in, workspace "Private" (ultra) selected.
+- Generated: 3 stills with gpt_image_2_5 (monolith, workbench, stacked slabs), 2 takes with veo3_1 from the monolith still. Used take B as `public/video/monolith.mp4` (borders cropped) and the workbench still as `public/images/workbench.jpg`. About 75 credits used.
+- Product loops: Saintlings song-of-day video (Convex) and the Recasa reveal from getrecasa.com, re-encoded to `public/video/`.
+- Motion: `Reveal` (scroll fade-up), `CountUp` (ship log), `LoopVideo` (plays only while on screen); all respect reduced motion.
+- OG image rebuilt (`app/opengraph-image.tsx`, node runtime, fonts in `app/_og/`).
+- Verified: build passes; live slateworks.io serves the page, all videos (200 video/mp4), and the OG PNG.
