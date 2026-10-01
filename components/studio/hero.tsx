@@ -1,10 +1,16 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import CountUp from "@/components/studio/count-up";
 
 const shipLog = [
-  { value: "21 days", label: "Recasa — first commit to a live, paying App Store product" },
-  { value: "1.1M views", label: "Saintlings — first 60 days on Instagram, from an AI-run content system" },
-  { value: "3 platforms", label: "Profluence — media, advisory, and venture fund, all built here" },
+  { to: 21, decimals: 0, suffix: " days", label: "Recasa — first commit to a live, paying App Store product" },
+  {
+    to: 1.1,
+    decimals: 1,
+    suffix: "M views",
+    label: "Saintlings — first 60 days on Instagram, from an AI-run content system",
+  },
+  { to: 3, decimals: 0, suffix: " platforms", label: "Profluence — media, advisory, and venture fund, all built here" },
 ];
 
 export default function Hero() {
@@ -26,8 +32,8 @@ export default function Hero() {
         <div className="mt-10 grid gap-12 lg:grid-cols-[1fr_26rem] lg:items-start">
           <div>
             <p className="max-w-xl text-lg leading-relaxed text-ink-soft md:text-xl">
-              We design, build, and ship AI products and systems — for companies directly, and for the firms that
-              sell builds under their own name. Then we hand over the keys.
+              We design, build, and ship AI products and systems — for companies directly, and for the firms that sell
+              builds under their own name. Then we hand over the keys.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
@@ -55,9 +61,11 @@ export default function Hero() {
               </span>
             </div>
             <ul className="mt-5 divide-y divide-paper/10">
-              {shipLog.map((item) => (
-                <li key={item.value} className="py-4 first:pt-0 last:pb-0">
-                  <p className="font-display text-2xl font-semibold tracking-tight">{item.value}</p>
+              {shipLog.map((item, i) => (
+                <li key={item.label} className="py-4 first:pt-0 last:pb-0">
+                  <p className="font-display text-2xl font-semibold tracking-tight">
+                    <CountUp to={item.to} decimals={item.decimals} suffix={item.suffix} delay={0.3 + i * 0.15} />
+                  </p>
                   <p className="mt-1 text-sm leading-snug text-paper/60">{item.label}</p>
                 </li>
               ))}

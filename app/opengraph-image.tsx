@@ -1,130 +1,83 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
-export const alt = "Slateworks — AI systems, built with your team";
+export const alt = "Slateworks — Senior AI engineering for teams that can't afford to get it wrong.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+const PAPER = "#f3f1ec";
+const INK = "#131313";
+const MUTED = "#6b6d70";
+const SIGNAL = "#e8501f";
+
 export default async function Image() {
+  const root = process.cwd();
+  const [display, mono, photo] = await Promise.all([
+    readFile(join(root, "app/_og/space-grotesk-600.ttf")),
+    readFile(join(root, "app/_og/jetbrains-mono-400.ttf")),
+    readFile(join(root, "public/video/monolith-end.jpg")),
+  ]);
+  const photoSrc = `data:image/jpeg;base64,${photo.toString("base64")}`;
+
   return new ImageResponse(
-    (
+    <div style={{ display: "flex", width: "100%", height: "100%", background: PAPER }}>
       <div
         style={{
-          background: "#0a0a0a",
-          width: "100%",
-          height: "100%",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
-          fontFamily: "Inter, system-ui, sans-serif",
-          position: "relative",
-          overflow: "hidden",
-          padding: "80px 90px",
+          justifyContent: "space-between",
+          width: 620,
+          padding: "64px 56px 60px 72px",
         }}
       >
-        {/* ambient gold glow */}
         <div
           style={{
-            position: "absolute",
-            top: "-220px",
-            right: "-140px",
-            width: "640px",
-            height: "640px",
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(212,175,55,0.16) 0%, transparent 70%)",
+            display: "flex",
+            alignItems: "flex-end",
+            fontFamily: "Display",
+            fontSize: 40,
+            color: INK,
+            letterSpacing: -1.6,
           }}
-        />
+        >
+          slateworks
+          <div style={{ width: 11, height: 11, background: SIGNAL, marginLeft: 3, marginBottom: 9 }} />
+        </div>
         <div
           style={{
-            position: "absolute",
-            bottom: "-180px",
-            left: "-80px",
-            width: "440px",
-            height: "440px",
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(212,175,55,0.07) 0%, transparent 70%)",
+            display: "flex",
+            fontFamily: "Display",
+            fontSize: 54,
+            lineHeight: 1.04,
+            color: INK,
+            letterSpacing: -1.8,
           }}
-        />
-
-        {/* gold accent line at top */}
+        >
+          Senior AI engineering for teams that can&apos;t afford to get it wrong.
+        </div>
         <div
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            height: "3px",
-            background: "linear-gradient(90deg, transparent, #D4AF37, #E6C667, #D4AF37, transparent)",
-          }}
-        />
-
-        {/* eyebrow */}
-        <span
-          style={{
-            fontSize: "20px",
-            fontWeight: 700,
-            letterSpacing: "6px",
-            color: "#D4AF37",
-            textTransform: "uppercase",
-            marginBottom: "28px",
+            display: "flex",
+            alignItems: "center",
+            fontFamily: "Mono",
+            fontSize: 17,
+            color: MUTED,
+            letterSpacing: 2.5,
           }}
         >
-          AI systems, built with your team
-        </span>
-
-        {/* headline */}
-        <span
-          style={{
-            fontSize: "84px",
-            fontWeight: 800,
-            color: "#fafafa",
-            lineHeight: 1.05,
-            letterSpacing: "-3px",
-            maxWidth: "950px",
-            marginBottom: "36px",
-          }}
-        >
-          There&apos;s profit hiding in your business.
-        </span>
-
-        {/* subline */}
-        <span
-          style={{
-            fontSize: "26px",
-            color: "#9aa0aa",
-            lineHeight: 1.45,
-            maxWidth: "760px",
-            marginBottom: "56px",
-          }}
-        >
-          We build the tools, automations, and AI your team is missing — then level your team up to run them.
-        </span>
-
-        {/* wordmark */}
-        <div style={{ display: "flex", alignItems: "baseline" }}>
-          <span
-            style={{
-              fontSize: "34px",
-              fontWeight: 800,
-              color: "#fafafa",
-              letterSpacing: "-1px",
-            }}
-          >
-            slateworks
-          </span>
-          <div
-            style={{
-              width: "7px",
-              height: "7px",
-              backgroundColor: "#D4AF37",
-              borderRadius: "2px",
-              marginLeft: "4px",
-              marginBottom: "4px",
-            }}
-          />
+          <div style={{ width: 9, height: 9, borderRadius: 9, background: SIGNAL, marginRight: 14 }} />
+          AI ENGINEERING STUDIO · SLATEWORKS.IO
         </div>
       </div>
-    ),
-    { ...size }
+      <img src={photoSrc} alt="" width={580} height={630} style={{ objectFit: "cover", objectPosition: "62% 50%" }} />
+    </div>,
+    {
+      ...size,
+      fonts: [
+        { name: "Display", data: display, weight: 600, style: "normal" },
+        { name: "Mono", data: mono, weight: 400, style: "normal" },
+      ],
+    },
   );
 }

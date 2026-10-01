@@ -1,3 +1,4 @@
+import Reveal from "@/components/studio/reveal";
 import SectionLabel from "@/components/studio/section-label";
 
 const offers = [
@@ -41,24 +42,26 @@ export default function Services() {
         </h2>
 
         <div className="mt-14 grid gap-5 md:grid-cols-2">
-          {offers.map((offer) => (
-            <article key={offer.title} className="flex flex-col rounded-xl border border-rule bg-paper-deep/60 p-7 md:p-9">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal">{offer.audience}</p>
-                <p className="font-mono text-xs text-ink-muted">{offer.price}</p>
-              </div>
-              <h3 className="mt-6 text-3xl font-semibold leading-tight text-ink">{offer.title}</h3>
-              <p className="mt-4 leading-relaxed text-ink-soft">{offer.pitch}</p>
-              <ul className="mt-7 space-y-3 border-t border-rule pt-7">
-                {offer.points.map((point) => (
-                  <li key={point} className="flex gap-3 text-[15px] text-ink">
-                    <span aria-hidden className="mt-[0.55em] h-1.5 w-1.5 shrink-0 bg-ink" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-auto pt-8 text-sm text-ink-muted">{offer.footnote}</p>
-            </article>
+          {offers.map((offer, i) => (
+            <Reveal key={offer.title} delay={i * 0.12} className="flex">
+              <article className="flex w-full flex-col rounded-xl border border-rule bg-paper-deep/60 p-7 md:p-9">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal">{offer.audience}</p>
+                  <p className="font-mono text-xs text-ink-muted">{offer.price}</p>
+                </div>
+                <h3 className="mt-6 text-3xl font-semibold leading-tight text-ink">{offer.title}</h3>
+                <p className="mt-4 leading-relaxed text-ink-soft">{offer.pitch}</p>
+                <ul className="mt-7 space-y-3 border-t border-rule pt-7">
+                  {offer.points.map((point) => (
+                    <li key={point} className="flex gap-3 text-[15px] text-ink">
+                      <span aria-hidden className="mt-[0.55em] h-1.5 w-1.5 shrink-0 bg-ink" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-auto pt-8 text-sm text-ink-muted">{offer.footnote}</p>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

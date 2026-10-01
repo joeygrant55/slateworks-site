@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import Reveal from "@/components/studio/reveal";
 import SectionLabel from "@/components/studio/section-label";
 
 type Build = {
@@ -55,7 +56,9 @@ const builds: Build[] = [
 function BuildCard({ build, featured = false }: { build: Build; featured?: boolean }) {
   const inner = (
     <>
-      <div className={`overflow-hidden rounded-lg border border-rule bg-paper-deep ${featured ? "aspect-[16/9]" : "aspect-[16/10]"}`}>
+      <div
+        className={`overflow-hidden rounded-lg border border-rule bg-paper-deep ${featured ? "aspect-[16/9]" : "aspect-[16/10]"}`}
+      >
         <img
           src={build.image}
           alt={`${build.name} — ${build.url}`}
@@ -96,17 +99,24 @@ export default function Work() {
           <h2 className="max-w-2xl text-4xl font-semibold leading-[1.05] text-ink md:text-5xl">
             Shipped, live, and in use.
           </h2>
-          <Link href="/work" className="text-sm font-medium text-ink underline decoration-rule underline-offset-4 hover:decoration-ink">
+          <Link
+            href="/work"
+            className="text-sm font-medium text-ink underline decoration-rule underline-offset-4 hover:decoration-ink"
+          >
             All work
           </Link>
         </div>
 
         <div className="mt-14">
-          <BuildCard build={featured} featured />
+          <Reveal>
+            <BuildCard build={featured} featured />
+          </Reveal>
         </div>
         <div className="mt-14 grid gap-x-8 gap-y-14 md:grid-cols-2">
-          {rest.map((build) => (
-            <BuildCard key={build.name} build={build} />
+          {rest.map((build, i) => (
+            <Reveal key={build.name} delay={(i % 2) * 0.1}>
+              <BuildCard build={build} />
+            </Reveal>
           ))}
         </div>
       </div>

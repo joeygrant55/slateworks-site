@@ -66,7 +66,9 @@ export default function InquiryForm() {
     return (
       <div className="rounded-xl border border-rule bg-paper p-8">
         <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal">Received</p>
-        <p className="mt-3 font-display text-2xl text-ink">Thanks — I&apos;ll reply personally within one business day.</p>
+        <p className="mt-3 font-display text-2xl text-ink">
+          Thanks — I&apos;ll reply personally within one business day.
+        </p>
       </div>
     );
   }
@@ -75,23 +77,33 @@ export default function InquiryForm() {
     <form onSubmit={handleSubmit} className="space-y-5 rounded-xl border border-rule bg-paper p-6 md:p-8">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className={label}>Name</label>
+          <label htmlFor="name" className={label}>
+            Name
+          </label>
           <input id="name" name="name" type="text" autoComplete="name" required className={field} />
         </div>
         <div>
-          <label htmlFor="email" className={label}>Email</label>
+          <label htmlFor="email" className={label}>
+            Email
+          </label>
           <input id="email" name="email" type="email" autoComplete="email" required className={field} />
         </div>
       </div>
       <div>
-        <label htmlFor="company" className={label}>Company</label>
+        <label htmlFor="company" className={label}>
+          Company
+        </label>
         <input id="company" name="company" type="text" autoComplete="organization" className={field} />
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="projectType" className={label}>Looking for</label>
+          <label htmlFor="projectType" className={label}>
+            Looking for
+          </label>
           <select id="projectType" name="projectType" defaultValue="" required className={field}>
-            <option value="" disabled>Choose one</option>
+            <option value="" disabled>
+              Choose one
+            </option>
             <option value="fractional_ai_team">Fractional AI team</option>
             <option value="ai_sprint">AI Opportunity Sprint</option>
             <option value="white_label_build">White-label build partner</option>
@@ -100,9 +112,13 @@ export default function InquiryForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="budget" className={label}>Budget</label>
+          <label htmlFor="budget" className={label}>
+            Budget
+          </label>
           <select id="budget" name="budget" defaultValue="" required className={field}>
-            <option value="" disabled>Choose a range</option>
+            <option value="" disabled>
+              Choose a range
+            </option>
             <option value="Under $10,000">Under $10,000</option>
             <option value="$10,000 - $25,000">$10,000 – $25,000</option>
             <option value="$25,000 - $75,000">$25,000 – $75,000</option>
@@ -112,7 +128,9 @@ export default function InquiryForm() {
         </div>
       </div>
       <div>
-        <label htmlFor="description" className={label}>What are you building?</label>
+        <label htmlFor="description" className={label}>
+          What are you building?
+        </label>
         <textarea id="description" name="description" rows={4} required className={`${field} min-h-[120px]`} />
       </div>
       <button

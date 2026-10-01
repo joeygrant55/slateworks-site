@@ -34,7 +34,9 @@ export default function SiteHeader() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || open ? "border-b border-rule bg-paper/95 backdrop-blur-md" : "border-b border-transparent bg-paper/0"
+        scrolled || open
+          ? "border-b border-rule bg-paper/95 backdrop-blur-md"
+          : "border-b border-transparent bg-paper/0"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:h-20 md:px-8">
