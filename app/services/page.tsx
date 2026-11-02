@@ -72,7 +72,7 @@ const capabilities = [
   },
   {
     title: "Content engines",
-    body: "Systems that research, produce, and publish content on their own — like the one behind Saintlings.",
+    body: "Systems that research, produce, and publish content on their own.",
   },
   {
     title: "Platforms & sites",

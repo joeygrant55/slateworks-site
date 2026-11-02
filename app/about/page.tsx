@@ -68,8 +68,8 @@ export default function AboutPage() {
                 behind-the-scenes build team for agencies and firms that sell the outcome under their own name.
               </p>
               <p>
-                In between client work, Slateworks Studio builds and runs its own apps — Saintlings and Recasa. It keeps
-                our methods honest: everything we recommend, we&apos;ve shipped ourselves.
+                In between client work, Slateworks Studio builds and runs its own apps, like Recasa. It keeps our
+                methods honest: everything we recommend, we&apos;ve shipped ourselves.
               </p>
             </div>
           </div>

@@ -4,12 +4,6 @@ import CountUp from "@/components/studio/count-up";
 
 const shipLog = [
   { to: 21, decimals: 0, suffix: " days", label: "Recasa — first commit to a live, paying App Store product" },
-  {
-    to: 1.1,
-    decimals: 1,
-    suffix: "M views",
-    label: "Saintlings — first 60 days on Instagram, from an AI-run content system",
-  },
   { to: 3, decimals: 0, suffix: " platforms", label: "Profluence — media, advisory, and venture fund, all built here" },
 ];
 
